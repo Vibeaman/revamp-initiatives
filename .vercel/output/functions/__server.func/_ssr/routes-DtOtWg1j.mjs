@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BzF0s3EJ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DtOtWg1j.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -905,6 +905,144 @@ function Achievements() {
 				]
 			})
 		]
+	});
+}
+var founders = [
+	{
+		role: "CEO / FOUNDER",
+		name: "Taibat Ajiboye",
+		bio: "Taibat Ajiboye is a humanitarian and creative based in Abuja, Nigeria, who advocates for global change through creative visual representation. She works as a visual artist and documentary photographer focused on storytelling around humanitarian affairs, health and well-being, and social inclusion. She's published two photography books — Sadiya: Journey of Social Impact and Tokens that Births Change.",
+		highlights: [
+			"Served as Documentary Photographer and Assistant on Visual Communications to Nigeria's Minister of Humanitarian Affairs (2019–2023)",
+			"Worked on assignment for CNN, Reuters, and other organizations in Nigeria",
+			"Founded Revamp Art Media Agency as Creative Director — a communications consulting firm specializing in documentary photography, videography, and graphic arts"
+		],
+		image: "",
+		imageAspect: "aspect-[1136/1271]"
+	},
+	{
+		role: "BOARD MEMBER",
+		name: "Professor Abdul-Rasheed Na'Allah",
+		bio: "Former Vice Chancellor, Kaduna State University and University of Abuja. A distinguished academic and administrator with extensive contributions to education and research in Nigeria.",
+		image: "",
+		imageAspect: "aspect-[978/843]"
+	},
+	{
+		role: "BOARD MEMBER",
+		name: "Doctor Itoho Obong",
+		bio: "President, Association of Resident Doctors, ARD-FCTA. A medical professional dedicated to healthcare advocacy and community welfare.",
+		image: "",
+		imageAspect: "aspect-[977/855]"
+	}
+];
+function Founders() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		id: "founders",
+		className: "relative overflow-hidden bg-ink py-12 text-cream md:py-20",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -left-40 top-1/3 h-[28rem] w-[28rem] rounded-full bg-gold/10 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "relative mx-auto max-w-7xl px-6 md:px-10",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+				variants: staggerParent,
+				initial: "hidden",
+				whileInView: "show",
+				viewport: viewportOnce,
+				className: "max-w-3xl",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
+						variants: fadeUp,
+						className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold md:mb-4",
+						children: "Our People"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
+						variants: fadeUp,
+						className: "text-display font-bold leading-[1.02]",
+						style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
+						children: [
+							"Meet the ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-gold",
+								children: "visionaries"
+							}),
+							" behind Revamp."
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
+						variants: fadeUp,
+						className: "mt-4 max-w-2xl text-sm text-cream/70 md:mt-6 md:text-base",
+						children: "Passionate leaders driving positive change through creativity, advocacy, and community empowerment."
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-12 grid gap-8 md:mt-16 lg:grid-cols-3 md:gap-10",
+				children: founders.map((f, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+					initial: {
+						opacity: 0,
+						y: 40
+					},
+					whileInView: {
+						opacity: 1,
+						y: 0
+					},
+					viewport: viewportOnce,
+					transition: {
+						duration: .7,
+						delay: i * .15
+					},
+					className: "group",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: `relative mb-6 overflow-hidden rounded-3xl bg-white/5 ${f.imageAspect || "aspect-[4/5]"}`,
+							children: f.image ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								src: f.image,
+								alt: f.name,
+								className: "h-full w-full object-cover",
+								loading: "lazy"
+							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "flex h-full w-full items-center justify-center bg-gradient-to-br from-gold/20 to-transparent",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "text-center text-gold/40",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+										xmlns: "http://www.w3.org/2000/svg",
+										className: "mx-auto h-16 w-16",
+										fill: "none",
+										viewBox: "0 0 24 24",
+										stroke: "currentColor",
+										strokeWidth: 1,
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+											strokeLinecap: "round",
+											strokeLinejoin: "round",
+											d: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+										})
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-2 text-xs",
+										children: "Photo coming soon"
+									})]
+								})
+							})
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-xs font-semibold uppercase tracking-[0.2em] text-gold",
+							children: f.role
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "mt-2 text-display text-xl font-bold text-cream md:text-2xl",
+							children: f.name
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-3 text-sm leading-relaxed text-cream/70",
+							children: f.bio
+						}),
+						f.highlights && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+							className: "mt-4 space-y-2",
+							children: f.highlights.map((h) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								className: "flex gap-3 text-sm text-cream/80",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" }), h]
+							}, h))
+						})
+					]
+				}, f.name))
+			})]
+		})]
 	});
 }
 var whiteboard_default = "/assets/whiteboard-CEefMvhg.jpg";
@@ -2046,6 +2184,7 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Journey, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ImpactNumbers, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Achievements, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Founders, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Programs, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ImpactStories, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Testimonials, {}),
