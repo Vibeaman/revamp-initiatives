@@ -5,7 +5,7 @@ import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 const stats = [
   { value: 300, suffix: "+", label: "Children reached" },
   { value: 1000, suffix: "+", label: "Youth in facilitation programs" },
-  { value: 16, suffix: "", label: "Women trained in Art Residency" },
+  { value: 50, suffix: "+", label: "Women trained in Art Residency" },
   { value: 10, suffix: "+", label: "Impact stories documented" },
   { value: 150, suffix: "+", label: "Slum beneficiaries supported" },
   { value: 100, suffix: "+", label: "Families supported with cash aid" },

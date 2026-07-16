@@ -1,19 +1,19 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BC2TL7mX.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-DO6euQxk.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/workspace/project/revamp-initiatives/src/routes/__root.tsx",
 		children: ["/"],
-		preloads: ["/assets/index-C4etAKUy.js"],
+		preloads: ["/assets/index-BHLW0X8l.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-C4etAKUy.js"
+			src: "/assets/index-BHLW0X8l.js"
 		} }]
 	},
 	"/": {
 		filePath: "/workspace/project/revamp-initiatives/src/routes/index.tsx",
 		children: void 0,
-		preloads: ["/assets/routes-pgcU9kTI.js"]
+		preloads: ["/assets/routes-zuEzXyvT.js"]
 	}
 } });
 //#endregion

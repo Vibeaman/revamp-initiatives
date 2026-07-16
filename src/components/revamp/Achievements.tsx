@@ -104,7 +104,7 @@ export default function Achievements() {
             <ul className="mt-6 space-y-3">
               {[
                 "2024: Inaugural cohort trained & graduated",
-                "16 women fully empowered with tools & seed capital",
+                "50+ women fully empowered with tools & seed capital",
                 "Graduation ceremonies celebrating each cohort's journey",
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-sm text-cream/85">

@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-1THcydIA.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-D1fAfKqd.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -490,7 +490,7 @@ var milestones = [
 	},
 	{
 		year: "2025",
-		title: "16 women fully empowered",
+		title: "50+ women fully empowered",
 		body: "The Art Residency cohort completes training with tools, seed capital, and job placement pathways."
 	},
 	{
@@ -612,8 +612,8 @@ var stats = [
 		label: "Youth in facilitation programs"
 	},
 	{
-		value: 16,
-		suffix: "",
+		value: 50,
+		suffix: "+",
 		label: "Women trained in Art Residency"
 	},
 	{
@@ -838,7 +838,7 @@ function Achievements() {
 									className: "mt-6 space-y-3",
 									children: [
 										"2024: Inaugural cohort trained & graduated",
-										"16 women fully empowered with tools & seed capital",
+										"50+ women fully empowered with tools & seed capital",
 										"Graduation ceremonies celebrating each cohort's journey"
 									].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 										className: "flex gap-3 text-sm text-cream/85",
@@ -1049,7 +1049,6 @@ function Founders() {
 		})]
 	});
 }
-var whiteboard_default = "/assets/whiteboard-CEefMvhg.jpg";
 var seedObjectives = [
 	"Train women in tailoring & entrepreneurship",
 	"Create sustainable jobs and income",
@@ -1059,7 +1058,7 @@ var seedObjectives = [
 var subPrograms = [
 	{
 		name: "Walk for Impact",
-		img: whiteboard_default,
+		img: "https://i.imgur.com/u4AB0p1.jpg",
 		blurb: "Preserving stories of Nigeria's elders."
 	},
 	{
@@ -1148,7 +1147,7 @@ function Programs() {
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "rounded-full border border-gold/30 px-3 py-1",
-										children: "16 women trained"
+										children: "50+ women trained"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "rounded-full border border-gold/30 px-3 py-1",

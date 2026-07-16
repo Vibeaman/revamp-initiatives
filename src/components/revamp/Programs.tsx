@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import cameras from "@/assets/cameras.jpg";
-import whiteboard from "@/assets/whiteboard.jpg";
 import photography from "@/assets/photography.jpg";
 
 const seedObjectives = [
@@ -12,7 +11,7 @@ const seedObjectives = [
 ];
 
 const subPrograms = [
-  { name: "Walk for Impact", img: whiteboard, blurb: "Preserving stories of Nigeria's elders." },
+  { name: "Walk for Impact", img: "https://i.imgur.com/u4AB0p1.jpg", blurb: "Preserving stories of Nigeria's elders." },
   { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities." },
   { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance." },
   { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training." },
@@ -54,7 +53,7 @@ export default function Programs() {
               with social change.
             </p>
             <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-wider text-cream/60 md:mt-6 md:gap-3">
-              <span className="rounded-full border border-gold/30 px-3 py-1">16 women trained</span>
+              <span className="rounded-full border border-gold/30 px-3 py-1">50+ women trained</span>
               <span className="rounded-full border border-gold/30 px-3 py-1">6+ skill areas</span>
               <span className="rounded-full border border-gold/30 px-3 py-1">Launched 2024</span>
             </div>
