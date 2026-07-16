@@ -14,7 +14,7 @@ const seedObjectives = [
 
 const subPrograms = [
   { name: "Walk for Impact", img: whiteboard, blurb: "Preserving stories of Nigeria's elders." },
-  { name: "Slum Outreach", img: "https://i.imgur.com/undefined.jpg", blurb: "Direct intervention in underserved communities." },
+  { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities." },
   { name: "IDP Camp Durumi", img: photography, blurb: "Food, medical & cash assistance." },
   { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training." },
 ];
