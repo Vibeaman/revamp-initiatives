@@ -4,10 +4,10 @@ import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter,
 import { r as require_jsx_runtime } from "../_libs/@radix-ui/react-label+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-C0JB9vmT.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-BCzJ1B9C.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-Q88PBvjK.css";
+var styles_default = "/assets/styles-M9o9ObRL.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
