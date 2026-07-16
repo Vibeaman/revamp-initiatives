@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CpbsY5ok.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-D-0tQDzh.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -1205,7 +1205,7 @@ function Programs() {
 										loading: "lazy"
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" })]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "absolute inset-0 flex flex-col items-center justify-center p-5 text-center",
+									className: "absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 										className: "text-display text-lg font-bold text-gold",
 										children: p.name
