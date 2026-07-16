@@ -12,6 +12,10 @@ const pillars = [
     body: "A world where creativity and opportunity are accessible to all, regardless of background.",
   },
   {
+    title: "Goal",
+    body: "To build a Creative Social Impact Hub that creates lasting positive social change for vulnerable, underprivileged, and underserved communities through creativity in Nigeria.",
+  },
+  {
     title: "Established",
     body: "Founded in 2022. What started as a small idea has grown into structured programs reaching hundreds.",
   },
@@ -57,7 +61,7 @@ export default function About() {
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-6"
+          className="mt-12 grid gap-4 md:mt-16 md:grid-cols-2 lg:grid-cols-4 md:gap-6"
         >
           {pillars.map((p) => (
             <motion.div
