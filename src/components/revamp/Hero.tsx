@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Content */}
       <motion.div
         style={{ y: y1 }}
-        className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-28 md:px-10 md:pt-40"
+        className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-start px-6 pb-16 pt-24 md:px-10 md:pt-32"
       >
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
