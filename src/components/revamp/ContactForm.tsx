@@ -51,17 +51,37 @@ export default function ContactForm() {
     setErrors({});
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual API call)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://formspree.io/f/meeyevoa", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          inquiryType: formData.inquiryType,
+          message: formData.message,
+        }),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
 
-    // Reset after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", inquiryType: "", message: "" });
-    }, 5000);
+      setIsSubmitted(true);
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", inquiryType: "", message: "" });
+      }, 5000);
+    } catch {
+      setErrors({ submit: "Something went wrong. Please try again." });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -238,6 +258,9 @@ export default function ContactForm() {
                 />
                 {errors.message && (
                   <p className="text-xs text-red-500">{errors.message}</p>
+                )}
+                {errors.submit && (
+                  <p className="text-xs text-red-500">{errors.submit}</p>
                 )}
               </motion.div>
 
