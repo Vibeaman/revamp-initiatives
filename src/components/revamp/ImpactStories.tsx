@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import hug from "@/assets/hug.jpg";
-import partner from "@/assets/partner.jpg";
 
 const stories = [
   {
     date: "July 2024",
     name: "Abubakar Sadiq",
     body: "A young boy suffering from severe malnutrition was admitted to hospital after Revamp's intervention. He received essential medical care on the path toward restoring his health.",
-    img: hug,
+    img: "https://i.imgur.com/bhu0XIq.jpg",
   },
   {
     date: "2024",
@@ -20,7 +18,7 @@ const stories = [
     date: "1 Oct 2024",
     name: "Walk for Impact",
     body: "Five elderly men aged 60+ were interviewed to preserve their lived experiences. Each received cash support honoring the contributions of a lifetime.",
-    img: partner,
+    img: "https://i.imgur.com/nIfszce.jpg",
   },
 ];
 
