@@ -1,4 +1,5 @@
-import { Mail, Phone, Instagram, Globe, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Mail, Phone, Instagram, Globe, Facebook, Linkedin } from "lucide-react";
+import { Music2 } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const contacts = [
@@ -7,9 +8,9 @@ const contacts = [
 ];
 
 const socials = [
-  { icon: Instagram, label: "@therevamp_initiative", href: "https://instagram.com/therevamp_initiative" },
-  { icon: Facebook, label: "Revamp Initiatives", href: "https://facebook.com/therevampinitiative" },
-  { icon: Twitter, label: "@therevamp_init", href: "https://twitter.com/therevamp_init" },
+  { icon: Instagram, label: "@therevamp_initiatives", href: "https://instagram.com/therevamp_initiatives" },
+  { icon: Facebook, label: "The Revamp Initiatives", href: "https://facebook.com/TheRevampInitiatives" },
+  { icon: Music2, label: "@therevampinitiatives", href: "https://tiktok.com/@therevampinitiatives" },
   { icon: Linkedin, label: "Revamp Initiatives", href: "https://linkedin.com/company/revamp-initiatives" },
   { icon: Globe, label: "therevampinitiatives.org", href: "https://www.therevampinitiatives.org" },
 ];
@@ -81,7 +82,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 flex flex-col justify-between gap-4 border-t border-cream/10 pt-6 text-xs text-cream/50 md:flex-row">
-          <p>© {new Date().getFullYear()} Revamp Initiatives. Creativity as a force for change.</p>
+          <p>© {new Date().getFullYear()} Revamp Initiatives. Encourage creativity for social impact.</p>
           <p>Made with intention in Nigeria.</p>
         </div>
       </div>

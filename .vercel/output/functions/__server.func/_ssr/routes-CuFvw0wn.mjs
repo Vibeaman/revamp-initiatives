@@ -3,10 +3,10 @@ import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].
 import { r as require_jsx_runtime, t as Root } from "../_libs/@radix-ui/react-label+[...].mjs";
 import { i as AnimatePresence, n as useScroll, r as motion, t as useTransform } from "../_libs/framer-motion.mjs";
 import { t as useInView } from "../_libs/react-intersection-observer.mjs";
-import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
+import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-1H6T9Ph6.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CuFvw0wn.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -1926,18 +1926,18 @@ var contacts = [{
 var socials = [
 	{
 		icon: Instagram,
-		label: "@therevamp_initiative",
-		href: "https://instagram.com/therevamp_initiative"
+		label: "@therevamp_initiatives",
+		href: "https://instagram.com/therevamp_initiatives"
 	},
 	{
 		icon: Facebook,
-		label: "Revamp Initiatives",
-		href: "https://facebook.com/therevampinitiative"
+		label: "The Revamp Initiatives",
+		href: "https://facebook.com/TheRevampInitiatives"
 	},
 	{
-		icon: Twitter,
-		label: "@therevamp_init",
-		href: "https://twitter.com/therevamp_init"
+		icon: Music2,
+		label: "@therevampinitiatives",
+		href: "https://tiktok.com/@therevampinitiatives"
 	},
 	{
 		icon: Linkedin,
@@ -2032,7 +2032,7 @@ function Footer() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
 					"© ",
 					(/* @__PURE__ */ new Date()).getFullYear(),
-					" Revamp Initiatives. Creativity as a force for change."
+					" Revamp Initiatives. Encourage creativity for social impact."
 				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Made with intention in Nigeria." })]
 			})]
 		})
