@@ -93,7 +93,7 @@ export default function Programs() {
                   </div>
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
                     <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
-                    <p className="mt-1.5 text-sm text-cream/80">{p.blurb}</p>
+                    <p className="mt-1.5 text-sm text-white font-medium">{p.blurb}</p>
                   </div>
                 </article>
               ))}
