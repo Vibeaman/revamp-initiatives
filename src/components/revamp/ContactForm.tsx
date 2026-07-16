@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Send, CheckCircle } from "lucide-react";
+import { Mail, Send, CheckCircle, Phone, Instagram, Facebook, Linkedin, Globe } from "lucide-react";
+import { Music2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -109,7 +110,7 @@ export default function ContactForm() {
         <div className="absolute -left-10 bottom-10 h-24 w-24 rounded-full bg-gold/10 blur-2xl animate-floaty" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-6 md:px-10">
+      <div className="relative mx-auto max-w-5xl px-6 md:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -135,6 +136,48 @@ export default function ContactForm() {
           <p className="mx-auto mt-3 max-w-xl text-sm text-ink/70 md:text-base">
             Have questions or ideas? We'd love to hear from you.
           </p>
+        </motion.div>
+
+        {/* Contact Info & Socials */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewportOnce}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-8 flex flex-wrap justify-center gap-4 md:mt-10"
+        >
+          <a href="mailto:revampinitiatives@gmail.com" className="flex items-center gap-2 rounded-full border border-gold/30 bg-white px-4 py-2 text-sm text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+            <Mail size={16} className="text-gold" />
+            revampinitiatives@gmail.com
+          </a>
+          <a href="tel:09090009999" className="flex items-center gap-2 rounded-full border border-gold/30 bg-white px-4 py-2 text-sm text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+            <Phone size={16} className="text-gold" />
+            0909 000 9999
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewportOnce}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-4 flex justify-center gap-3"
+        >
+          <a href="https://instagram.com/therevamp_initiatives" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 bg-white text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-gold hover:text-ink">
+            <Instagram size={18} />
+          </a>
+          <a href="https://facebook.com/TheRevampInitiatives" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 bg-white text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-gold hover:text-ink">
+            <Facebook size={18} />
+          </a>
+          <a href="https://tiktok.com/@therevampinitiatives" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 bg-white text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-gold hover:text-ink">
+            <Music2 size={18} />
+          </a>
+          <a href="https://linkedin.com/company/revamp-initiatives" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 bg-white text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-gold hover:text-ink">
+            <Linkedin size={18} />
+          </a>
+          <a href="https://www.therevampinitiatives.org" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 bg-white text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold hover:bg-gold hover:text-ink">
+            <Globe size={18} />
+          </a>
         </motion.div>
 
         <motion.div
