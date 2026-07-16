@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import hero from "@/assets/hero.jpg.asset.json";
+import hero from "@/assets/hero.jpg";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Photo backdrop */}
       <motion.div style={{ y: y2, opacity }} className="absolute inset-0">
         <img
-          src={hero.url}
+          src={hero}
           alt="Revamp Initiatives community"
           className="h-full w-full object-cover opacity-40"
           loading="eager"

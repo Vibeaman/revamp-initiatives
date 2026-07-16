@@ -1,5 +1,5 @@
 import { Mail, Phone, Instagram, Globe, Facebook, Twitter, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 
 const contacts = [
   { icon: Mail, label: "revampinitiatives@gmail.com", href: "mailto:revampinitiatives@gmail.com" },
@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <img src={logo.url} alt="Revamp Initiatives" className="h-12 w-12 rounded-full" />
+              <img src={logo} alt="Revamp Initiatives" className="h-12 w-12 rounded-full" />
               <span className="text-display text-2xl font-bold text-gold">Revamp Initiatives</span>
             </div>
             <p className="mt-5 max-w-md text-cream/70">

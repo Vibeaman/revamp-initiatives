@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import leaders from "@/assets/leaders.jpg.asset.json";
+import leaders from "@/assets/leaders.jpg";
 
 const pillars = [
   {
@@ -45,7 +45,7 @@ export default function About() {
 
           <motion.div variants={fadeUp} className="relative">
             <div className="relative overflow-hidden rounded-3xl shadow-ink">
-              <img src={leaders.url} alt="Revamp leadership" className="h-full w-full object-cover" loading="lazy" />
+              <img src={leaders} alt="Revamp leadership" className="h-full w-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-tr from-ink/40 via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden h-24 w-24 rounded-full bg-gradient-gold shadow-gold animate-floaty md:block" />

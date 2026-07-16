@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import garuba from "@/assets/garuba.jpg.asset.json";
+import garuba from "@/assets/garuba-testimonial.jpg";
 
 const testimonials = [
   {
@@ -9,7 +9,7 @@ const testimonials = [
     name: "Garuba Aliyah Azumi",
     role: "Culinary Art",
     program: "Creative Women Residency",
-    img: garuba.url,
+    img: garuba,
   },
 ];
 

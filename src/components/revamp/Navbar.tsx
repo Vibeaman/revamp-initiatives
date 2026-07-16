@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 
 const links = [
   { label: "About", href: "#about" },
@@ -33,7 +33,7 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logo.url} alt="Revamp Initiatives" className="h-10 w-10 rounded-full" />
+            <img src={logo} alt="Revamp Initiatives" className="h-10 w-10 rounded-full" />
             <span className="text-display text-lg font-semibold text-gold md:text-xl">
               Revamp <span className="text-cream">Initiatives</span>
             </span>

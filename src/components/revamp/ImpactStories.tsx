@@ -1,27 +1,27 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import hug from "@/assets/hug.jpg.asset.json";
-import gallery from "@/assets/gallery.jpg.asset.json";
-import partner from "@/assets/partner.jpg.asset.json";
+import hug from "@/assets/hug.jpg";
+import gallery from "@/assets/gallery.jpg";
+import partner from "@/assets/partner.jpg";
 
 const stories = [
   {
     date: "July 2024",
     name: "Abubakar Sadiq",
     body: "A young boy suffering from severe malnutrition was admitted to hospital after Revamp's intervention. He received essential medical care on the path toward restoring his health.",
-    img: hug.url,
+    img: hug,
   },
   {
     date: "2024",
     name: "Sa'adatu Adamu",
     body: "A displaced woman from Gwoza, Borno State. Through medical assistance and cash support, she received the treatment she needed, along with a renewed sense of agency.",
-    img: gallery.url,
+    img: gallery,
   },
   {
     date: "1 Oct 2024",
     name: "Walk for Impact",
     body: "Five elderly men aged 60+ were interviewed to preserve their lived experiences. Each received cash support honoring the contributions of a lifetime.",
-    img: partner.url,
+    img: partner,
   },
 ];
 

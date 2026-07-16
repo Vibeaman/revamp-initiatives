@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import kitchen from "@/assets/kitchen.jpg.asset.json";
-import cameras from "@/assets/cameras.jpg.asset.json";
-import whiteboard from "@/assets/whiteboard.jpg.asset.json";
-import photography from "@/assets/photography.jpg.asset.json";
+import kitchen from "@/assets/kitchen.jpg";
+import cameras from "@/assets/cameras.jpg";
+import whiteboard from "@/assets/whiteboard.jpg";
+import photography from "@/assets/photography.jpg";
 
 const seedObjectives = [
   "Train women in tailoring & entrepreneurship",
@@ -13,10 +13,10 @@ const seedObjectives = [
 ];
 
 const subPrograms = [
-  { name: "Walk for Impact", img: whiteboard.url, blurb: "Preserving stories of Nigeria's elders." },
-  { name: "Slum Outreach", img: cameras.url, blurb: "Direct intervention in underserved communities." },
-  { name: "IDP Camp Durumi", img: photography.url, blurb: "Food, medical & cash assistance." },
-  { name: "Kreative Campus", img: kitchen.url, blurb: "Skill-building creative training." },
+  { name: "Walk for Impact", img: whiteboard, blurb: "Preserving stories of Nigeria's elders." },
+  { name: "Slum Outreach", img: cameras, blurb: "Direct intervention in underserved communities." },
+  { name: "IDP Camp Durumi", img: photography, blurb: "Food, medical & cash assistance." },
+  { name: "Kreative Campus", img: kitchen, blurb: "Skill-building creative training." },
 ];
 
 export default function Programs() {
@@ -41,7 +41,7 @@ export default function Programs() {
           className="mt-16 grid gap-10 overflow-hidden rounded-3xl bg-ink text-cream shadow-ink lg:grid-cols-2"
         >
           <motion.div variants={fadeUp} className="relative min-h-[320px] lg:min-h-full">
-            <img src={kitchen.url} alt="Seed for Change training" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <img src={kitchen} alt="Seed for Change training" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-tr from-ink/70 via-transparent to-transparent" />
             <span className="absolute left-6 top-6 rounded-full bg-gold px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-ink">
               Flagship
