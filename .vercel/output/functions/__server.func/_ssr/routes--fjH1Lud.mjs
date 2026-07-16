@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-B_eWnq6I.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes--fjH1Lud.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -908,7 +908,6 @@ function Achievements() {
 	});
 }
 var kitchen_default = "/assets/kitchen-Bymp3yR7.jpg";
-var cameras_default = "/assets/cameras-DP0eMIH0.jpg";
 var whiteboard_default = "/assets/whiteboard-CEefMvhg.jpg";
 var photography_default = "/assets/photography-v_P6y4XR.jpg";
 var seedObjectives = [
@@ -925,7 +924,7 @@ var subPrograms = [
 	},
 	{
 		name: "Slum Outreach",
-		img: cameras_default,
+		img: "https://i.imgur.com/undefined.jpg",
 		blurb: "Direct intervention in underserved communities."
 	},
 	{
