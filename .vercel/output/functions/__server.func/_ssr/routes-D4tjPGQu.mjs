@@ -1,9 +1,12 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
+import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
+import { r as require_jsx_runtime, t as Root } from "../_libs/@radix-ui/react-label+[...].mjs";
 import { i as AnimatePresence, n as useScroll, r as motion, t as useTransform } from "../_libs/framer-motion.mjs";
 import { t as useInView } from "../_libs/react-intersection-observer.mjs";
-import { a as Instagram, i as Linkedin, n as Phone, o as Globe, r as Mail, s as Facebook, t as Twitter } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-c3wkcuCi.js
+import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
+import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
+import { t as twMerge } from "../_libs/tailwind-merge.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-D4tjPGQu.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -1373,6 +1376,324 @@ function Support() {
 		})]
 	});
 }
+function cn(...inputs) {
+	return twMerge(clsx(inputs));
+}
+var Input = import_react.forwardRef(({ className, type, ...props }, ref) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+		type,
+		className: cn("flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", className),
+		ref,
+		...props
+	});
+});
+Input.displayName = "Input";
+var Textarea = import_react.forwardRef(({ className, ...props }, ref) => {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
+		className: cn("flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", className),
+		ref,
+		...props
+	});
+});
+Textarea.displayName = "Textarea";
+var labelVariants = cva("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
+var Label = import_react.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Root, {
+	ref,
+	className: cn(labelVariants(), className),
+	...props
+}));
+Label.displayName = Root.displayName;
+var inquiryTypes = [
+	"General Inquiry",
+	"Partnership",
+	"Volunteering",
+	"Sponsorship",
+	"Media & Press",
+	"Other"
+];
+function ContactForm() {
+	const [formData, setFormData] = (0, import_react.useState)({
+		name: "",
+		email: "",
+		inquiryType: "",
+		message: ""
+	});
+	const [isSubmitting, setIsSubmitting] = (0, import_react.useState)(false);
+	const [isSubmitted, setIsSubmitted] = (0, import_react.useState)(false);
+	const [errors, setErrors] = (0, import_react.useState)({});
+	const validate = () => {
+		const newErrors = {};
+		if (!formData.name.trim()) newErrors.name = "Name is required";
+		if (!formData.email.trim()) newErrors.email = "Email is required";
+		else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Please enter a valid email address";
+		if (!formData.inquiryType) newErrors.inquiryType = "Please select an inquiry type";
+		if (!formData.message.trim()) newErrors.message = "Message is required";
+		else if (formData.message.trim().length < 10) newErrors.message = "Message must be at least 10 characters";
+		return newErrors;
+	};
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const newErrors = validate();
+		if (Object.keys(newErrors).length > 0) {
+			setErrors(newErrors);
+			return;
+		}
+		setErrors({});
+		setIsSubmitting(true);
+		await new Promise((resolve) => setTimeout(resolve, 1500));
+		setIsSubmitting(false);
+		setIsSubmitted(true);
+		setTimeout(() => {
+			setIsSubmitted(false);
+			setFormData({
+				name: "",
+				email: "",
+				inquiryType: "",
+				message: ""
+			});
+		}, 5e3);
+	};
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prev) => ({
+			...prev,
+			[name]: value
+		}));
+		if (errors[name]) setErrors((prev) => ({
+			...prev,
+			[name]: ""
+		}));
+	};
+	const handleSelectChange = (value) => {
+		setFormData((prev) => ({
+			...prev,
+			inquiryType: value
+		}));
+		if (errors.inquiryType) setErrors((prev) => ({
+			...prev,
+			inquiryType: ""
+		}));
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		id: "contact",
+		className: "relative overflow-hidden bg-cream py-24 md:py-32",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "pointer-events-none absolute inset-0",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-20 top-20 h-48 w-48 rounded-full border-2 border-gold/20 animate-drift" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-16 bottom-20 h-36 w-36 rounded-full bg-gold/10 blur-2xl animate-floaty" })]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "relative mx-auto max-w-4xl px-6 md:px-10",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+				initial: {
+					opacity: 0,
+					y: 30
+				},
+				whileInView: {
+					opacity: 1,
+					y: 0
+				},
+				viewport: viewportOnce,
+				transition: { duration: .7 },
+				className: "text-center",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+						initial: {
+							opacity: 0,
+							scale: .8
+						},
+						whileInView: {
+							opacity: 1,
+							scale: 1
+						},
+						viewport: viewportOnce,
+						transition: { duration: .5 },
+						className: "mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-gold/15",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-6 w-6 text-gold" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
+						className: "text-display font-bold leading-[1.05] text-ink",
+						style: { fontSize: "clamp(2rem, 6vw, 3.5rem)" },
+						children: ["Get in ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-gold",
+							children: "Touch"
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mx-auto mt-5 max-w-xl text-ink/70 md:text-lg",
+						children: "Have questions or ideas? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+				variants: staggerParent,
+				initial: "hidden",
+				whileInView: "show",
+				viewport: viewportOnce,
+				className: "mt-14 rounded-2xl bg-white p-8 shadow-lg md:p-12",
+				style: { boxShadow: "0 25px 80px -25px rgba(232, 168, 56, 0.2)" },
+				children: isSubmitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+					initial: {
+						opacity: 0,
+						scale: .9
+					},
+					animate: {
+						opacity: 1,
+						scale: 1
+					},
+					className: "flex flex-col items-center py-8 text-center",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+							initial: { scale: 0 },
+							animate: { scale: 1 },
+							transition: {
+								type: "spring",
+								stiffness: 200,
+								damping: 15
+							},
+							className: "mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheckBig, { className: "h-10 w-10 text-green-600" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "text-display text-2xl font-bold text-ink",
+							children: "Message Sent!"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-3 text-ink/70",
+							children: "Thank you for reaching out. We'll get back to you shortly."
+						})
+					]
+				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
+					onSubmit: handleSubmit,
+					className: "space-y-6",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+							variants: fadeUp,
+							className: "grid gap-6 md:grid-cols-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+										htmlFor: "name",
+										className: "text-sm font-semibold text-ink",
+										children: "Full Name"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+										id: "name",
+										name: "name",
+										type: "text",
+										placeholder: "Adaobi Nwosu",
+										value: formData.name,
+										onChange: handleChange,
+										className: `h-12 border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.name ? "border-red-500" : ""}`
+									}),
+									errors.name && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs text-red-500",
+										children: errors.name
+									})
+								]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-2",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+										htmlFor: "email",
+										className: "text-sm font-semibold text-ink",
+										children: "Email Address"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+										id: "email",
+										name: "email",
+										type: "email",
+										placeholder: "adaobi@example.com",
+										value: formData.email,
+										onChange: handleChange,
+										className: `h-12 border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.email ? "border-red-500" : ""}`
+									}),
+									errors.email && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs text-red-500",
+										children: errors.email
+									})
+								]
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+							variants: fadeUp,
+							className: "space-y-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+									htmlFor: "inquiryType",
+									className: "text-sm font-semibold text-ink",
+									children: "Inquiry Type"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "relative",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
+										id: "inquiryType",
+										name: "inquiryType",
+										value: formData.inquiryType,
+										onChange: (e) => handleSelectChange(e.target.value),
+										className: `flex h-12 w-full appearance-none rounded-md border border-ink/20 bg-cream/50 px-3 py-2 pr-10 text-base text-ink transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold md:text-sm ${errors.inquiryType ? "border-red-500" : ""}`,
+										style: {
+											backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%230d0d0d' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
+											backgroundPosition: "right 0.75rem center",
+											backgroundRepeat: "no-repeat",
+											backgroundSize: "1.25rem"
+										},
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+											value: "",
+											children: "Select inquiry type"
+										}), inquiryTypes.map((type) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+											value: type,
+											children: type
+										}, type))]
+									})
+								}),
+								errors.inquiryType && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-red-500",
+									children: errors.inquiryType
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+							variants: fadeUp,
+							className: "space-y-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
+									htmlFor: "message",
+									className: "text-sm font-semibold text-ink",
+									children: "Your Message"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Textarea, {
+									id: "message",
+									name: "message",
+									placeholder: "Tell us how we can help...",
+									rows: 5,
+									value: formData.message,
+									onChange: handleChange,
+									className: `min-h-[120px] resize-none border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.message ? "border-red-500" : ""}`
+								}),
+								errors.message && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-red-500",
+									children: errors.message
+								})
+							]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+							variants: fadeUp,
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								type: "submit",
+								disabled: isSubmitting,
+								className: "group inline-flex w-full items-center justify-center gap-3 rounded-full bg-ink px-8 py-4 text-base font-semibold text-gold transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70 md:w-auto",
+								style: { boxShadow: "0 10px 40px -15px rgba(13, 13, 13, 0.4)" },
+								children: isSubmitting ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-5 w-5 animate-spin rounded-full border-2 border-gold/30 border-t-gold" }), "Sending..."] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Send Message", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, {
+									size: 18,
+									className: "transition-transform group-hover:translate-x-1"
+								})] })
+							})
+						})
+					]
+				})
+			})]
+		})]
+	});
+}
 var contacts = [{
 	icon: Mail,
 	label: "revampinitiatives@gmail.com",
@@ -1514,6 +1835,7 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Partners, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LookingAhead, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Support, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactForm, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
 		]
 	});

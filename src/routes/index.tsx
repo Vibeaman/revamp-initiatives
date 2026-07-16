@@ -13,6 +13,7 @@ import CoreValues from "@/components/revamp/CoreValues";
 import Partners from "@/components/revamp/Partners";
 import LookingAhead from "@/components/revamp/LookingAhead";
 import Support from "@/components/revamp/Support";
+import ContactForm from "@/components/revamp/ContactForm";
 import Footer from "@/components/revamp/Footer";
 
 export const Route = createFileRoute("/")({
@@ -54,6 +55,7 @@ function Index() {
       <Partners />
       <LookingAhead />
       <Support />
+      <ContactForm />
       <Footer />
     </main>
   );

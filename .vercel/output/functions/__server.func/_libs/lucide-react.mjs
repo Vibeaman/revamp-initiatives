@@ -1,5 +1,5 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { r as require_react } from "./react+tanstack__react-query.mjs";
+import { n as require_react } from "./@radix-ui/react-compose-refs+[...].mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils/mergeClasses.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
@@ -109,6 +109,19 @@ var createLucideIcon = (iconName, iconNode) => {
 	Component.displayName = toPascalCase(iconName);
 	return Component;
 };
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var CircleCheckBig = createLucideIcon("circle-check-big", [["path", {
+	d: "M21.801 10A10 10 0 1 1 17 3.335",
+	key: "yps3ct"
+}], ["path", {
+	d: "m9 11 3 3L22 4",
+	key: "1pflzl"
+}]]);
 /**
 * @license lucide-react v0.575.0 - ISC
 *
@@ -227,9 +240,22 @@ var Phone = createLucideIcon("phone", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Send = createLucideIcon("send", [["path", {
+	d: "M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z",
+	key: "1ffxy3"
+}], ["path", {
+	d: "m21.854 2.147-10.94 10.939",
+	key: "12cjpa"
+}]]);
+/**
+* @license lucide-react v0.575.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Twitter = createLucideIcon("twitter", [["path", {
 	d: "M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z",
 	key: "pff0z6"
 }]]);
 //#endregion
-export { Instagram as a, Linkedin as i, Phone as n, Globe as o, Mail as r, Facebook as s, Twitter as t };
+export { Linkedin as a, Facebook as c, Mail as i, CircleCheckBig as l, Send as n, Instagram as o, Phone as r, Globe as s, Twitter as t };
