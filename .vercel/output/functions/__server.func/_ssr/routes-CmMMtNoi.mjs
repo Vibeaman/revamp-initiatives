@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-B-VXuHnU.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CmMMtNoi.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -195,6 +195,22 @@ function Hero() {
 						},
 						className: "mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-blue/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" }), "Nigerian Creative Social Impact Hub"]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
+						initial: {
+							opacity: 0,
+							y: 20
+						},
+						animate: {
+							opacity: 1,
+							y: 0
+						},
+						transition: {
+							duration: .6,
+							delay: .15
+						},
+						className: "mb-3 text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:mb-4",
+						children: "Encouraging Creativity for Social Impact"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h1, {
 						initial: {

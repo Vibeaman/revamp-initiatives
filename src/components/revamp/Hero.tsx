@@ -60,6 +60,14 @@ export default function Hero() {
           Nigerian Creative Social Impact Hub
         </motion.span>
 
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:mb-4"
+        >
+          Encouraging Creativity for Social Impact
+        </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
