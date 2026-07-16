@@ -7,7 +7,7 @@ const stats = [
   { value: 1000, suffix: "+", label: "Youth in facilitation programs" },
   { value: 16, suffix: "", label: "Women trained in Art Residency" },
   { value: 10, suffix: "+", label: "Impact stories documented" },
-  { value: 150, suffix: "+", label: "Slum beneficiaries fed" },
+  { value: 150, suffix: "+", label: "Slum beneficiaries supported" },
   { value: 100, suffix: "+", label: "Families supported with cash aid" },
   { value: 6, suffix: "+", label: "Vocational skill areas" },
   { value: 4, suffix: "", label: "Institutional partners" },
