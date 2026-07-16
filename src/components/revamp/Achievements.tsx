@@ -21,7 +21,7 @@ const milestoneCards = [
   {
     year: "2026",
     title: "Ministry of Women Affairs",
-    body: "A major institutional collaboration with the Federal Ministry of Women Affairs — a milestone that validates Revamp's grassroots model at the national policy level.",
+    body: "A major institutional collaboration with the Federal Ministry of Women Affairs, a milestone that validates Revamp's grassroots model at the national policy level.",
     featured: true,
   },
 ];
@@ -53,7 +53,7 @@ export default function Achievements() {
             className="text-display font-bold leading-[1.02]"
             style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)" }}
           >
-            Milestones that <span className="text-gold">move the needle</span> — and move people.
+            Milestones that <span className="text-gold">move the needle</span> and move people.
           </motion.h2>
           <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-sm text-cream/70 md:mt-6 md:text-base">
             From empowering thousands of individuals to securing national-level partnerships, every achievement is a step toward lasting change.
@@ -75,7 +75,7 @@ export default function Achievements() {
             </div>
             <p className="text-sm leading-relaxed text-cream/80 md:text-base">
               Over three thousand individuals across communities have been directly empowered through Revamp
-              programs — from vocational training and creative workshops to cash assistance and mentorship.
+              programs, from vocational training and creative workshops to cash assistance and mentorship.
               Each number represents a name, a story, and a future reshaped.
             </p>
           </div>
@@ -97,13 +97,13 @@ export default function Achievements() {
               Seed for Change
             </h3>
             <p className="mt-4 leading-relaxed text-cream/80 md:text-lg">
-              SFC is different — it's not just a program, it's a transformational experience. Graduates
+              SFC is different, it's not just a program, it's a transformational experience. Graduates
               leave with real skills, real confidence, and real futures. Every cohort is celebrated with
               graduation ceremonies that mark a new beginning.
             </p>
             <ul className="mt-6 space-y-3">
               {[
-                "2024 — Inaugural cohort trained & graduated",
+                "2024: Inaugural cohort trained & graduated",
                 "16 women fully empowered with tools & seed capital",
                 "Graduation ceremonies celebrating each cohort's journey",
               ].map((item) => (

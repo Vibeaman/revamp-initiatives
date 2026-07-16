@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DXrhBvcm.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-1THcydIA.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -733,7 +733,7 @@ var milestoneCards = [
 	{
 		year: "2026",
 		title: "Ministry of Women Affairs",
-		body: "A major institutional collaboration with the Federal Ministry of Women Affairs — a milestone that validates Revamp's grassroots model at the national policy level.",
+		body: "A major institutional collaboration with the Federal Ministry of Women Affairs, a milestone that validates Revamp's grassroots model at the national policy level.",
 		featured: true
 	}
 ];
@@ -777,7 +777,7 @@ function Achievements() {
 										className: "text-gold",
 										children: "move the needle"
 									}),
-									" — and move people."
+									" and move people."
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
@@ -809,7 +809,7 @@ function Achievements() {
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-sm leading-relaxed text-cream/80 md:text-base",
-								children: "Over three thousand individuals across communities have been directly empowered through Revamp programs — from vocational training and creative workshops to cash assistance and mentorship. Each number represents a name, a story, and a future reshaped."
+								children: "Over three thousand individuals across communities have been directly empowered through Revamp programs, from vocational training and creative workshops to cash assistance and mentorship. Each number represents a name, a story, and a future reshaped."
 							})]
 						})
 					}),
@@ -832,12 +832,12 @@ function Achievements() {
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "mt-4 leading-relaxed text-cream/80 md:text-lg",
-									children: "SFC is different — it's not just a program, it's a transformational experience. Graduates leave with real skills, real confidence, and real futures. Every cohort is celebrated with graduation ceremonies that mark a new beginning."
+									children: "SFC is different, it's not just a program, it's a transformational experience. Graduates leave with real skills, real confidence, and real futures. Every cohort is celebrated with graduation ceremonies that mark a new beginning."
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 									className: "mt-6 space-y-3",
 									children: [
-										"2024 — Inaugural cohort trained & graduated",
+										"2024: Inaugural cohort trained & graduated",
 										"16 women fully empowered with tools & seed capital",
 										"Graduation ceremonies celebrating each cohort's journey"
 									].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
@@ -915,11 +915,11 @@ var founders = [
 	{
 		role: "CEO / FOUNDER",
 		name: "Taibat Ajiboye",
-		bio: "Taibat Ajiboye is a humanitarian and creative based in Abuja, Nigeria, who advocates for global change through creative visual representation. She works as a visual artist and documentary photographer focused on storytelling around humanitarian affairs, health and well-being, and social inclusion. She's published two photography books — Sadiya: Journey of Social Impact and Tokens that Births Change.",
+		bio: "Taibat Ajiboye is a humanitarian and creative based in Abuja, Nigeria, who advocates for global change through creative visual representation. She works as a visual artist and documentary photographer focused on storytelling around humanitarian affairs, health and well-being, and social inclusion. She's published two photography books: Sadiya: Journey of Social Impact and Tokens that Births Change.",
 		highlights: [
 			"Served as Documentary Photographer and Assistant on Visual Communications to Nigeria's Minister of Humanitarian Affairs (2019–2023)",
 			"Worked on assignment for CNN, Reuters, and other organizations in Nigeria",
-			"Founded Revamp Art Media Agency as Creative Director — a communications consulting firm specializing in documentary photography, videography, and graphic arts"
+			"Founded Revamp Art Media Agency as Creative Director, a communications consulting firm specializing in documentary photography, videography, and graphic arts"
 		],
 		image: "https://i.imgur.com/srvG6zl.jpg",
 		imageAspect: "aspect-[1136/1271]"

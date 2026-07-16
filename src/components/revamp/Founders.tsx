@@ -5,11 +5,11 @@ const founders = [
   {
     role: "CEO / FOUNDER",
     name: "Taibat Ajiboye",
-    bio: "Taibat Ajiboye is a humanitarian and creative based in Abuja, Nigeria, who advocates for global change through creative visual representation. She works as a visual artist and documentary photographer focused on storytelling around humanitarian affairs, health and well-being, and social inclusion. She's published two photography books — Sadiya: Journey of Social Impact and Tokens that Births Change.",
+    bio: "Taibat Ajiboye is a humanitarian and creative based in Abuja, Nigeria, who advocates for global change through creative visual representation. She works as a visual artist and documentary photographer focused on storytelling around humanitarian affairs, health and well-being, and social inclusion. She's published two photography books: Sadiya: Journey of Social Impact and Tokens that Births Change.",
     highlights: [
       "Served as Documentary Photographer and Assistant on Visual Communications to Nigeria's Minister of Humanitarian Affairs (2019–2023)",
       "Worked on assignment for CNN, Reuters, and other organizations in Nigeria",
-      "Founded Revamp Art Media Agency as Creative Director — a communications consulting firm specializing in documentary photography, videography, and graphic arts",
+      "Founded Revamp Art Media Agency as Creative Director, a communications consulting firm specializing in documentary photography, videography, and graphic arts",
     ],
     image: "https://i.imgur.com/srvG6zl.jpg",
     imageAspect: "aspect-[1136/1271]",
