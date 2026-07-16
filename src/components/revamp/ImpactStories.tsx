@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import hug from "@/assets/hug.jpg";
-import gallery from "@/assets/gallery.jpg";
 import partner from "@/assets/partner.jpg";
 
 const stories = [
@@ -15,7 +14,7 @@ const stories = [
     date: "2024",
     name: "Sa'adatu Adamu",
     body: "A displaced woman from Gwoza, Borno State. Through medical assistance and cash support, she received the treatment she needed, along with a renewed sense of agency.",
-    img: gallery,
+    img: "https://i.imgur.com/evGlEHV.jpg",
   },
   {
     date: "1 Oct 2024",
