@@ -82,39 +82,38 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-cream py-24 md:py-32">
+    <section id="contact" className="relative overflow-hidden bg-cream py-12 md:py-20">
       {/* Decorative elements */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-20 top-20 h-48 w-48 rounded-full border-2 border-gold/20 animate-drift" />
-        <div className="absolute -left-16 bottom-20 h-36 w-36 rounded-full bg-gold/10 blur-2xl animate-floaty" />
+        <div className="absolute -right-10 top-10 h-32 w-32 rounded-full border-2 border-gold/20 animate-drift" />
+        <div className="absolute -left-10 bottom-10 h-24 w-24 rounded-full bg-gold/10 blur-2xl animate-floaty" />
       </div>
 
       <div className="relative mx-auto max-w-4xl px-6 md:px-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
           className="text-center"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={viewportOnce}
-            transition={{ duration: 0.5 }}
-            className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-gold/15"
+            transition={{ duration: 0.4 }}
+            className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-gold/15"
           >
-            <Mail className="h-6 w-6 text-gold" />
+            <Mail className="h-5 w-5 text-gold" />
           </motion.div>
           <h2
             className="text-display font-bold leading-[1.05] text-ink"
-            style={{ fontSize: "clamp(2rem, 6vw, 3.5rem)" }}
+            style={{ fontSize: "clamp(1.5rem, 5vw, 2.5rem)" }}
           >
             Get in <span className="text-gold">Touch</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-ink/70 md:text-lg">
-            Have questions or ideas? We'd love to hear from you. Send us a message and we'll
-            respond as soon as possible.
+          <p className="mx-auto mt-3 max-w-xl text-sm text-ink/70 md:text-base">
+            Have questions or ideas? We'd love to hear from you.
           </p>
         </motion.div>
 
@@ -123,33 +122,33 @@ export default function ContactForm() {
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="mt-14 rounded-2xl bg-white p-8 shadow-lg md:p-12"
-          style={{ boxShadow: "0 25px 80px -25px rgba(232, 168, 56, 0.2)" }}
+          className="mt-8 rounded-2xl bg-white p-5 shadow-lg md:mt-10 md:p-8"
+          style={{ boxShadow: "0 20px 60px -20px rgba(232, 168, 56, 0.15)" }}
         >
           {isSubmitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="flex flex-col items-center py-8 text-center"
+              className="flex flex-col items-center py-6 text-center"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100"
+                className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100"
               >
-                <CheckCircle className="h-10 w-10 text-green-600" />
+                <CheckCircle className="h-7 w-7 text-green-600" />
               </motion.div>
-              <h3 className="text-display text-2xl font-bold text-ink">Message Sent!</h3>
-              <p className="mt-3 text-ink/70">
+              <h3 className="text-display text-xl font-bold text-ink">Message Sent!</h3>
+              <p className="mt-2 text-sm text-ink/70">
                 Thank you for reaching out. We'll get back to you shortly.
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <motion.div variants={fadeUp} className="grid gap-6 md:grid-cols-2">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-sm font-semibold text-ink">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
+              <motion.div variants={fadeUp} className="grid gap-4 md:grid-cols-2 md:gap-5">
+                <div className="space-y-1.5">
+                  <Label htmlFor="name" className="text-xs font-semibold text-ink md:text-sm">
                     Full Name
                   </Label>
                   <Input
@@ -159,7 +158,7 @@ export default function ContactForm() {
                     placeholder="Adaobi Nwosu"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`h-12 border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${
+                    className={`h-10 border-ink/20 bg-cream/50 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${
                       errors.name ? "border-red-500" : ""
                     }`}
                   />
@@ -168,8 +167,8 @@ export default function ContactForm() {
                   )}
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-semibold text-ink">
+                <div className="space-y-1.5">
+                  <Label htmlFor="email" className="text-xs font-semibold text-ink md:text-sm">
                     Email Address
                   </Label>
                   <Input
@@ -179,7 +178,7 @@ export default function ContactForm() {
                     placeholder="adaobi@example.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`h-12 border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${
+                    className={`h-10 border-ink/20 bg-cream/50 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${
                       errors.email ? "border-red-500" : ""
                     }`}
                   />
@@ -189,8 +188,8 @@ export default function ContactForm() {
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="space-y-2">
-                <Label htmlFor="inquiryType" className="text-sm font-semibold text-ink">
+              <motion.div variants={fadeUp} className="space-y-1.5">
+                <Label htmlFor="inquiryType" className="text-xs font-semibold text-ink md:text-sm">
                   Inquiry Type
                 </Label>
                 <div className="relative">
@@ -199,7 +198,7 @@ export default function ContactForm() {
                     name="inquiryType"
                     value={formData.inquiryType}
                     onChange={(e) => handleSelectChange(e.target.value)}
-                    className={`flex h-12 w-full appearance-none rounded-md border border-ink/20 bg-cream/50 px-3 py-2 pr-10 text-base text-ink transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold md:text-sm ${
+                    className={`flex h-10 w-full appearance-none rounded-md border border-ink/20 bg-cream/50 px-3 py-2 pr-10 text-sm text-ink transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold ${
                       errors.inquiryType ? "border-red-500" : ""
                     }`}
                     style={{
@@ -222,18 +221,18 @@ export default function ContactForm() {
                 )}
               </motion.div>
 
-              <motion.div variants={fadeUp} className="space-y-2">
-                <Label htmlFor="message" className="text-sm font-semibold text-ink">
+              <motion.div variants={fadeUp} className="space-y-1.5">
+                <Label htmlFor="message" className="text-xs font-semibold text-ink md:text-sm">
                   Your Message
                 </Label>
                 <Textarea
                   id="message"
                   name="message"
                   placeholder="Tell us how we can help..."
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className={`min-h-[120px] resize-none border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${
+                  className={`min-h-[80px] resize-none border-ink/20 bg-cream/50 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${
                     errors.message ? "border-red-500" : ""
                   }`}
                 />
@@ -246,19 +245,19 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-ink px-8 py-4 text-base font-semibold text-gold transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70 md:w-auto"
-                  style={{ boxShadow: "0 10px 40px -15px rgba(13, 13, 13, 0.4)" }}
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-gold transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70 md:w-auto md:px-8 md:py-3.5"
+                  style={{ boxShadow: "0 8px 30px -10px rgba(13, 13, 13, 0.4)" }}
                 >
                   {isSubmitting ? (
                     <>
-                      <span className="h-5 w-5 animate-spin rounded-full border-2 border-gold/30 border-t-gold" />
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-gold/30 border-t-gold" />
                       Sending...
                     </>
                   ) : (
                     <>
                       Send Message
                       <Send
-                        size={18}
+                        size={16}
                         className="transition-transform group-hover:translate-x-1"
                       />
                     </>

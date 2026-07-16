@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-D4tjPGQu.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DIJRJbn8.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -1476,23 +1476,23 @@ function ContactForm() {
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		id: "contact",
-		className: "relative overflow-hidden bg-cream py-24 md:py-32",
+		className: "relative overflow-hidden bg-cream py-12 md:py-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "pointer-events-none absolute inset-0",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-20 top-20 h-48 w-48 rounded-full border-2 border-gold/20 animate-drift" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-16 bottom-20 h-36 w-36 rounded-full bg-gold/10 blur-2xl animate-floaty" })]
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-10 top-10 h-32 w-32 rounded-full border-2 border-gold/20 animate-drift" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-10 bottom-10 h-24 w-24 rounded-full bg-gold/10 blur-2xl animate-floaty" })]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative mx-auto max-w-4xl px-6 md:px-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 				initial: {
 					opacity: 0,
-					y: 30
+					y: 20
 				},
 				whileInView: {
 					opacity: 1,
 					y: 0
 				},
 				viewport: viewportOnce,
-				transition: { duration: .7 },
+				transition: { duration: .6 },
 				className: "text-center",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
@@ -1505,21 +1505,21 @@ function ContactForm() {
 							scale: 1
 						},
 						viewport: viewportOnce,
-						transition: { duration: .5 },
-						className: "mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-gold/15",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-6 w-6 text-gold" })
+						transition: { duration: .4 },
+						className: "mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-gold/15",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-5 w-5 text-gold" })
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 						className: "text-display font-bold leading-[1.05] text-ink",
-						style: { fontSize: "clamp(2rem, 6vw, 3.5rem)" },
+						style: { fontSize: "clamp(1.5rem, 5vw, 2.5rem)" },
 						children: ["Get in ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-gold",
 							children: "Touch"
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mx-auto mt-5 max-w-xl text-ink/70 md:text-lg",
-						children: "Have questions or ideas? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+						className: "mx-auto mt-3 max-w-xl text-sm text-ink/70 md:text-base",
+						children: "Have questions or ideas? We'd love to hear from you."
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
@@ -1527,8 +1527,8 @@ function ContactForm() {
 				initial: "hidden",
 				whileInView: "show",
 				viewport: viewportOnce,
-				className: "mt-14 rounded-2xl bg-white p-8 shadow-lg md:p-12",
-				style: { boxShadow: "0 25px 80px -25px rgba(232, 168, 56, 0.2)" },
+				className: "mt-8 rounded-2xl bg-white p-5 shadow-lg md:mt-10 md:p-8",
+				style: { boxShadow: "0 20px 60px -20px rgba(232, 168, 56, 0.15)" },
 				children: isSubmitted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 					initial: {
 						opacity: 0,
@@ -1538,7 +1538,7 @@ function ContactForm() {
 						opacity: 1,
 						scale: 1
 					},
-					className: "flex flex-col items-center py-8 text-center",
+					className: "flex flex-col items-center py-6 text-center",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
 							initial: { scale: 0 },
@@ -1548,31 +1548,31 @@ function ContactForm() {
 								stiffness: 200,
 								damping: 15
 							},
-							className: "mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-100",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheckBig, { className: "h-10 w-10 text-green-600" })
+							className: "mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheckBig, { className: "h-7 w-7 text-green-600" })
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "text-display text-2xl font-bold text-ink",
+							className: "text-display text-xl font-bold text-ink",
 							children: "Message Sent!"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-3 text-ink/70",
+							className: "mt-2 text-sm text-ink/70",
 							children: "Thank you for reaching out. We'll get back to you shortly."
 						})
 					]
 				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 					onSubmit: handleSubmit,
-					className: "space-y-6",
+					className: "space-y-4 md:space-y-5",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 							variants: fadeUp,
-							className: "grid gap-6 md:grid-cols-2",
+							className: "grid gap-4 md:grid-cols-2 md:gap-5",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "space-y-2",
+								className: "space-y-1.5",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
 										htmlFor: "name",
-										className: "text-sm font-semibold text-ink",
+										className: "text-xs font-semibold text-ink md:text-sm",
 										children: "Full Name"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
@@ -1582,7 +1582,7 @@ function ContactForm() {
 										placeholder: "Adaobi Nwosu",
 										value: formData.name,
 										onChange: handleChange,
-										className: `h-12 border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.name ? "border-red-500" : ""}`
+										className: `h-10 border-ink/20 bg-cream/50 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.name ? "border-red-500" : ""}`
 									}),
 									errors.name && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 										className: "text-xs text-red-500",
@@ -1590,11 +1590,11 @@ function ContactForm() {
 									})
 								]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "space-y-2",
+								className: "space-y-1.5",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
 										htmlFor: "email",
-										className: "text-sm font-semibold text-ink",
+										className: "text-xs font-semibold text-ink md:text-sm",
 										children: "Email Address"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
@@ -1604,7 +1604,7 @@ function ContactForm() {
 										placeholder: "adaobi@example.com",
 										value: formData.email,
 										onChange: handleChange,
-										className: `h-12 border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.email ? "border-red-500" : ""}`
+										className: `h-10 border-ink/20 bg-cream/50 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.email ? "border-red-500" : ""}`
 									}),
 									errors.email && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 										className: "text-xs text-red-500",
@@ -1615,11 +1615,11 @@ function ContactForm() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 							variants: fadeUp,
-							className: "space-y-2",
+							className: "space-y-1.5",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
 									htmlFor: "inquiryType",
-									className: "text-sm font-semibold text-ink",
+									className: "text-xs font-semibold text-ink md:text-sm",
 									children: "Inquiry Type"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1629,7 +1629,7 @@ function ContactForm() {
 										name: "inquiryType",
 										value: formData.inquiryType,
 										onChange: (e) => handleSelectChange(e.target.value),
-										className: `flex h-12 w-full appearance-none rounded-md border border-ink/20 bg-cream/50 px-3 py-2 pr-10 text-base text-ink transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold md:text-sm ${errors.inquiryType ? "border-red-500" : ""}`,
+										className: `flex h-10 w-full appearance-none rounded-md border border-ink/20 bg-cream/50 px-3 py-2 pr-10 text-sm text-ink transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold ${errors.inquiryType ? "border-red-500" : ""}`,
 										style: {
 											backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%230d0d0d' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
 											backgroundPosition: "right 0.75rem center",
@@ -1653,21 +1653,21 @@ function ContactForm() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 							variants: fadeUp,
-							className: "space-y-2",
+							className: "space-y-1.5",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Label, {
 									htmlFor: "message",
-									className: "text-sm font-semibold text-ink",
+									className: "text-xs font-semibold text-ink md:text-sm",
 									children: "Your Message"
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Textarea, {
 									id: "message",
 									name: "message",
 									placeholder: "Tell us how we can help...",
-									rows: 5,
+									rows: 4,
 									value: formData.message,
 									onChange: handleChange,
-									className: `min-h-[120px] resize-none border-ink/20 bg-cream/50 text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.message ? "border-red-500" : ""}`
+									className: `min-h-[80px] resize-none border-ink/20 bg-cream/50 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:ring-gold ${errors.message ? "border-red-500" : ""}`
 								}),
 								errors.message && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "text-xs text-red-500",
@@ -1680,10 +1680,10 @@ function ContactForm() {
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								type: "submit",
 								disabled: isSubmitting,
-								className: "group inline-flex w-full items-center justify-center gap-3 rounded-full bg-ink px-8 py-4 text-base font-semibold text-gold transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70 md:w-auto",
-								style: { boxShadow: "0 10px 40px -15px rgba(13, 13, 13, 0.4)" },
-								children: isSubmitting ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-5 w-5 animate-spin rounded-full border-2 border-gold/30 border-t-gold" }), "Sending..."] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Send Message", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, {
-									size: 18,
+								className: "group inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-gold transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70 md:w-auto md:px-8 md:py-3.5",
+								style: { boxShadow: "0 8px 30px -10px rgba(13, 13, 13, 0.4)" },
+								children: isSubmitting ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-4 w-4 animate-spin rounded-full border-2 border-gold/30 border-t-gold" }), "Sending..."] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Send Message", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, {
+									size: 16,
 									className: "transition-transform group-hover:translate-x-1"
 								})] })
 							})
