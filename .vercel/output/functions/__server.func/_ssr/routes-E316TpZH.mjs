@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CmMMtNoi.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-E316TpZH.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -404,6 +404,10 @@ var pillars = [
 		body: "A world where creativity and opportunity are accessible to all, regardless of background."
 	},
 	{
+		title: "Goal",
+		body: "To build a Creative Social Impact Hub that creates lasting positive social change for vulnerable, underprivileged, and underserved communities through creativity in Nigeria."
+	},
+	{
 		title: "Established",
 		body: "Founded in 2022. What started as a small idea has grown into structured programs reaching hundreds."
 	}
@@ -455,7 +459,7 @@ function About() {
 				initial: "hidden",
 				whileInView: "show",
 				viewport: viewportOnce,
-				className: "mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-6",
+				className: "mt-12 grid gap-4 md:mt-16 md:grid-cols-2 lg:grid-cols-4 md:gap-6",
 				children: pillars.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 					variants: fadeUp,
 					className: "group relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-6 transition-transform hover:-translate-y-1 hover:shadow-gold md:p-8",
@@ -1186,7 +1190,6 @@ function CoreValues() {
 }
 var partners = [
 	"Federal Ministry of Women Affairs",
-	"Supply Chain Research and Innovation Hub",
 	"Office of the Special Assistant to the President on Art & Culture",
 	"Revamp Art Media Agency"
 ];
