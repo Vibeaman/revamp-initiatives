@@ -91,9 +91,9 @@ export default function Programs() {
                     <img src={p.img} alt={p.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
                   </div>
-                  <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-5 text-center">
                     <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
-                    <p className="mt-1.5 text-sm text-white font-medium">{p.blurb}</p>
+                    <p className="mt-2 text-sm text-white font-medium">{p.blurb}</p>
                   </div>
                 </article>
               ))}

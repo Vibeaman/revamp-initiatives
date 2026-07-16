@@ -4,7 +4,7 @@ import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter,
 import { r as require_jsx_runtime } from "../_libs/@radix-ui/react-label+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-Fbn9bk1l.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-B7XmKkq2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles-h1YmRy5N.css";
@@ -145,7 +145,7 @@ function RootComponent() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 	});
 }
-var $$splitComponentImporter = () => import("./routes-6I8vP9R_.mjs");
+var $$splitComponentImporter = () => import("./routes-CpbsY5ok.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title: "Revamp Initiatives — Encourage Creativity for Social Impact" },
