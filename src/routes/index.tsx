@@ -5,6 +5,7 @@ import SDGStrip from "@/components/revamp/SDGStrip";
 import About from "@/components/revamp/About";
 import Journey from "@/components/revamp/Journey";
 import ImpactNumbers from "@/components/revamp/ImpactNumbers";
+import Achievements from "@/components/revamp/Achievements";
 
 import Programs from "@/components/revamp/Programs";
 import ImpactStories from "@/components/revamp/ImpactStories";
@@ -47,6 +48,7 @@ function Index() {
       <About />
       <Journey />
       <ImpactNumbers />
+      <Achievements />
 
       <Programs />
       <ImpactStories />

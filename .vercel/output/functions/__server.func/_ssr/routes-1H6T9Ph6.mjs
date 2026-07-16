@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-Crzf-Ir7.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-1H6T9Ph6.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -706,6 +706,203 @@ function ImpactNumbers() {
 					style: { perspective: "1200px" },
 					children: stats.map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Stat, { ...s }, s.label))
 				})]
+			})
+		]
+	});
+}
+var milestoneCards = [
+	{
+		year: "2024",
+		title: "Seed for Change Inaugural Cohort",
+		body: "The first SFC cohort completed training with graduation celebrations, empowering participants with practical skills and entrepreneurial confidence."
+	},
+	{
+		year: "2025",
+		title: "University of Maiduguri Partnership",
+		body: "A landmark academic partnership with the University of Maiduguri, extending our reach into Borno State and enabling research-backed community development."
+	},
+	{
+		year: "2025",
+		title: "CWS Collaboration",
+		body: "Joined forces with the Centre for Women's Studies to deepen gender-focused impact, research, and advocacy across our programs."
+	},
+	{
+		year: "2026",
+		title: "Ministry of Women Affairs",
+		body: "A major institutional collaboration with the Federal Ministry of Women Affairs — a milestone that validates Revamp's grassroots model at the national policy level.",
+		featured: true
+	}
+];
+function BigStat({ value }) {
+	const { ref, value: n } = useCountUp(value);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+		ref,
+		className: "text-display text-5xl font-bold text-gold gold-glow md:text-6xl",
+		children: [n.toLocaleString(), "+"]
+	});
+}
+function Achievements() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		id: "achievements",
+		className: "relative overflow-hidden bg-ink py-12 text-cream md:py-20",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -left-40 top-1/3 h-[28rem] w-[28rem] rounded-full bg-gold/10 blur-3xl" }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -right-40 bottom-1/4 h-96 w-96 rounded-full bg-blue/20 blur-3xl" }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative mx-auto max-w-7xl px-6 md:px-10",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+						variants: staggerParent,
+						initial: "hidden",
+						whileInView: "show",
+						viewport: viewportOnce,
+						className: "max-w-3xl",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
+								variants: fadeUp,
+								className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold md:mb-4",
+								children: "Our Achievements"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
+								variants: fadeUp,
+								className: "text-display font-bold leading-[1.02]",
+								style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
+								children: [
+									"Milestones that ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-gold",
+										children: "move the needle"
+									}),
+									" — and move people."
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
+								variants: fadeUp,
+								className: "mt-4 max-w-2xl text-sm text-cream/70 md:mt-6 md:text-base",
+								children: "From empowering thousands of individuals to securing national-level partnerships, every achievement is a step toward lasting change."
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+						initial: {
+							opacity: 0,
+							y: 40
+						},
+						whileInView: {
+							opacity: 1,
+							y: 0
+						},
+						viewport: viewportOnce,
+						transition: { duration: .7 },
+						className: "mt-10 rounded-3xl border border-gold/20 bg-gradient-to-br from-white/5 to-transparent p-8 backdrop-blur-sm md:mt-14 md:p-12",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-12",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "shrink-0",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BigStat, { value: 3e3 }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-2 text-sm uppercase tracking-wider text-cream/60",
+									children: "People Empowered"
+								})]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-sm leading-relaxed text-cream/80 md:text-base",
+								children: "Over three thousand individuals across communities have been directly empowered through Revamp programs — from vocational training and creative workshops to cash assistance and mentorship. Each number represents a name, a story, and a future reshaped."
+							})]
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+						variants: staggerParent,
+						initial: "hidden",
+						whileInView: "show",
+						viewport: viewportOnce,
+						className: "mt-10 overflow-hidden rounded-3xl border border-gold/20 bg-gradient-to-br from-gold/5 to-transparent p-8 md:mt-14 md:p-12",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+							variants: fadeUp,
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "mb-3 inline-block w-fit rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-widest text-ink",
+									children: "Flagship Program"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-display text-2xl font-bold text-gold md:text-3xl",
+									children: "Seed for Change"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-4 leading-relaxed text-cream/80 md:text-lg",
+									children: "SFC is different — it's not just a program, it's a transformational experience. Graduates leave with real skills, real confidence, and real futures. Every cohort is celebrated with graduation ceremonies that mark a new beginning."
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+									className: "mt-6 space-y-3",
+									children: [
+										"2024 — Inaugural cohort trained & graduated",
+										"16 women fully empowered with tools & seed capital",
+										"Graduation ceremonies celebrating each cohort's journey"
+									].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+										className: "flex gap-3 text-sm text-cream/85",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" }), item]
+									}, item))
+								})
+							]
+						})
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mt-12 md:mt-16",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.h3, {
+							initial: {
+								opacity: 0,
+								y: 20
+							},
+							whileInView: {
+								opacity: 1,
+								y: 0
+							},
+							viewport: viewportOnce,
+							transition: { duration: .5 },
+							className: "text-display mb-8 text-2xl font-bold text-cream md:text-3xl",
+							children: "Key Milestones & Partnerships"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+							variants: staggerParent,
+							initial: "hidden",
+							whileInView: "show",
+							viewport: viewportOnce,
+							className: "grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6",
+							style: { perspective: "1200px" },
+							children: milestoneCards.map((m) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+								variants: fadeUp,
+								whileHover: {
+									rotateX: -4,
+									rotateY: 4,
+									scale: 1.02
+								},
+								transition: {
+									type: "spring",
+									stiffness: 200,
+									damping: 20
+								},
+								style: { transformStyle: "preserve-3d" },
+								className: `group relative flex flex-col rounded-3xl border p-6 backdrop-blur-sm md:p-8 ${m.featured ? "border-gold/40 bg-gradient-to-br from-gold/15 to-transparent" : "border-gold/20 bg-gradient-to-br from-white/5 to-transparent"}`,
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-display text-3xl font-bold text-gold gold-glow md:text-4xl",
+										children: m.year
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+										className: "mt-2 text-display text-base font-bold text-cream md:text-lg",
+										children: m.title
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-2 flex-1 text-xs leading-relaxed text-cream/70 md:text-sm",
+										children: m.body
+									}),
+									m.featured && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "mt-4 inline-block w-fit rounded-full bg-gold/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-gold",
+										children: "Major Collaborator"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 rounded-3xl border border-transparent transition-colors group-hover:border-gold/40" })
+								]
+							}, m.title))
+						})]
+					})
+				]
 			})
 		]
 	});
@@ -1851,6 +2048,7 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(About, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Journey, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ImpactNumbers, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Achievements, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Programs, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ImpactStories, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Testimonials, {}),
