@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DQaeNdAG.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CwAxwPD-.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -1190,42 +1190,32 @@ function Programs() {
 							children: "Direct intervention in underserved communities, IDP camps, and slum areas. Food support, cash assistance, and preserving cultural narratives."
 						})] })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:snap-none md:grid-cols-4 md:gap-5 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-						children: subPrograms.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.article, {
-							initial: {
-								opacity: 0,
-								y: 40
-							},
-							whileInView: {
-								opacity: 1,
-								y: 0
-							},
-							viewport: viewportOnce,
-							transition: {
-								duration: .6,
-								delay: i * .08
-							},
-							whileHover: { y: -6 },
-							className: "group relative w-[78%] shrink-0 snap-start overflow-hidden rounded-2xl bg-ink text-cream md:w-auto",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "relative aspect-[3/4] overflow-hidden",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: p.img,
-									alt: p.name,
-									className: "h-full w-full object-cover transition-transform duration-700 group-hover:scale-110",
-									loading: "lazy"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" })]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "absolute inset-x-0 bottom-0 p-5 md:p-6",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-									className: "text-display text-lg font-bold text-gold",
-									children: p.name
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-1.5 text-sm text-cream/80",
-									children: p.blurb
+						className: "relative overflow-hidden",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "flex gap-5 animate-marquee-slow whitespace-nowrap",
+							style: { animation: "marquee 25s linear infinite" },
+							children: [...subPrograms, ...subPrograms].map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
+								className: "group relative w-[78%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-64",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative aspect-[3/4] overflow-hidden",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+										src: p.img,
+										alt: p.name,
+										className: "h-full w-full object-cover transition-transform duration-700 group-hover:scale-110",
+										loading: "lazy"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "absolute inset-x-0 bottom-0 p-5 md:p-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+										className: "text-display text-lg font-bold text-gold",
+										children: p.name
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-1.5 text-sm text-cream/80",
+										children: p.blurb
+									})]
 								})]
-							})]
-						}, p.name))
+							}, `${p.name}-${i}`))
+						})
 					})]
 				})
 			]

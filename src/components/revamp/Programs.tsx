@@ -80,27 +80,24 @@ export default function Programs() {
             </div>
           </div>
 
-          <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:snap-none md:grid-cols-4 md:gap-5 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {subPrograms.map((p, i) => (
-              <motion.article
-                key={p.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={viewportOnce}
-                transition={{ duration: 0.6, delay: i * 0.08 }}
-                whileHover={{ y: -6 }}
-                className="group relative w-[78%] shrink-0 snap-start overflow-hidden rounded-2xl bg-ink text-cream md:w-auto"
-              >
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <img src={p.img} alt={p.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                  <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
-                  <p className="mt-1.5 text-sm text-cream/80">{p.blurb}</p>
-                </div>
-              </motion.article>
-            ))}
+          <div className="relative overflow-hidden">
+            <div className="flex gap-5 animate-marquee-slow whitespace-nowrap" style={{ animation: 'marquee 25s linear infinite' }}>
+              {[...subPrograms, ...subPrograms].map((p, i) => (
+                <article
+                  key={`${p.name}-${i}`}
+                  className="group relative w-[78%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-64"
+                >
+                  <div className="relative aspect-[3/4] overflow-hidden">
+                    <img src={p.img} alt={p.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                    <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
+                    <p className="mt-1.5 text-sm text-cream/80">{p.blurb}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </div>
