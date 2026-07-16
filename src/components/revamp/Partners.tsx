@@ -3,7 +3,6 @@ import { viewportOnce } from "@/utils/animations";
 
 const partners = [
   "Federal Ministry of Women Affairs",
-  "Supply Chain Research and Innovation Hub",
   "Office of the Special Assistant to the President on Art & Culture",
   "Revamp Art Media Agency",
 ];
