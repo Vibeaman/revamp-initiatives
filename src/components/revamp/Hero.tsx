@@ -16,33 +16,15 @@ export default function Hero() {
         <img
           src={hero}
           alt="Revamp Initiatives community"
-          className="h-full w-full object-cover opacity-40"
+          className="h-full w-full object-cover opacity-40 animate-hero-kb"
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink" />
       </motion.div>
 
-      {/* 3D floating gold shapes */}
-      <div className="pointer-events-none absolute inset-0" style={{ perspective: "1200px" }}>
-        <div
-          className="absolute left-[8%] top-[20%] h-40 w-40 rounded-full bg-gradient-gold opacity-70 blur-2xl animate-floaty md:h-64 md:w-64"
-          style={{ transform: "translateZ(-100px)" }}
-        />
-        <div
-          className="absolute right-[6%] top-[35%] h-52 w-52 rounded-full border-2 border-gold/50 animate-drift md:h-80 md:w-80"
-          style={{ transform: "translateZ(-40px)" }}
-        />
-        <div
-          className="absolute bottom-[10%] left-[15%] h-24 w-24 rotate-45 bg-gold/80 blur-sm animate-floaty md:h-40 md:w-40"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="absolute right-[15%] bottom-[20%] h-16 w-16 rounded-full bg-gold shadow-gold animate-pulse-gold md:h-24 md:w-24"
-        />
-        <div
-          className="absolute left-1/2 top-[60%] h-32 w-32 -translate-x-1/2 rounded-full border border-gold/30 animate-drift"
-          style={{ animationDelay: "4s" }}
-        />
+      {/* Subtle accent — single soft glow */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-[10%] top-[30%] h-64 w-64 rounded-full bg-gold/10 blur-3xl md:h-96 md:w-96" />
       </div>
 
       {/* Content */}
@@ -54,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-blue/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5"
+          className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold/30 bg-ink/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" />
           Nigerian Creative Social Impact Hub
@@ -76,8 +58,8 @@ export default function Hero() {
           className="text-display font-bold leading-[0.95] text-cream"
           style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
         >
-          Creativity as a<br />
-          <span className="text-gold gold-glow">Force for Change</span>
+          Encourage Creativity<br />
+          <span className="text-gold">for Social Impact</span>
         </motion.h1>
 
         <motion.p
