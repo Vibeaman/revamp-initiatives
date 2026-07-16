@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DcV3ulD8.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DQaeNdAG.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -167,38 +167,6 @@ function Hero() {
 				style: { y: y1 },
 				className: "relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-28 md:px-10 md:pt-40",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.p, {
-						initial: {
-							opacity: 0,
-							y: 20
-						},
-						animate: {
-							opacity: 1,
-							y: 0
-						},
-						transition: {
-							duration: .6,
-							delay: .1
-						},
-						className: "mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold/30 bg-ink/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" }), "Nigerian Creative Social Impact Hub"]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.span, {
-						initial: {
-							opacity: 0,
-							y: 20
-						},
-						animate: {
-							opacity: 1,
-							y: 0
-						},
-						transition: {
-							duration: .6,
-							delay: .15
-						},
-						className: "mb-3 text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:mb-4",
-						children: "Encouraging Creativity for Social Impact"
-					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h1, {
 						initial: {
 							opacity: 0,
@@ -210,7 +178,7 @@ function Hero() {
 						},
 						transition: {
 							duration: .9,
-							delay: .2,
+							delay: .1,
 							ease: [
 								.22,
 								1,
@@ -228,6 +196,38 @@ function Hero() {
 								children: "for Social Impact"
 							})
 						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.p, {
+						initial: {
+							opacity: 0,
+							y: 20
+						},
+						animate: {
+							opacity: 1,
+							y: 0
+						},
+						transition: {
+							duration: .6,
+							delay: .15
+						},
+						className: "mb-4 mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-gold/30 bg-ink/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" }), "Nigerian Creative Social Impact Hub"]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.span, {
+						initial: {
+							opacity: 0,
+							y: 20
+						},
+						animate: {
+							opacity: 1,
+							y: 0
+						},
+						transition: {
+							duration: .6,
+							delay: .2
+						},
+						className: "text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:text-sm",
+						children: "Encouraging Creativity for Social Impact"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
 						initial: {
@@ -306,53 +306,36 @@ var goals = [
 	}
 ];
 function SDGStrip() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "border-y border-gold/20 bg-ink py-4 md:py-5",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "border-y border-gold/20 bg-ink py-4 md:py-5 overflow-hidden",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto flex max-w-7xl flex-col gap-3 px-5 md:flex-row md:items-center md:gap-6 md:px-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "shrink-0 text-xs font-semibold uppercase tracking-[0.2em] text-gold md:tracking-[0.25em]",
 				children: "Aligned with UN SDGs"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 md:mx-0 md:px-0 md:pb-0 md:gap-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-				children: goals.map((g, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
-					initial: {
-						opacity: 0,
-						y: 10
-					},
-					animate: {
-						opacity: 1,
-						y: 0
-					},
-					transition: {
-						duration: .5,
-						delay: i * .1
-					},
-					whileHover: {
-						scale: 1.05,
-						y: -2
-					},
-					className: "flex shrink-0 items-center gap-1.5 rounded-full border border-gold/30 bg-gold/5 px-3 py-1.5 text-xs text-cream md:gap-2 md:px-4 md:py-2 md:text-sm cursor-pointer",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.span, {
-						className: "text-display text-xs font-bold text-gold",
-						animate: { y: [
-							0,
-							-2,
-							0
-						] },
-						transition: {
-							duration: 2,
-							repeat: Infinity,
-							delay: i * .3
-						},
-						children: ["GOAL ", g.n]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-cream/80",
-						children: g.label
-					})]
-				}, g.n))
+				className: "relative flex-1 overflow-hidden",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex gap-3 animate-marquee whitespace-nowrap",
+					style: { animation: "marquee 20s linear infinite" },
+					children: [...goals, ...goals].map((g, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex shrink-0 items-center gap-1.5 rounded-full border border-gold/30 bg-gold/5 px-3 py-1.5 text-xs text-cream md:gap-2 md:px-4 md:py-2 md:text-sm",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+							className: "text-display text-xs font-bold text-gold",
+							children: ["GOAL ", g.n]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-cream/80",
+							children: g.label
+						})]
+					}, `${g.n}-${i}`))
+				})
 			})]
-		})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("style", { children: `
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      ` })]
 	});
 }
 var fadeUp = {

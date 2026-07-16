@@ -34,11 +34,22 @@ export default function Hero() {
         style={{ y: y1 }}
         className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-28 md:px-10 md:pt-40"
       >
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="text-display font-bold leading-[0.95] text-cream"
+          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
+        >
+          Encourage Creativity<br />
+          <span className="text-gold">for Social Impact</span>
+        </motion.h1>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold/30 bg-ink/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mb-4 mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-gold/30 bg-ink/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" />
           Nigerian Creative Social Impact Hub
@@ -47,22 +58,11 @@ export default function Hero() {
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:mb-4"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:text-sm"
         >
           Encouraging Creativity for Social Impact
         </motion.span>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="text-display font-bold leading-[0.95] text-cream"
-          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
-        >
-          Encourage Creativity<br />
-          <span className="text-gold">for Social Impact</span>
-        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
