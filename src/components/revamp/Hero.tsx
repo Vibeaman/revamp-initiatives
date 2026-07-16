@@ -34,7 +34,7 @@ export default function Hero() {
         style={{ y: y1 }}
         className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-28 md:px-10 md:pt-40"
       >
-        <motion.span
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -42,16 +42,16 @@ export default function Hero() {
         >
           <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" />
           Nigerian Creative Social Impact Hub
-        </motion.span>
+        </motion.p>
 
-        <motion.p
+        <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
           className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:mb-4"
         >
           Encouraging Creativity for Social Impact
-        </motion.p>
+        </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
