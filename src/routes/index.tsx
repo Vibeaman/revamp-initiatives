@@ -51,10 +51,10 @@ function Index() {
       <Programs />
       <ImpactNumbers />
       <Achievements />
-      <Founders />
 
       <ImpactStories />
       <Testimonials />
+      <Founders />
       <CoreValues />
       <Partners />
       <LookingAhead />

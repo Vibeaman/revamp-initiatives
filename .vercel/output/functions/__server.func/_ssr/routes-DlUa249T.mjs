@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BR7RrEHL.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DlUa249T.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -2185,9 +2185,9 @@ function Index() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Programs, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ImpactNumbers, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Achievements, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Founders, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ImpactStories, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Testimonials, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Founders, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CoreValues, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Partners, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LookingAhead, {}),
