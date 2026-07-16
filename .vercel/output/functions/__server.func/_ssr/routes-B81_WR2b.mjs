@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Phone, o as Instagram, r as Music2, s as Globe, t as Send } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-ByOc9fsm.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-B81_WR2b.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -907,7 +907,6 @@ function Achievements() {
 		]
 	});
 }
-var kitchen_default = "/assets/kitchen-Bymp3yR7.jpg";
 var whiteboard_default = "/assets/whiteboard-CEefMvhg.jpg";
 var seedObjectives = [
 	"Train women in tailoring & entrepreneurship",
@@ -979,7 +978,7 @@ function Programs() {
 						className: "relative min-h-[280px] lg:min-h-full",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: kitchen_default,
+								src: "https://i.imgur.com/5nrpSL1.jpg",
 								alt: "Seed for Change training",
 								className: "absolute inset-0 h-full w-full object-cover",
 								loading: "lazy"

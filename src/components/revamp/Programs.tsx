@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import kitchen from "@/assets/kitchen.jpg";
 import cameras from "@/assets/cameras.jpg";
 import whiteboard from "@/assets/whiteboard.jpg";
 import photography from "@/assets/photography.jpg";
@@ -41,7 +40,7 @@ export default function Programs() {
           className="mt-10 grid gap-8 overflow-hidden rounded-3xl bg-ink text-cream shadow-ink lg:grid-cols-2 md:mt-14"
         >
           <motion.div variants={fadeUp} className="relative min-h-[280px] lg:min-h-full">
-            <img src={kitchen} alt="Seed for Change training" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <img src="https://i.imgur.com/5nrpSL1.jpg" alt="Seed for Change training" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-tr from-ink/70 via-transparent to-transparent" />
             <span className="absolute left-5 top-5 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-widest text-ink md:left-6 md:top-6 md:px-4 md:py-1.5">
               Flagship
