@@ -48,11 +48,11 @@ function Index() {
       <SDGStrip />
       <About />
       <Journey />
+      <Programs />
       <ImpactNumbers />
       <Achievements />
       <Founders />
 
-      <Programs />
       <ImpactStories />
       <Testimonials />
       <CoreValues />
