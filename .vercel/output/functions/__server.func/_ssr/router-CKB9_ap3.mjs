@@ -4,7 +4,7 @@ import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter,
 import { r as require_jsx_runtime } from "../_libs/@radix-ui/react-label+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CdX7Zs6l.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CKB9_ap3.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles-D1Oo3XCa.css";
@@ -148,14 +148,14 @@ function RootComponent() {
 var $$splitComponentImporter = () => import("./routes-CuFvw0wn.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({
 	head: () => ({ meta: [
-		{ title: "Revamp Initiatives, Creativity as a Force for Change" },
+		{ title: "Revamp Initiatives — Encourage Creativity for Social Impact" },
 		{
 			name: "description",
 			content: "Revamp Initiatives is a Nigerian creative social impact hub empowering vulnerable communities through creative expression, vocational training, and sustainable development since 2022."
 		},
 		{
 			property: "og:title",
-			content: "Revamp Initiatives, Creativity as a Force for Change"
+			content: "Revamp Initiatives — Encourage Creativity for Social Impact"
 		},
 		{
 			property: "og:description",

@@ -20,13 +20,13 @@ import Footer from "@/components/revamp/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Revamp Initiatives, Creativity as a Force for Change" },
+      { title: "Revamp Initiatives — Encourage Creativity for Social Impact" },
       {
         name: "description",
         content:
           "Revamp Initiatives is a Nigerian creative social impact hub empowering vulnerable communities through creative expression, vocational training, and sustainable development since 2022.",
       },
-      { property: "og:title", content: "Revamp Initiatives, Creativity as a Force for Change" },
+      { property: "og:title", content: "Revamp Initiatives — Encourage Creativity for Social Impact" },
       {
         property: "og:description",
         content:
