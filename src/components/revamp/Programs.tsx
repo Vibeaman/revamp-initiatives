@@ -16,7 +16,7 @@ const subPrograms = [
   { name: "Walk for Impact", img: whiteboard, blurb: "Preserving stories of Nigeria's elders." },
   { name: "Slum Outreach", img: cameras, blurb: "Direct intervention in underserved communities." },
   { name: "IDP Camp Durumi", img: photography, blurb: "Food, medical & cash assistance." },
-  { name: "Kreative Campus", img: kitchen, blurb: "Skill-building creative training." },
+  { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training." },
 ];
 
 export default function Programs() {
