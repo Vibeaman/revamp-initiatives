@@ -36,7 +36,7 @@ const milestones = [
 
 export default function Journey() {
   return (
-    <section id="journey" className="relative overflow-hidden bg-cream py-24 md:py-32">
+    <section id="journey" className="relative overflow-hidden bg-cream py-12 md:py-20">
       <div className="pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-blue/10 blur-3xl" />
       <div className="pointer-events-none absolute left-0 bottom-20 h-72 w-72 rounded-full bg-gold/15 blur-3xl" />
 
@@ -48,19 +48,19 @@ export default function Journey() {
           viewport={viewportOnce}
           className="max-w-3xl"
         >
-          <motion.p variants={fadeUp} className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-blue">
+          <motion.p variants={fadeUp} className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-blue md:mb-4">
             The Journey
           </motion.p>
           <motion.h2
             variants={fadeUp}
             className="text-display font-bold leading-[1.02] text-ink"
-            style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
+            style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)" }}
           >
             From a single idea to a <span className="text-blue italic">movement</span> across communities.
           </motion.h2>
         </motion.div>
 
-        <div className="relative mt-20">
+        <div className="relative mt-12 md:mt-16">
           {/* vertical rail */}
           <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-blue via-gold to-transparent md:left-1/2" />
 
@@ -69,25 +69,25 @@ export default function Journey() {
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="space-y-14 md:space-y-20"
+            className="space-y-10 md:space-y-16"
           >
             {milestones.map((m, i) => (
               <motion.li
                 key={m.title}
                 variants={fadeUp}
-                className={`relative grid gap-6 pl-14 md:grid-cols-2 md:gap-16 md:pl-0 ${
+                className={`relative grid gap-4 pl-14 md:grid gap-6 md:grid-cols-2 md:gap-12 md:pl-0 ${
                   i % 2 === 0 ? "md:pr-[calc(50%+2rem)]" : "md:pl-[calc(50%+2rem)]"
                 }`}
               >
                 {/* dot */}
-                <span className="absolute left-2 top-2 z-10 grid h-6 w-6 -translate-x-1/2 place-items-center rounded-full bg-gradient-blue shadow-[0_0_0_4px_var(--cream)] md:left-1/2">
-                  <span className="h-2 w-2 rounded-full bg-gold" />
+                <span className="absolute left-2 top-2 z-10 grid h-5 w-5 -translate-x-1/2 place-items-center rounded-full bg-gradient-blue shadow-[0_0_0_4px_var(--cream)] md:left-1/2 md:h-6 md:w-6">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold md:h-2 md:w-2" />
                 </span>
 
                 <div className={i % 2 === 0 ? "md:text-right" : "md:col-start-2"}>
-                  <span className="text-display text-4xl font-bold text-blue md:text-5xl">{m.year}</span>
-                  <h3 className="text-display mt-2 text-xl font-bold text-ink md:text-2xl">{m.title}</h3>
-                  <p className="mt-3 text-ink/70 leading-relaxed">{m.body}</p>
+                  <span className="text-display text-3xl font-bold text-blue md:text-4xl">{m.year}</span>
+                  <h3 className="text-display mt-1 text-lg font-bold text-ink md:text-xl">{m.title}</h3>
+                  <p className="mt-2 text-sm text-ink/70 leading-relaxed md:mt-3">{m.body}</p>
                 </div>
               </motion.li>
             ))}

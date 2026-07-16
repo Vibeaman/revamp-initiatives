@@ -48,13 +48,13 @@ export default function Hero() {
       {/* Content */}
       <motion.div
         style={{ y: y1 }}
-        className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-32 md:px-10 md:pt-40"
+        className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-28 md:px-10 md:pt-40"
       >
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-blue/20 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm"
+          className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-blue/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" />
           Nigerian Creative Social Impact Hub
@@ -66,7 +66,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-display font-bold leading-[0.95] text-cream"
-          style={{ fontSize: "clamp(2.75rem, 8vw, 7rem)" }}
+          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
         >
           Creativity as a<br />
           <span className="text-gold gold-glow">Force for Change</span>
@@ -76,7 +76,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-8 max-w-2xl text-base leading-relaxed text-cream/75 md:text-xl"
+          className="mt-5 max-w-2xl text-sm leading-relaxed text-cream/75 md:mt-8 md:text-lg"
         >
           Empowering vulnerable communities through creative expression, vocational training,
           and sustainable development since 2022.
@@ -86,18 +86,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="mt-10 flex flex-wrap gap-4"
+          className="mt-7 flex flex-wrap gap-3 md:mt-10 md:gap-4"
         >
           <a
             href="#support"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-gold px-7 py-4 text-base font-semibold text-ink shadow-gold transition-transform hover:scale-[1.04] active:scale-95"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-gold px-5 py-3 text-sm font-semibold text-ink shadow-gold transition-transform hover:scale-[1.04] active:scale-95 md:px-7 md:py-4 md:text-base"
           >
             Support Our Mission
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
           <a
             href="#programs"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-gold px-7 py-4 text-base font-semibold text-gold transition-colors hover:bg-gold hover:text-ink"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-ink md:px-7 md:py-4 md:text-base"
           >
             See Our Work
           </a>

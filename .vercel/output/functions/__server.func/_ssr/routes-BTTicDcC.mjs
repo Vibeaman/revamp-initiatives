@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DIJRJbn8.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BTTicDcC.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -53,17 +53,17 @@ function Navbar() {
 		transition: { duration: .6 },
 		className: `fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "bg-ink/95 backdrop-blur-md shadow-ink" : "bg-transparent"}`,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-			className: "mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10",
+			className: "mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-10 md:py-4",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 					href: "#top",
-					className: "flex items-center gap-3",
+					className: "flex items-center gap-2 md:gap-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 						src: logo_default,
 						alt: "Revamp Initiatives",
-						className: "h-10 w-10 rounded-full"
+						className: "h-8 w-8 rounded-full md:h-10 md:w-10"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-						className: "text-display text-lg font-semibold text-gold md:text-xl",
+						className: "text-display text-base font-semibold text-gold md:text-xl",
 						children: ["Revamp ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-cream",
 							children: "Initiatives"
@@ -71,21 +71,21 @@ function Navbar() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-					className: "hidden items-center gap-8 md:flex",
+					className: "hidden items-center gap-6 md:flex md:gap-8",
 					children: [links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 						href: l.href,
 						className: "text-sm font-medium text-cream/80 transition-colors hover:text-gold",
 						children: l.label
 					}) }, l.href)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 						href: "#support",
-						className: "inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-95",
+						className: "inline-flex items-center rounded-full bg-gold px-4 py-2 text-sm font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-95 md:px-5 md:py-2.5",
 						children: "Get Involved"
 					}) })]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 					"aria-label": "Toggle menu",
 					onClick: () => setOpen((v) => !v),
-					className: "flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full border border-gold/40 md:hidden",
+					className: "flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-gold/40 md:hidden",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `h-0.5 w-5 bg-gold transition-transform ${open ? "translate-y-1 rotate-45" : ""}` }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `h-0.5 w-5 bg-gold transition-opacity ${open ? "opacity-0" : ""}` }),
@@ -108,19 +108,19 @@ function Navbar() {
 				1
 			]
 		},
-		className: "fixed inset-y-0 right-0 z-40 flex w-4/5 max-w-sm flex-col bg-ink px-8 pt-24 md:hidden",
+		className: "fixed inset-y-0 right-0 z-40 flex w-4/5 max-w-sm flex-col bg-ink px-6 pt-20 md:hidden",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-			className: "flex flex-col gap-6",
+			className: "flex flex-col gap-5",
 			children: links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 				href: l.href,
 				onClick: () => setOpen(false),
-				className: "text-display text-3xl font-semibold text-cream hover:text-gold",
+				className: "text-display text-2xl font-semibold text-cream hover:text-gold",
 				children: l.label
 			}) }, l.href))
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 			href: "#support",
 			onClick: () => setOpen(false),
-			className: "mt-10 inline-flex w-fit items-center rounded-full bg-gold px-6 py-3 text-base font-semibold text-ink",
+			className: "mt-8 inline-flex w-fit items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink",
 			children: "Get Involved →"
 		})]
 	}) })] });
@@ -178,7 +178,7 @@ function Hero() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 				style: { y: y1 },
-				className: "relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-32 md:px-10 md:pt-40",
+				className: "relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 pb-16 pt-28 md:px-10 md:pt-40",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.span, {
 						initial: {
@@ -193,7 +193,7 @@ function Hero() {
 							duration: .6,
 							delay: .1
 						},
-						className: "mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-blue/20 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm",
+						className: "mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-blue/20 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-gold backdrop-blur-sm md:mb-6 md:px-4 md:py-1.5",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-1.5 w-1.5 rounded-full bg-gold animate-pulse-gold" }), "Nigerian Creative Social Impact Hub"]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h1, {
@@ -216,7 +216,7 @@ function Hero() {
 							]
 						},
 						className: "text-display font-bold leading-[0.95] text-cream",
-						style: { fontSize: "clamp(2.75rem, 8vw, 7rem)" },
+						style: { fontSize: "clamp(2rem, 6vw, 5rem)" },
 						children: [
 							"Creativity as a",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
@@ -239,7 +239,7 @@ function Hero() {
 							duration: .8,
 							delay: .4
 						},
-						className: "mt-8 max-w-2xl text-base leading-relaxed text-cream/75 md:text-xl",
+						className: "mt-5 max-w-2xl text-sm leading-relaxed text-cream/75 md:mt-8 md:text-lg",
 						children: "Empowering vulnerable communities through creative expression, vocational training, and sustainable development since 2022."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
@@ -255,17 +255,17 @@ function Hero() {
 							duration: .7,
 							delay: .6
 						},
-						className: "mt-10 flex flex-wrap gap-4",
+						className: "mt-7 flex flex-wrap gap-3 md:mt-10 md:gap-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 							href: "#support",
-							className: "group inline-flex items-center gap-2 rounded-full bg-gradient-gold px-7 py-4 text-base font-semibold text-ink shadow-gold transition-transform hover:scale-[1.04] active:scale-95",
+							className: "group inline-flex items-center gap-2 rounded-full bg-gradient-gold px-5 py-3 text-sm font-semibold text-ink shadow-gold transition-transform hover:scale-[1.04] active:scale-95 md:px-7 md:py-4 md:text-base",
 							children: ["Support Our Mission", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "transition-transform group-hover:translate-x-1",
 								children: "→"
 							})]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: "#programs",
-							className: "inline-flex items-center gap-2 rounded-full border-2 border-gold px-7 py-4 text-base font-semibold text-gold transition-colors hover:bg-gold hover:text-ink",
+							className: "inline-flex items-center gap-2 rounded-full border-2 border-gold px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-ink md:px-7 md:py-4 md:text-base",
 							children: "See Our Work"
 						})]
 					}),
@@ -304,16 +304,16 @@ var goals = [
 ];
 function SDGStrip() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "border-y border-gold/20 bg-ink py-6",
+		className: "border-y border-gold/20 bg-ink py-4 md:py-5",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto flex max-w-7xl flex-col gap-4 px-6 md:flex-row md:items-center md:gap-8 md:px-10",
+			className: "mx-auto flex max-w-7xl flex-col gap-3 px-5 md:flex-row md:items-center md:gap-6 md:px-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "shrink-0 text-xs font-semibold uppercase tracking-[0.25em] text-gold",
+				className: "shrink-0 text-xs font-semibold uppercase tracking-[0.2em] text-gold md:tracking-[0.25em]",
 				children: "Aligned with UN SDGs"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "-mx-6 flex gap-3 overflow-x-auto px-6 pb-1 md:mx-0 md:px-0 md:pb-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+				className: "-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 md:mx-0 md:px-0 md:pb-0 md:gap-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
 				children: goals.map((g) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex shrink-0 items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-2 text-sm text-cream",
+					className: "flex shrink-0 items-center gap-1.5 rounded-full border border-gold/30 bg-gold/5 px-3 py-1.5 text-xs text-cream md:gap-2 md:px-4 md:py-2 md:text-sm",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 						className: "text-display text-xs font-bold text-gold",
 						children: ["GOAL ", g.n]
@@ -395,7 +395,7 @@ var pillars = [
 function About() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "about",
-		className: "relative overflow-hidden bg-cream py-24 md:py-32",
+		className: "relative overflow-hidden bg-cream py-12 md:py-20",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-7xl px-6 md:px-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
@@ -403,15 +403,15 @@ function About() {
 				initial: "hidden",
 				whileInView: "show",
 				viewport: viewportOnce,
-				className: "grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16",
+				className: "grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
 					variants: fadeUp,
-					className: "mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep",
+					className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep md:mb-6",
 					children: "Who We Are"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
 					variants: fadeUp,
 					className: "text-display font-bold leading-[1.02] text-ink",
-					style: { fontSize: "clamp(2rem, 5vw, 4rem)" },
+					style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
 					children: [
 						"A creative social impact hub creating",
 						" ",
@@ -432,28 +432,28 @@ function About() {
 							className: "h-full w-full object-cover",
 							loading: "lazy"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-tr from-ink/40 via-transparent to-transparent" })]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-6 -left-6 hidden h-24 w-24 rounded-full bg-gradient-gold shadow-gold animate-floaty md:block" })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-4 -left-4 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold animate-floaty md:-bottom-6 md:-left-6 md:h-24 md:w-24" })]
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
 				variants: staggerParent,
 				initial: "hidden",
 				whileInView: "show",
 				viewport: viewportOnce,
-				className: "mt-20 grid gap-6 md:grid-cols-3",
+				className: "mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-6",
 				children: pillars.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 					variants: fadeUp,
-					className: "group relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-8 transition-transform hover:-translate-y-1 hover:shadow-gold",
+					className: "group relative overflow-hidden rounded-2xl border border-ink/10 bg-white p-6 transition-transform hover:-translate-y-1 hover:shadow-gold md:p-8",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mb-4 h-1 w-10 bg-gradient-gold" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mb-3 h-1 w-10 bg-gradient-gold" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "text-display mb-3 text-2xl font-bold text-ink",
+							className: "text-display mb-2 text-xl font-bold text-ink md:text-2xl",
 							children: p.title
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-ink/70 leading-relaxed",
+							className: "text-sm text-ink/70 leading-relaxed",
 							children: p.body
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gold/5 transition-transform group-hover:scale-150" })
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -right-6 -top-6 h-20 w-20 rounded-full bg-gold/5 transition-transform group-hover:scale-150" })
 					]
 				}, p.title))
 			})]
@@ -495,7 +495,7 @@ var milestones = [
 function Journey() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		id: "journey",
-		className: "relative overflow-hidden bg-cream py-24 md:py-32",
+		className: "relative overflow-hidden bg-cream py-12 md:py-20",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute right-0 top-20 h-72 w-72 rounded-full bg-blue/10 blur-3xl" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute left-0 bottom-20 h-72 w-72 rounded-full bg-gold/15 blur-3xl" }),
@@ -509,12 +509,12 @@ function Journey() {
 					className: "max-w-3xl",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
 						variants: fadeUp,
-						className: "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-blue",
+						className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-blue md:mb-4",
 						children: "The Journey"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
 						variants: fadeUp,
 						className: "text-display font-bold leading-[1.02] text-ink",
-						style: { fontSize: "clamp(2rem, 5vw, 4rem)" },
+						style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
 						children: [
 							"From a single idea to a ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -525,32 +525,32 @@ function Journey() {
 						]
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "relative mt-20",
+					className: "relative mt-12 md:mt-16",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-blue via-gold to-transparent md:left-1/2" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.ol, {
 						variants: staggerParent,
 						initial: "hidden",
 						whileInView: "show",
 						viewport: viewportOnce,
-						className: "space-y-14 md:space-y-20",
+						className: "space-y-10 md:space-y-16",
 						children: milestones.map((m, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.li, {
 							variants: fadeUp,
-							className: `relative grid gap-6 pl-14 md:grid-cols-2 md:gap-16 md:pl-0 ${i % 2 === 0 ? "md:pr-[calc(50%+2rem)]" : "md:pl-[calc(50%+2rem)]"}`,
+							className: `relative grid gap-4 pl-14 md:grid gap-6 md:grid-cols-2 md:gap-12 md:pl-0 ${i % 2 === 0 ? "md:pr-[calc(50%+2rem)]" : "md:pl-[calc(50%+2rem)]"}`,
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "absolute left-2 top-2 z-10 grid h-6 w-6 -translate-x-1/2 place-items-center rounded-full bg-gradient-blue shadow-[0_0_0_4px_var(--cream)] md:left-1/2",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-2 w-2 rounded-full bg-gold" })
+								className: "absolute left-2 top-2 z-10 grid h-5 w-5 -translate-x-1/2 place-items-center rounded-full bg-gradient-blue shadow-[0_0_0_4px_var(--cream)] md:left-1/2 md:h-6 md:w-6",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-1.5 w-1.5 rounded-full bg-gold md:h-2 md:w-2" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: i % 2 === 0 ? "md:text-right" : "md:col-start-2",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-display text-4xl font-bold text-blue md:text-5xl",
+										className: "text-display text-3xl font-bold text-blue md:text-4xl",
 										children: m.year
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-										className: "text-display mt-2 text-xl font-bold text-ink md:text-2xl",
+										className: "text-display mt-1 text-lg font-bold text-ink md:text-xl",
 										children: m.title
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-3 text-ink/70 leading-relaxed",
+										className: "mt-2 text-sm text-ink/70 leading-relaxed md:mt-3",
 										children: m.body
 									})
 								]
@@ -651,14 +651,14 @@ function Stat({ value, suffix, label }) {
 			damping: 20
 		},
 		style: { transformStyle: "preserve-3d" },
-		className: "group relative rounded-3xl border border-gold/20 bg-gradient-to-br from-white/5 to-transparent p-8 backdrop-blur-sm md:p-10",
+		className: "group relative rounded-3xl border border-gold/20 bg-gradient-to-br from-white/5 to-transparent p-6 backdrop-blur-sm md:p-8",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "text-display text-6xl font-bold text-gold gold-glow md:text-7xl",
+				className: "text-display text-4xl font-bold text-gold gold-glow md:text-5xl",
 				children: [n.toLocaleString(), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: suffix })]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-4 text-sm uppercase tracking-wider text-cream/70 md:text-base",
+				className: "mt-3 text-xs uppercase tracking-wider text-cream/70 md:text-sm",
 				children: label
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 rounded-3xl border border-transparent transition-colors group-hover:border-gold/40" })
@@ -668,29 +668,29 @@ function Stat({ value, suffix, label }) {
 function ImpactNumbers() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		id: "impact",
-		className: "relative overflow-hidden bg-ink py-24 text-cream md:py-32",
+		className: "relative overflow-hidden bg-ink py-12 text-cream md:py-20",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-gold/10 blur-3xl" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -right-32 bottom-1/4 h-96 w-96 rounded-full bg-blue/25 blur-3xl" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "relative mx-auto max-w-7xl px-6 md:px-10",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mb-16 max-w-3xl",
+					className: "mb-10 max-w-3xl md:mb-14",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold",
+							className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold md:mb-4",
 							children: "Our Impact"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 							className: "text-display font-bold leading-[1.02]",
-							style: { fontSize: "clamp(2rem, 5vw, 4rem)" },
+							style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
 							children: ["Numbers that carry ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-gold",
 								children: "names, stories, and futures."
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-6 max-w-2xl text-cream/70 md:text-lg",
+							className: "mt-4 max-w-2xl text-sm text-cream/70 md:mt-6 md:text-base",
 							children: "Over ₦50,000 distributed in direct cash assistance to displaced persons and vulnerable families, alongside sustained empowerment programs from Abuja to Borno."
 						})
 					]
@@ -699,7 +699,7 @@ function ImpactNumbers() {
 					initial: "hidden",
 					whileInView: "show",
 					viewport: viewportOnce,
-					className: "grid gap-6 sm:grid-cols-2 lg:grid-cols-4",
+					className: "grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6",
 					style: { perspective: "1200px" },
 					children: stats.map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Stat, { ...s }, s.label))
 				})]
@@ -742,7 +742,7 @@ var subPrograms = [
 function Programs() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "programs",
-		className: "relative overflow-hidden bg-cream py-24 md:py-32",
+		className: "relative overflow-hidden bg-cream py-12 md:py-20",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-7xl px-6 md:px-10",
 			children: [
@@ -754,12 +754,12 @@ function Programs() {
 					className: "max-w-3xl",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
 						variants: fadeUp,
-						className: "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep",
+						className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep md:mb-4",
 						children: "What We Do"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
 						variants: fadeUp,
 						className: "text-display font-bold leading-[1.02] text-ink",
-						style: { fontSize: "clamp(2rem, 5vw, 4rem)" },
+						style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
 						children: [
 							"Programs that turn creativity into ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -775,10 +775,10 @@ function Programs() {
 					initial: "hidden",
 					whileInView: "show",
 					viewport: viewportOnce,
-					className: "mt-16 grid gap-10 overflow-hidden rounded-3xl bg-ink text-cream shadow-ink lg:grid-cols-2",
+					className: "mt-10 grid gap-8 overflow-hidden rounded-3xl bg-ink text-cream shadow-ink lg:grid-cols-2 md:mt-14",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 						variants: fadeUp,
-						className: "relative min-h-[320px] lg:min-h-full",
+						className: "relative min-h-[280px] lg:min-h-full",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 								src: kitchen_default,
@@ -788,24 +788,24 @@ function Programs() {
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-tr from-ink/70 via-transparent to-transparent" }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "absolute left-6 top-6 rounded-full bg-gold px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-ink",
+								className: "absolute left-5 top-5 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-widest text-ink md:left-6 md:top-6 md:px-4 md:py-1.5",
 								children: "Flagship"
 							})
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 						variants: fadeUp,
-						className: "flex flex-col justify-center p-8 md:p-12",
+						className: "flex flex-col justify-center p-6 md:p-10",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "text-display text-3xl font-bold text-gold md:text-5xl",
+								className: "text-display text-2xl font-bold text-gold md:text-4xl",
 								children: "Seed for Change"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-5 leading-relaxed text-cream/80",
+								className: "mt-4 leading-relaxed text-cream/80 md:text-lg",
 								children: "A women-focused empowerment and art therapy program, also a fashion brand built on training, empowerment, and job creation. Every piece produced carries a story of resilience, linking style with social change."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-wider text-cream/60",
+								className: "mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-wider text-cream/60 md:mt-6 md:gap-3",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "rounded-full border border-gold/30 px-3 py-1",
@@ -822,28 +822,28 @@ function Programs() {
 								]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-								className: "mt-8 space-y-3",
+								className: "mt-6 space-y-2 md:mt-8 md:space-y-3",
 								children: seedObjectives.map((o) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex gap-3 text-sm text-cream/85 md:text-base",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" }), o]
+									className: "flex gap-3 text-sm text-cream/85",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" }), o]
 								}, o))
 							})
 						]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-20",
+					className: "mt-12 md:mt-16",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mb-8 flex items-end justify-between gap-6",
+						className: "mb-6 flex items-end justify-between gap-6 md:mb-8",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "text-display text-3xl font-bold text-ink md:text-5xl",
+							className: "text-display text-2xl font-bold text-ink md:text-4xl",
 							children: "Community Outreach"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-3 max-w-2xl text-ink/70 md:text-lg",
+							className: "mt-2 max-w-2xl text-sm text-ink/70 md:mt-3 md:text-base",
 							children: "Direct intervention in underserved communities, IDP camps, and slum areas. Food support, cash assistance, and preserving cultural narratives."
 						})] })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "-mx-6 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:snap-none md:grid-cols-4 md:gap-6 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+						className: "-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 md:mx-0 md:grid md:snap-none md:grid-cols-4 md:gap-5 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
 						children: subPrograms.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.article, {
 							initial: {
 								opacity: 0,
@@ -869,12 +869,12 @@ function Programs() {
 									loading: "lazy"
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "absolute inset-x-0 bottom-0 p-6",
+								className: "absolute inset-x-0 bottom-0 p-5 md:p-6",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
-									className: "text-display text-xl font-bold text-gold",
+									className: "text-display text-lg font-bold text-gold",
 									children: p.name
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-2 text-sm text-cream/80",
+									className: "mt-1.5 text-sm text-cream/80",
 									children: p.blurb
 								})]
 							})]
@@ -908,7 +908,7 @@ var stories = [
 function ImpactStories() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "stories",
-		className: "relative overflow-hidden bg-cream py-24 md:py-32",
+		className: "relative overflow-hidden bg-cream py-12 md:py-20",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-7xl px-6 md:px-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
@@ -919,12 +919,12 @@ function ImpactStories() {
 				className: "max-w-3xl",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
 					variants: fadeUp,
-					className: "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep",
+					className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep md:mb-4",
 					children: "Impact Stories"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
 					variants: fadeUp,
 					className: "text-display font-bold leading-[1.02] text-ink",
-					style: { fontSize: "clamp(2rem, 5vw, 4rem)" },
+					style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
 					children: [
 						"Every number is a ",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -935,7 +935,7 @@ function ImpactStories() {
 					]
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-20 flex flex-col gap-24",
+				className: "mt-12 flex flex-col gap-16 md:mt-16 md:gap-20",
 				children: stories.map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.article, {
 					initial: {
 						opacity: 0,
@@ -955,7 +955,7 @@ function ImpactStories() {
 							1
 						]
 					},
-					className: `grid items-center gap-10 md:grid-cols-2 md:gap-16 ${i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`,
+					className: `grid items-center gap-8 md:grid-cols-2 md:gap-12 ${i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`,
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -966,19 +966,19 @@ function ImpactStories() {
 								className: "aspect-[4/5] w-full object-cover",
 								loading: "lazy"
 							})
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-4 -right-4 hidden h-20 w-20 rounded-full bg-gradient-gold shadow-gold md:block" })]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-3 -right-3 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold md:-bottom-4 md:-right-4 md:h-20 md:w-20" })]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep",
 							children: s.date
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "text-display mt-4 font-bold leading-tight text-ink",
-							style: { fontSize: "clamp(1.75rem, 3.5vw, 3rem)" },
+							className: "text-display mt-3 font-bold leading-tight text-ink md:mt-4",
+							style: { fontSize: "clamp(1.5rem, 3vw, 2.5rem)" },
 							children: s.name
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-6 text-lg leading-relaxed text-ink/75",
+							className: "mt-4 text-base leading-relaxed text-ink/75 md:mt-6",
 							children: s.body
 						})
 					] })]
@@ -997,7 +997,7 @@ var testimonials = [{
 function Testimonials() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		id: "testimonials",
-		className: "relative overflow-hidden bg-ink py-24 text-cream md:py-32",
+		className: "relative overflow-hidden bg-ink py-12 text-cream md:py-20",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-gold/10 blur-3xl" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute -right-24 bottom-10 h-80 w-80 rounded-full bg-gold/10 blur-3xl" }),
@@ -1008,15 +1008,15 @@ function Testimonials() {
 					initial: "hidden",
 					whileInView: "show",
 					viewport: viewportOnce,
-					className: "mb-16 max-w-3xl",
+					className: "mb-10 max-w-3xl md:mb-14",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
 						variants: fadeUp,
-						className: "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold",
+						className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold md:mb-4",
 						children: "Resident Testimonials"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
 						variants: fadeUp,
 						className: "text-display font-bold leading-[1.02]",
-						style: { fontSize: "clamp(2rem, 5vw, 4rem)" },
+						style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
 						children: [
 							"In their ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1045,7 +1045,7 @@ function Testimonials() {
 							1
 						]
 					},
-					className: "grid items-center gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16",
+					className: "grid items-center gap-8 md:grid-cols-[1fr_1.2fr] md:gap-12",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative",
 						children: [
@@ -1059,27 +1059,27 @@ function Testimonials() {
 									loading: "lazy"
 								})
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-5 -right-5 hidden h-24 w-24 rounded-full bg-gradient-gold shadow-gold md:block" })
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -bottom-4 -right-4 hidden h-20 w-20 rounded-full bg-gradient-gold shadow-gold md:-bottom-5 md:-right-5 md:h-24 md:w-24" })
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								"aria-hidden": true,
-								className: "text-display absolute -left-2 -top-16 select-none text-[10rem] leading-none text-gold/20 md:-top-20 md:text-[14rem]",
+								className: "text-display absolute -left-2 -top-12 select-none text-[8rem] leading-none text-gold/20 md:-top-16 md:text-[12rem]",
 								children: "“"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "relative text-xl leading-relaxed text-cream/90 md:text-2xl",
+								className: "relative text-base leading-relaxed text-cream/90 md:text-lg",
 								children: t.quote
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-10 flex items-center gap-4",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-px w-12 bg-gold" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-display text-2xl font-bold text-gold",
+								className: "mt-7 flex items-center gap-4 md:mt-10",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-px w-10 bg-gold" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-display text-xl font-bold text-gold md:text-2xl",
 									children: t.name
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-									className: "mt-1 text-sm uppercase tracking-widest text-cream/60",
+									className: "mt-1 text-xs uppercase tracking-widest text-cream/60 md:text-sm",
 									children: [
 										t.role,
 										" · Seed for Change ",
@@ -1118,17 +1118,17 @@ var values = [
 ];
 function CoreValues() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: "relative overflow-hidden bg-ink py-24 text-cream md:py-32",
+		className: "relative overflow-hidden bg-ink py-12 text-cream md:py-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pointer-events-none absolute right-1/4 top-1/3 h-64 w-64 rounded-full bg-gold/10 blur-3xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-7xl px-6 md:px-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-16 max-w-3xl",
+				className: "mb-10 max-w-3xl md:mb-14",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold",
+					className: "mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold md:mb-4",
 					children: "Core Values"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 					className: "text-display font-bold leading-[1.02]",
-					style: { fontSize: "clamp(2rem, 5vw, 4rem)" },
+					style: { fontSize: "clamp(1.5rem, 4vw, 3rem)" },
 					children: [
 						"The principles that ",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1143,7 +1143,7 @@ function CoreValues() {
 				initial: "hidden",
 				whileInView: "show",
 				viewport: viewportOnce,
-				className: "grid gap-6 md:grid-cols-2",
+				className: "grid gap-4 md:grid-cols-2 md:gap-6",
 				style: { perspective: "1200px" },
 				children: values.map((v) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 					variants: tiltIn,
@@ -1152,15 +1152,15 @@ function CoreValues() {
 						rotateX: -2
 					},
 					style: { transformStyle: "preserve-3d" },
-					className: "group flex gap-6 rounded-3xl border border-cream/10 bg-gradient-to-br from-white/[0.03] to-transparent p-8 transition-colors hover:border-gold/40 md:gap-8 md:p-10",
+					className: "group flex gap-5 rounded-3xl border border-cream/10 bg-gradient-to-br from-white/[0.03] to-transparent p-6 transition-colors hover:border-gold/40 md:gap-6 md:p-8",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "text-display shrink-0 text-5xl font-bold text-gold gold-glow md:text-7xl",
+						className: "text-display shrink-0 text-4xl font-bold text-gold gold-glow md:text-5xl",
 						children: v.n
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-						className: "text-display text-2xl font-bold text-cream md:text-3xl",
+						className: "text-display text-xl font-bold text-cream md:text-2xl",
 						children: v.title
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-3 text-cream/70 leading-relaxed",
+						className: "mt-2 text-sm text-cream/70 leading-relaxed md:mt-3",
 						children: v.body
 					})] })]
 				}, v.n))
@@ -1176,14 +1176,14 @@ var partners = [
 ];
 function Partners() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		className: "border-y border-ink/10 bg-cream py-16 md:py-20",
+		className: "border-y border-ink/10 bg-cream py-10 md:py-16",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-7xl px-6 md:px-10",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mb-8 text-center text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep",
+				className: "mb-6 text-center text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep md:mb-8",
 				children: "Partners & Supporters"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "grid gap-6 md:grid-cols-2 lg:grid-cols-4",
+				className: "grid gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-6",
 				children: partners.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
 					initial: {
 						opacity: 0,
@@ -1198,7 +1198,7 @@ function Partners() {
 						duration: .5,
 						delay: i * .08
 					},
-					className: "flex items-center justify-center rounded-2xl border border-ink/10 bg-white p-6 text-center text-sm font-medium text-ink/80 transition-colors hover:border-gold/50 hover:text-ink",
+					className: "flex items-center justify-center rounded-xl border border-ink/10 bg-white p-5 text-center text-sm font-medium text-ink/80 transition-colors hover:border-gold/50 hover:text-ink md:p-6",
 					children: p
 				}, p))
 			})]
@@ -1207,18 +1207,18 @@ function Partners() {
 }
 function LookingAhead() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: "relative overflow-hidden bg-ink py-24 text-cream md:py-32",
+		className: "relative overflow-hidden bg-ink py-12 text-cream md:py-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "pointer-events-none absolute inset-0",
 			style: { perspective: "1000px" },
 			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-[10%] top-[15%] h-20 w-20 rounded-full bg-gradient-gold opacity-70 blur-md animate-floaty" }),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-[15%] top-[25%] h-32 w-32 rounded-full border-2 border-gold/40 animate-drift" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-[10%] top-[15%] h-16 w-16 rounded-full bg-gradient-gold opacity-70 blur-md animate-floaty md:h-20 md:w-20" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-[15%] top-[25%] h-24 w-24 rounded-full border-2 border-gold/40 animate-drift md:h-32 md:w-32" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "absolute left-[20%] bottom-[15%] h-16 w-16 rotate-45 bg-gold/70 animate-floaty",
+					className: "absolute left-[20%] bottom-[15%] h-12 w-12 rotate-45 bg-gold/70 animate-floaty md:h-16 md:w-16",
 					style: { animationDelay: "2s" }
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-[10%] bottom-[10%] h-28 w-28 rounded-full bg-gold/20 blur-xl animate-pulse-gold" })
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-[10%] bottom-[10%] h-20 w-20 rounded-full bg-gold/20 blur-xl animate-pulse-gold md:h-28 md:w-28" })
 			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative mx-auto max-w-4xl px-6 text-center md:px-10",
@@ -1234,7 +1234,7 @@ function LookingAhead() {
 					},
 					viewport: viewportOnce,
 					transition: { duration: .5 },
-					className: "mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-gold",
+					className: "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold md:mb-6",
 					children: "Looking Ahead"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h2, {
@@ -1257,7 +1257,7 @@ function LookingAhead() {
 						]
 					},
 					className: "text-display font-bold leading-[1.02]",
-					style: { fontSize: "clamp(2rem, 6vw, 5rem)" },
+					style: { fontSize: "clamp(1.5rem, 5vw, 4rem)" },
 					children: [
 						"Committed to expanding ",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1275,7 +1275,7 @@ function LookingAhead() {
 						duration: .8,
 						delay: .2
 					},
-					className: "mt-8 text-lg leading-relaxed text-cream/70 md:text-xl",
+					className: "mt-5 text-base leading-relaxed text-cream/70 md:mt-8 md:text-lg",
 					children: "We aim to become a leading creative social impact hub on the continent. One community, one story, one skill at a time."
 				})
 			]
@@ -1292,10 +1292,10 @@ var options = [
 function Support() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		id: "support",
-		className: "relative overflow-hidden bg-gradient-gold py-24 md:py-32",
+		className: "relative overflow-hidden bg-gradient-gold py-12 md:py-20",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "pointer-events-none absolute inset-0",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-20 top-10 h-64 w-64 rounded-full border-2 border-ink/10 animate-drift" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-10 bottom-10 h-48 w-48 rounded-full bg-ink/5 blur-2xl animate-floaty" })]
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute -left-10 top-5 h-48 w-48 rounded-full border-2 border-ink/10 animate-drift md:-left-20 md:top-10 md:h-64 md:w-64" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute right-5 bottom-5 h-36 w-36 rounded-full bg-ink/5 blur-2xl animate-floaty md:right-10 md:bottom-10 md:h-48 md:w-48" })]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "relative mx-auto max-w-5xl px-6 text-center md:px-10",
 			children: [
@@ -1311,7 +1311,7 @@ function Support() {
 					viewport: viewportOnce,
 					transition: { duration: .8 },
 					className: "text-display font-bold leading-[0.95] text-ink",
-					style: { fontSize: "clamp(2.5rem, 8vw, 6rem)" },
+					style: { fontSize: "clamp(2rem, 6vw, 5rem)" },
 					children: [
 						"Be Part of the ",
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1329,7 +1329,7 @@ function Support() {
 						duration: .7,
 						delay: .2
 					},
-					className: "mx-auto mt-6 max-w-2xl text-ink/80 md:text-lg",
+					className: "mx-auto mt-4 max-w-2xl text-ink/80 md:mt-6 md:text-lg",
 					children: "There's a role for everyone. Choose how you'd like to move creativity forward with us."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
@@ -1337,7 +1337,7 @@ function Support() {
 					initial: "hidden",
 					whileInView: "show",
 					viewport: viewportOnce,
-					className: "mt-10 flex flex-wrap justify-center gap-3",
+					className: "mt-8 flex flex-wrap justify-center gap-2 md:mt-10 md:gap-3",
 					children: options.map((o) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.span, {
 						variants: fadeUp,
 						whileHover: {
@@ -1345,7 +1345,7 @@ function Support() {
 							y: -3
 						},
 						whileTap: { scale: .97 },
-						className: "cursor-pointer rounded-full border-2 border-ink/80 bg-ink/5 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-gold",
+						className: "cursor-pointer rounded-full border-2 border-ink/80 bg-ink/5 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-gold md:px-5 md:py-2.5",
 						children: o
 					}, o))
 				}),
@@ -1366,7 +1366,7 @@ function Support() {
 					},
 					whileHover: { scale: 1.04 },
 					whileTap: { scale: .96 },
-					className: "mt-12 inline-flex items-center gap-3 rounded-full bg-ink px-9 py-5 text-lg font-semibold text-gold shadow-ink transition-transform",
+					className: "mt-8 inline-flex items-center gap-2 rounded-full bg-ink px-7 py-4 text-base font-semibold text-gold shadow-ink transition-transform md:mt-12 md:gap-3 md:px-9 md:py-5 md:text-lg",
 					children: ["Get In Touch", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						"aria-hidden": true,
 						children: "→"
