@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero.mp4";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -13,11 +13,13 @@ export default function Hero() {
     <section id="top" ref={ref} className="relative min-h-[100svh] overflow-hidden bg-ink text-cream">
       {/* Photo backdrop */}
       <motion.div style={{ y: y2, opacity }} className="absolute inset-0">
-        <img
+        <video
           src={hero}
-          alt="Revamp Initiatives community"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="h-full w-full object-cover opacity-40 animate-hero-kb"
-          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink" />
       </motion.div>

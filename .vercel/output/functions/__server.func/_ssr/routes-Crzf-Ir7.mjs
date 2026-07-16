@@ -6,7 +6,7 @@ import { t as useInView } from "../_libs/react-intersection-observer.mjs";
 import { a as Linkedin, c as Facebook, i as Mail, l as CircleCheckBig, n as Send, o as Instagram, r as Phone, s as Globe, t as Twitter } from "../_libs/lucide-react.mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BEtMM6Ki.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-Crzf-Ir7.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var logo_default = "/assets/logo-IPdv1eDQ.png";
@@ -125,7 +125,7 @@ function Navbar() {
 		})]
 	}) })] });
 }
-var hero_default = "/assets/hero-B6pvWbQc.jpg";
+var hero_default = "/assets/hero-DvMjDv7L.mp4";
 function Hero() {
 	const ref = (0, import_react.useRef)(null);
 	const { scrollYProgress } = useScroll({
@@ -146,11 +146,13 @@ function Hero() {
 					opacity
 				},
 				className: "absolute inset-0",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("video", {
 					src: hero_default,
-					alt: "Revamp Initiatives community",
-					className: "h-full w-full object-cover opacity-40 animate-hero-kb",
-					loading: "eager"
+					autoPlay: true,
+					loop: true,
+					muted: true,
+					playsInline: true,
+					className: "h-full w-full object-cover opacity-40 animate-hero-kb"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink" })]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
