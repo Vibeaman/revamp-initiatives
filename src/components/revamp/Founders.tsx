@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import naallahImg from "@/assets/naallah.webp";
+import itohoImg from "@/assets/itoho-obong.webp";
 
 const founders = [
   {
@@ -25,9 +26,9 @@ const founders = [
   {
     role: "BOARD MEMBER",
     name: "Doctor Itoho Obong",
-    bio: "President, Association of Resident Doctors, ARD-FCTA. A medical professional dedicated to healthcare advocacy and community welfare.",
-    image: "https://i.imgur.com/MLrib3r.jpg",
-    imageAspect: "aspect-[977/855]",
+    bio: "Dr. Itoho Obong is a prominent Nigerian medical practitioner, union leader, and community health advocate. He currently serves as President of the Association of Resident Doctors, Federal Capital Territory Administration (ARD-FCTA) in Abuja, championing better working conditions and addressing healthcare workforce shortages. He is also a Board Member of Revamp Initiatives, using this platform to drive healthcare advocacy and community welfare initiatives across Nigeria.",
+    image: itohoImg,
+    imageAspect: "aspect-[4/5]",
   },
 ];
 
