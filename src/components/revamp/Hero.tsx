@@ -1,24 +1,85 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import hero from "@/assets/hero.mp4";
+import heroPoster from "@/assets/hero.jpg";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -120]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 80]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Some browsers silently block autoplay unless muted is set as a
+    // JS property (not just the JSX attribute) before play() is called.
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const tryPlay = () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay was blocked (e.g. low battery mode, aggressive
+          // browser policy). Retry once metadata/data is ready.
+          const retry = () => {
+            video.play().catch(() => {
+              /* give up silently, poster image remains visible */
+            });
+          };
+          video.addEventListener("canplay", retry, { once: true });
+        });
+      }
+    };
+
+    tryPlay();
+
+    // Resume playback if it stalls or gets paused when the tab regains
+    // focus / becomes visible again (common cause of the video "freezing").
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible" && video.paused) {
+        tryPlay();
+      }
+    };
+    const handlePause = () => {
+      if (document.visibilityState === "visible") {
+        tryPlay();
+      }
+    };
+    const handleStalled = () => {
+      tryPlay();
+    };
+
+    document.addEventListener("visibilitychange", handleVisibility);
+    video.addEventListener("pause", handlePause);
+    video.addEventListener("stalled", handleStalled);
+    video.addEventListener("suspend", handleStalled);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibility);
+      video.removeEventListener("pause", handlePause);
+      video.removeEventListener("stalled", handleStalled);
+      video.removeEventListener("suspend", handleStalled);
+    };
+  }, []);
 
   return (
     <section id="top" ref={ref} className="relative min-h-[100svh] overflow-hidden bg-ink text-cream">
       {/* Photo backdrop */}
       <motion.div style={{ y: y2, opacity }} className="absolute inset-0">
         <video
+          ref={videoRef}
           src={hero}
+          poster={heroPoster}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           className="h-full w-full object-cover opacity-40 animate-hero-kb"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink" />
