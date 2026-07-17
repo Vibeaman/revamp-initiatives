@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
+import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 
 const seedObjectives = [
   "Train women in tailoring & entrepreneurship",
@@ -11,7 +12,7 @@ const seedObjectives = [
 ];
 
 const subPrograms = [
-  { name: "Walk for Impact", img: "https://i.imgur.com/u4AB0p1.jpg", blurb: "Preserving stories of Nigeria's elders." },
+  { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders." },
   { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities." },
   { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance." },
   { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training." },
@@ -81,7 +82,7 @@ export default function Programs() {
           </div>
 
           <div className="relative overflow-hidden">
-            <div className="flex gap-5 animate-marquee-slow whitespace-nowrap" style={{ animation: 'marquee 25s linear infinite' }}>
+            <div className="flex gap-5 whitespace-nowrap marquee-cards">
               {[...subPrograms, ...subPrograms].map((p, i) => (
                 <article
                   key={`${p.name}-${i}`}
