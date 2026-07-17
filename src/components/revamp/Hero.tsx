@@ -41,8 +41,8 @@ export default function Hero() {
           className="text-display font-bold leading-[0.95] text-cream"
           style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
         >
-          Encourage Creativity<br />
-          <span className="text-gold">for Social Impact</span>
+          ENCOURAGING CREATIVITY<br />
+          <span className="text-gold">FOR SOCIAL IMPACT</span>
         </motion.h1>
 
         <motion.p
@@ -59,9 +59,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xs font-medium uppercase tracking-[0.25em] text-gold/80 md:text-sm"
+          className="text-xs font-medium tracking-[0.25em] text-gold/80 md:text-sm"
         >
-          Encouraging Creativity for Social Impact
+          Encourage Creativity For Social Impact
         </motion.span>
 
         <motion.p
