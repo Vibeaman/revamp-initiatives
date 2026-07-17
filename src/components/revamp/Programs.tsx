@@ -71,9 +71,9 @@ function CommunityOutreach() {
         style={{ WebkitOverflowScrolling: "touch" }}
       >
         <div className={`flex gap-5 whitespace-nowrap ${paused ? "" : "marquee-cards"}`}>
-          {[...subPrograms, ...subPrograms].map((p, i) => (
+          {subPrograms.map((p) => (
             <article
-              key={`${p.name}-${i}`}
+              key={p.name}
               className="group relative w-[78%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-64 select-none"
             >
               <div className="relative aspect-[3/4] overflow-hidden">

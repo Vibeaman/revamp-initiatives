@@ -9,38 +9,154 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ProgramsRouteImport } from './routes/programs'
+import { Route as GetInvolvedRouteImport } from './routes/get-involved'
+import { Route as FoundersRouteImport } from './routes/founders'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ImpactIndexRouteImport } from './routes/impact/index'
+import { Route as ImpactStoriesRouteImport } from './routes/impact/stories'
+import { Route as ImpactMilestonesRouteImport } from './routes/impact/milestones'
+import { Route as ImpactJourneyRouteImport } from './routes/impact/journey'
 
+const ProgramsRoute = ProgramsRouteImport.update({
+  id: '/programs',
+  path: '/programs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GetInvolvedRoute = GetInvolvedRouteImport.update({
+  id: '/get-involved',
+  path: '/get-involved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FoundersRoute = FoundersRouteImport.update({
+  id: '/founders',
+  path: '/founders',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImpactIndexRoute = ImpactIndexRouteImport.update({
+  id: '/impact/',
+  path: '/impact/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactStoriesRoute = ImpactStoriesRouteImport.update({
+  id: '/impact/stories',
+  path: '/impact/stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactMilestonesRoute = ImpactMilestonesRouteImport.update({
+  id: '/impact/milestones',
+  path: '/impact/milestones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactJourneyRoute = ImpactJourneyRouteImport.update({
+  id: '/impact/journey',
+  path: '/impact/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/founders': typeof FoundersRoute
+  '/get-involved': typeof GetInvolvedRoute
+  '/programs': typeof ProgramsRoute
+  '/impact/journey': typeof ImpactJourneyRoute
+  '/impact/milestones': typeof ImpactMilestonesRoute
+  '/impact/stories': typeof ImpactStoriesRoute
+  '/impact/': typeof ImpactIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/founders': typeof FoundersRoute
+  '/get-involved': typeof GetInvolvedRoute
+  '/programs': typeof ProgramsRoute
+  '/impact/journey': typeof ImpactJourneyRoute
+  '/impact/milestones': typeof ImpactMilestonesRoute
+  '/impact/stories': typeof ImpactStoriesRoute
+  '/impact': typeof ImpactIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/founders': typeof FoundersRoute
+  '/get-involved': typeof GetInvolvedRoute
+  '/programs': typeof ProgramsRoute
+  '/impact/journey': typeof ImpactJourneyRoute
+  '/impact/milestones': typeof ImpactMilestonesRoute
+  '/impact/stories': typeof ImpactStoriesRoute
+  '/impact/': typeof ImpactIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/founders'
+    | '/get-involved'
+    | '/programs'
+    | '/impact/journey'
+    | '/impact/milestones'
+    | '/impact/stories'
+    | '/impact/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/founders'
+    | '/get-involved'
+    | '/programs'
+    | '/impact/journey'
+    | '/impact/milestones'
+    | '/impact/stories'
+    | '/impact'
+  id:
+    | '__root__'
+    | '/'
+    | '/founders'
+    | '/get-involved'
+    | '/programs'
+    | '/impact/journey'
+    | '/impact/milestones'
+    | '/impact/stories'
+    | '/impact/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FoundersRoute: typeof FoundersRoute
+  GetInvolvedRoute: typeof GetInvolvedRoute
+  ProgramsRoute: typeof ProgramsRoute
+  ImpactJourneyRoute: typeof ImpactJourneyRoute
+  ImpactMilestonesRoute: typeof ImpactMilestonesRoute
+  ImpactStoriesRoute: typeof ImpactStoriesRoute
+  ImpactIndexRoute: typeof ImpactIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/programs': {
+      id: '/programs'
+      path: '/programs'
+      fullPath: '/programs'
+      preLoaderRoute: typeof ProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/get-involved': {
+      id: '/get-involved'
+      path: '/get-involved'
+      fullPath: '/get-involved'
+      preLoaderRoute: typeof GetInvolvedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/founders': {
+      id: '/founders'
+      path: '/founders'
+      fullPath: '/founders'
+      preLoaderRoute: typeof FoundersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +164,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/impact/': {
+      id: '/impact/'
+      path: '/impact'
+      fullPath: '/impact/'
+      preLoaderRoute: typeof ImpactIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact/stories': {
+      id: '/impact/stories'
+      path: '/impact/stories'
+      fullPath: '/impact/stories'
+      preLoaderRoute: typeof ImpactStoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact/milestones': {
+      id: '/impact/milestones'
+      path: '/impact/milestones'
+      fullPath: '/impact/milestones'
+      preLoaderRoute: typeof ImpactMilestonesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact/journey': {
+      id: '/impact/journey'
+      path: '/impact/journey'
+      fullPath: '/impact/journey'
+      preLoaderRoute: typeof ImpactJourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FoundersRoute: FoundersRoute,
+  GetInvolvedRoute: GetInvolvedRoute,
+  ProgramsRoute: ProgramsRoute,
+  ImpactJourneyRoute: ImpactJourneyRoute,
+  ImpactMilestonesRoute: ImpactMilestonesRoute,
+  ImpactStoriesRoute: ImpactStoriesRoute,
+  ImpactIndexRoute: ImpactIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

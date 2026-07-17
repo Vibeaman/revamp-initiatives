@@ -2,17 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import Navbar from "@/components/revamp/Navbar";
 import Hero from "@/components/revamp/Hero";
 import SDGStrip from "@/components/revamp/SDGStrip";
-import About from "@/components/revamp/About";
-import Journey from "@/components/revamp/Journey";
-import Programs from "@/components/revamp/Programs";
-import ImpactMilestones from "@/components/revamp/ImpactMilestones";
-import CommunityVoices from "@/components/revamp/CommunityVoices";
-import Founders from "@/components/revamp/Founders";
-import CoreValues from "@/components/revamp/CoreValues";
-import Partners from "@/components/revamp/Partners";
-import LookingAhead from "@/components/revamp/LookingAhead";
-import Support from "@/components/revamp/Support";
-import ContactForm from "@/components/revamp/ContactForm";
+import HomeWhoWeAre from "@/components/revamp/HomeWhoWeAre";
+import HomeProgramsTeaser from "@/components/revamp/HomeProgramsTeaser";
+import HomeImpactStats from "@/components/revamp/HomeImpactStats";
+import HomeTestimonials from "@/components/revamp/HomeTestimonials";
 import Footer from "@/components/revamp/Footer";
 
 export const Route = createFileRoute("/")({
@@ -43,17 +36,10 @@ function Index() {
       <Navbar />
       <Hero />
       <SDGStrip />
-      <About />
-      <Journey />
-      <Programs />
-      <ImpactMilestones />
-      <CommunityVoices />
-      <Founders />
-      <CoreValues />
-      <Partners />
-      <LookingAhead />
-      <Support />
-      <ContactForm />
+      <HomeWhoWeAre />
+      <HomeProgramsTeaser />
+      <HomeImpactStats />
+      <HomeTestimonials />
       <Footer />
     </main>
   );
