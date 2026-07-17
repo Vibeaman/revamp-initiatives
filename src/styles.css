@@ -138,14 +138,9 @@
 @utility animate-marquee { animation: marquee 40s linear infinite; }
 @utility animate-hero-kb { animation: hero-kb 20s ease-in-out infinite; }
 
-/* Community Outreach cards marquee — faster on mobile */
+/* Community Outreach cards marquee */
 .marquee-cards {
   animation: marquee 12s linear infinite;
-}
-@media (min-width: 768px) {
-  .marquee-cards {
-    animation: marquee 25s linear infinite;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
