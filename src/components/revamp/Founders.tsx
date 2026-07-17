@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
+import naallahImg from "@/assets/naallah.webp";
 
 const founders = [
   {
@@ -17,9 +18,9 @@ const founders = [
   {
     role: "BOARD MEMBER",
     name: "Professor Abdul-Rasheed Na'Allah",
-    bio: "Former Vice Chancellor, Kaduna State University and University of Abuja. A distinguished academic and administrator with extensive contributions to education and research in Nigeria.",
-    image: "https://i.imgur.com/WSFHnq9.jpg",
-    imageAspect: "aspect-[978/843]",
+    bio: "Prof. Abdul-Rasheed Na'Allah is a Nigerian scholar and academic administrator. He served as pioneer Vice-Chancellor of Kwara State University (2009–2019) and Vice-Chancellor of the University of Abuja (2019–2024). He holds a PhD in Comparative Literature (University of Alberta) and degrees from the University of Ilorin. A poet, playwright, and scholar, he authored Africa Discourse, Africanity, Yoruba Oral Traditions, Omokewu, and Ilorin Fa.",
+    image: naallahImg,
+    imageAspect: "aspect-[4/5]",
   },
   {
     role: "BOARD MEMBER",
