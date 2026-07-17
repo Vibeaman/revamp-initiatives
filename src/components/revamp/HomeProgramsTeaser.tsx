@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight } from "lucide-react";
+import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 
 const outreachCards = [
-  { name: "Walk for Impact", img: "https://i.imgur.com/walk-for-impact.jpg", blurb: "Preserving stories of Nigeria's elders." },
+  { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders." },
   { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities." },
   { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance." },
   { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training." },

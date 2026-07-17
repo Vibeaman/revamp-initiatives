@@ -6,6 +6,7 @@ import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight } from "lucide-react";
 import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
+import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 import { useRef, useState, useCallback } from "react";
 
 export const Route = createFileRoute("/programs")({
@@ -34,7 +35,7 @@ const seedObjectives = [
 const subPrograms = [
   { 
     name: "Walk for Impact", 
-    img: "https://i.imgur.com/walk-for-impact.jpg", 
+    img: walkForImpactImg, 
     blurb: "Preserving stories of Nigeria's elders.",
     fullDesc: "Intergenerational storytelling event honoring elders aged 60+ with interviews and cash support. We document their lived experiences while celebrating their contributions to society."
   },
