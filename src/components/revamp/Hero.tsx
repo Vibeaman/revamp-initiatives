@@ -69,8 +69,8 @@ export default function Hero() {
 
   return (
     <section id="top" ref={ref} className="relative min-h-[100svh] overflow-hidden bg-ink text-cream">
-      {/* Photo backdrop */}
-      <motion.div style={{ y: y2, opacity }} className="absolute inset-0">
+      {/* Photo backdrop — extra inset buffer so parallax never exposes a gap */}
+      <motion.div style={{ y: y2, opacity }} className="absolute -inset-x-0 -top-24 -bottom-24">
         <video
           ref={videoRef}
           src={hero}
@@ -80,7 +80,7 @@ export default function Hero() {
           muted
           playsInline
           preload="auto"
-          className="h-full w-full object-cover opacity-40 animate-hero-kb"
+          className="absolute inset-0 min-h-full min-w-full object-cover opacity-40 animate-hero-kb"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink" />
       </motion.div>
