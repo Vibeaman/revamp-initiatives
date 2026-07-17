@@ -4,13 +4,10 @@ import Hero from "@/components/revamp/Hero";
 import SDGStrip from "@/components/revamp/SDGStrip";
 import About from "@/components/revamp/About";
 import Journey from "@/components/revamp/Journey";
-import ImpactNumbers from "@/components/revamp/ImpactNumbers";
-import Achievements from "@/components/revamp/Achievements";
-import Founders from "@/components/revamp/Founders";
-
 import Programs from "@/components/revamp/Programs";
-import ImpactStories from "@/components/revamp/ImpactStories";
-import Testimonials from "@/components/revamp/Testimonials";
+import ImpactMilestones from "@/components/revamp/ImpactMilestones";
+import CommunityVoices from "@/components/revamp/CommunityVoices";
+import Founders from "@/components/revamp/Founders";
 import CoreValues from "@/components/revamp/CoreValues";
 import Partners from "@/components/revamp/Partners";
 import LookingAhead from "@/components/revamp/LookingAhead";
@@ -49,11 +46,8 @@ function Index() {
       <About />
       <Journey />
       <Programs />
-      <ImpactNumbers />
-      <Achievements />
-
-      <ImpactStories />
-      <Testimonials />
+      <ImpactMilestones />
+      <CommunityVoices />
       <Founders />
       <CoreValues />
       <Partners />
