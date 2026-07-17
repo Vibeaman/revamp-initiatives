@@ -1,11 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import hero from "@/assets/hero.mp4";
 import heroPoster from "@/assets/hero.jpg";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -120]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 80]);
@@ -15,62 +16,56 @@ export default function Hero() {
     const video = videoRef.current;
     if (!video) return;
 
-    // Some browsers silently block autoplay unless muted is set as a
-    // JS property (not just the JSX attribute) before play() is called.
+    // Set muted as JS property before play() for maximum autoplay compatibility
     video.muted = true;
-    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
 
     const tryPlay = () => {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Autoplay was blocked (e.g. low battery mode, aggressive
-          // browser policy). Retry once metadata/data is ready.
-          const retry = () => {
-            video.play().catch(() => {
-              /* give up silently, poster image remains visible */
+      if (video.paused) {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => setVideoLoaded(true))
+            .catch(() => {
+              // Autoplay blocked - retry on interaction
+              const handleInteraction = () => {
+                video.play().then(() => setVideoLoaded(true)).catch(() => {});
+                document.removeEventListener("touchstart", handleInteraction);
+                document.removeEventListener("click", handleInteraction);
+              };
+              document.addEventListener("touchstart", handleInteraction, { once: true });
+              document.addEventListener("click", handleInteraction, { once: true });
             });
-          };
-          video.addEventListener("canplay", retry, { once: true });
-        });
+        }
+      } else {
+        setVideoLoaded(true);
       }
     };
 
-    tryPlay();
+    // Small delay to ensure video element is ready
+    const timer = setTimeout(tryPlay, 100);
 
-    // Resume playback if it stalls or gets paused when the tab regains
-    // focus / becomes visible again (common cause of the video "freezing").
+    // Resume on visibility change
     const handleVisibility = () => {
       if (document.visibilityState === "visible" && video.paused) {
         tryPlay();
       }
     };
-    const handlePause = () => {
-      if (document.visibilityState === "visible") {
-        tryPlay();
-      }
-    };
-    const handleStalled = () => {
-      tryPlay();
-    };
 
     document.addEventListener("visibilitychange", handleVisibility);
-    video.addEventListener("pause", handlePause);
-    video.addEventListener("stalled", handleStalled);
-    video.addEventListener("suspend", handleStalled);
 
     return () => {
+      clearTimeout(timer);
       document.removeEventListener("visibilitychange", handleVisibility);
-      video.removeEventListener("pause", handlePause);
-      video.removeEventListener("stalled", handleStalled);
-      video.removeEventListener("suspend", handleStalled);
     };
   }, []);
 
   return (
     <section id="top" ref={ref} className="relative min-h-[100svh] overflow-hidden bg-ink text-cream">
-      {/* Photo backdrop — extra inset buffer so parallax never exposes a gap */}
-      <motion.div style={{ y: y2, opacity }} className="absolute -inset-x-0 -top-24 -bottom-24">
+      {/* Video backdrop */}
+      <motion.div style={{ y: y2, opacity }} className="absolute inset-0">
         <video
           ref={videoRef}
           src={hero}
@@ -79,8 +74,14 @@ export default function Hero() {
           loop
           muted
           playsInline
+          webkit-playsinline=""
+          disablePictureInPicture
           preload="auto"
-          className="absolute inset-0 min-h-full min-w-full object-cover opacity-40 animate-hero-kb"
+          className={`absolute inset-0 h-full w-full object-cover ${videoLoaded ? "opacity-40" : "opacity-0"} animate-hero-kb`}
+        />
+        {/* Fallback gradient background when video not loaded */}
+        <div 
+          className={`absolute inset-0 bg-gradient-to-b from-ink via-ink/80 to-ink transition-opacity duration-500 ${videoLoaded ? "opacity-0" : "opacity-100"}`}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink" />
       </motion.div>
