@@ -11,12 +11,24 @@ const impactLinks = [
   { label: "Stories", href: "/impact/stories" },
 ];
 
+const galleryLinks = [
+  { label: "Art Therapy CWSI", href: "/gallery/art-therapy-cwsi" },
+  { label: "IDP Camp Durumi", href: "/gallery/idp" },
+  { label: "RBM Summit", href: "/gallery/rbm-summit" },
+  { label: "Seed for Change 2025", href: "/gallery/seed-for-change-2025" },
+  { label: "Seed for Change 2026", href: "/gallery/seed-for-change-2026" },
+  { label: "Walk for Impact", href: "/gallery/walk-for-impact" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [impactOpen, setImpactOpen] = useState(false);
+  const [programsOpen, setProgramsOpen] = useState(false);
   const [mobileImpactOpen, setMobileImpactOpen] = useState(false);
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
   const impactRef = useRef<HTMLDivElement>(null);
+  const programsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -31,6 +43,9 @@ export default function Navbar() {
       if (impactRef.current && !impactRef.current.contains(e.target as Node)) {
         setImpactOpen(false);
       }
+      if (programsRef.current && !programsRef.current.contains(e.target as Node)) {
+        setProgramsOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -40,6 +55,7 @@ export default function Navbar() {
   useEffect(() => {
     setOpen(false);
     setMobileImpactOpen(false);
+    setMobileProgramsOpen(false);
   }, []);
 
   return (
@@ -70,21 +86,53 @@ export default function Navbar() {
                 About
               </Link>
             </li>
-            <li>
-              <Link
-                to="/programs"
-                className="rounded-full px-4 py-2 text-sm font-medium text-cream/80 transition-colors hover:text-gold"
+            {/* Programs Dropdown - Clickable */}
+            <li ref={programsRef} className="relative">
+              <button
+                onClick={() => setProgramsOpen(!programsOpen)}
+                onMouseEnter={() => setProgramsOpen(true)}
+                className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-cream/80 transition-colors hover:text-gold"
               >
-                Programs
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/gallery/art-therapy-cwsi"
-                className="rounded-full px-4 py-2 text-sm font-medium text-cream/80 transition-colors hover:text-gold"
-              >
-                Gallery
-              </Link>
+                Programs <ChevronDown size={14} className={`transition-transform ${programsOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              <AnimatePresence>
+                {programsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    onMouseLeave={() => setProgramsOpen(false)}
+                    className="absolute left-1/2 top-full mt-2 -translate-x-1/2 w-56 rounded-2xl border border-cream/10 bg-ink p-2 shadow-ink"
+                  >
+                    <div className="mb-2 px-4 py-1">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-gold/60">Programs</p>
+                    </div>
+                    <Link
+                      to="/programs"
+                      onClick={() => setProgramsOpen(false)}
+                      className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-cream/80 transition-colors hover:bg-cream/5 hover:text-gold"
+                    >
+                      All Programs
+                    </Link>
+                    <div className="my-2 border-t border-cream/10" />
+                    <div className="mb-2 px-4 py-1">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-gold/60">Gallery</p>
+                    </div>
+                    {galleryLinks.map((l) => (
+                      <Link
+                        key={l.href}
+                        to={l.href}
+                        onClick={() => setProgramsOpen(false)}
+                        className="flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm text-cream/80 transition-colors hover:bg-cream/5 hover:text-gold"
+                      >
+                        {l.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </li>
 
             {/* Impact Dropdown - Clickable */}
@@ -188,23 +236,48 @@ export default function Navbar() {
                   About
                 </Link>
               </li>
+              {/* Programs Accordion */}
               <li>
-                <Link
-                  to="/programs"
-                  onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5 hover:text-gold"
+                <button
+                  onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5"
                 >
-                  Programs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/gallery/art-therapy-cwsi"
-                  onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5 hover:text-gold"
-                >
-                  Gallery
-                </Link>
+                  Programs <ChevronDown size={20} className={`transition-transform ${mobileProgramsOpen ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {mobileProgramsOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="ml-4 flex flex-col gap-1 border-l border-gold/30 pl-4">
+                        <Link
+                          to="/programs"
+                          onClick={() => setOpen(false)}
+                          className="block rounded-xl px-4 py-3 text-lg font-medium text-cream/80 hover:bg-cream/5 hover:text-gold"
+                        >
+                          All Programs
+                        </Link>
+                        <p className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gold/60">
+                          Gallery
+                        </p>
+                        {galleryLinks.map((l) => (
+                          <Link
+                            key={l.href}
+                            to={l.href}
+                            onClick={() => setOpen(false)}
+                            className="block rounded-xl px-4 py-2.5 text-base text-cream/80 hover:bg-cream/5 hover:text-gold"
+                          >
+                            {l.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </li>
 
               {/* Impact Accordion */}

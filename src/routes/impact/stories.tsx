@@ -52,17 +52,6 @@ const voices: VoiceEntry[] = [
       "Five elderly men aged 60+ were interviewed to preserve their lived experiences. Each received cash support honoring the contributions of a lifetime.",
     img: "https://i.imgur.com/nIfszce.jpg",
   },
-  {
-    date: "2024",
-    name: "Garuba Aliyah Azumi",
-    story:
-      "A Seed for Change Creative Women Residency graduate who discovered new culinary art skills and the confidence to keep growing.",
-    img: garuba,
-    quote:
-      "Participating in the Seed for Change Creative Women Residency was a truly enriching experience for me. During the program, I learned new skills in culinary art that have expanded my creativity and confidence in the kitchen. It exposed me to new techniques, ideas, and ways of presenting food that I hadn't explored before. I'm grateful for the opportunity, and it has inspired me to keep growing and improving in my culinary journey.",
-    role: "Culinary Art",
-    program: "Creative Women Residency",
-  },
 ];
 
 const testimonials = [
