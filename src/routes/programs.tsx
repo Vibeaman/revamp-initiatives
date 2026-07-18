@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
 import { motion } from "framer-motion";
