@@ -87,7 +87,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     slug: "rbm-summit",
     title: "RBM Summit",
     description: "Results-Based Management Summit — strategic planning and capacity building.",
-    coverImage: getPlaceholderImage("rbm-summit", 1200, 800),
+    coverImage: "https://i.imgur.com/64wddjb.jpg",
   },
 };
 

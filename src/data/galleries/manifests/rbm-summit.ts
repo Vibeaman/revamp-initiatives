@@ -1,41 +1,38 @@
 /**
  * RBM Summit Gallery
  * 
- * Placeholder images - replace with actual photos when available.
- * To add a photo: { src: "/path/to/image.jpg", caption?: "Optional caption", date?: "2025-01-15" }
+ * Results-Based Management Summit photos
  */
 
-import { GalleryPhoto, getPlaceholderImage } from "../index";
+import { GalleryPhoto } from "../index";
 
 export const rbmSummitPhotos: GalleryPhoto[] = [
   {
-    src: getPlaceholderImage("rbm-1", 1200, 800),
-    caption: "Summit opening ceremony",
-    date: "2025-06-20",
+    src: "https://i.imgur.com/64wddjb.jpg",
+    caption: "Summit Opening Ceremony",
   },
   {
-    src: getPlaceholderImage("rbm-2", 1200, 900),
-    caption: "Keynote presentation",
-    date: "2025-06-20",
+    src: "https://i.imgur.com/H6gYPTY.jpg",
+    caption: "Keynote Presentation",
   },
   {
-    src: getPlaceholderImage("rbm-3", 1200, 800),
-    caption: "Breakout session",
-    date: "2025-06-21",
+    src: "https://i.imgur.com/cSUzYbl.jpg",
+    caption: "Breakout Session",
   },
   {
-    src: getPlaceholderImage("rbm-4", 1200, 850),
-    caption: "Workshop on results measurement",
-    date: "2025-06-21",
+    src: "https://i.imgur.com/tjyxZSg.jpg",
+    caption: "Workshop on Results Measurement",
   },
   {
-    src: getPlaceholderImage("rbm-5", 1200, 800),
-    caption: "Panel discussion",
-    date: "2025-06-22",
+    src: "https://i.imgur.com/GjqKvxL.jpg",
+    caption: "Panel Discussion",
   },
   {
-    src: getPlaceholderImage("rbm-6", 1200, 900),
-    caption: "Group photo of participants",
-    date: "2025-06-23",
+    src: "https://i.imgur.com/C0yuvSP.jpg",
+    caption: "Networking Session",
+  },
+  {
+    src: "https://i.imgur.com/lKIKZXx.jpg",
+    caption: "Group Photo of Participants",
   },
 ];
