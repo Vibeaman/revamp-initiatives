@@ -1,42 +1,42 @@
 /**
  * Seed for Change 2025 Gallery
  * 
- * Placeholder images - replace with actual photos when available.
- * To add a photo: { src: "/path/to/image.jpg", caption?: "Optional caption", date?: "2025-01-15" }
+ * Women's empowerment program photos - 2025 cohort
  */
 
 import { GalleryPhoto } from "../index";
-import { getPlaceholderImage } from "../placeholder";
 
 export const seedForChange2025Photos: GalleryPhoto[] = [
   {
-    src: getPlaceholderImage("sfc25-1", 1200, 800),
-    caption: "Tailoring workshop session",
-    date: "2025-03-10",
+    src: "https://i.imgur.com/qyxFGeu.jpg",
+    caption: "Training Session",
   },
   {
-    src: getPlaceholderImage("sfc25-2", 1200, 900),
-    caption: "Graduates receiving their certificates",
-    date: "2025-03-12",
+    src: "https://i.imgur.com/lo3fyVZ.jpg",
+    caption: "Graduation Day",
   },
   {
-    src: getPlaceholderImage("sfc25-3", 1200, 800),
-    caption: "Art therapy session in progress",
-    date: "2025-03-14",
+    src: "https://i.imgur.com/3sLlDr0.jpg",
+    caption: "Skill Development Workshop",
   },
   {
-    src: getPlaceholderImage("sfc25-4", 1200, 850),
-    caption: "Business skills training",
-    date: "2025-03-15",
+    src: "https://i.imgur.com/4DysffB.jpg",
+    caption: "Art Therapy Session",
   },
   {
-    src: getPlaceholderImage("sfc25-5", 1200, 800),
-    caption: "Fashion show showcasing student work",
-    date: "2025-03-20",
+    src: "https://i.imgur.com/tHO1QBd.jpg",
+    caption: "Business Skills Training",
   },
   {
-    src: getPlaceholderImage("sfc25-6", 1200, 900),
-    caption: "Group photo with founder",
-    date: "2025-03-25",
+    src: "https://i.imgur.com/kvLLsfb.jpg",
+    caption: "Fashion Showcase",
+  },
+  {
+    src: "https://i.imgur.com/b1nqTU4.jpg",
+    caption: "Participant Artwork",
+  },
+  {
+    src: "https://i.imgur.com/5BLnDub.jpg",
+    caption: "Group Photo",
   },
 ];
