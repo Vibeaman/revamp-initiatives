@@ -30,7 +30,7 @@ const team = [
       "Worked on assignment for CNN, Reuters, and other organizations in Nigeria",
       "Founded Revamp Art Media Agency as Creative Director, a communications consulting firm specializing in documentary photography, videography, and graphic arts",
     ],
-    image: "https://i.imgur.com/srvG6zl.jpg",
+    image: "https://i.imgur.com/33otmU4.jpg",
     imageAspect: "aspect-[1136/1271]",
   },
   {
