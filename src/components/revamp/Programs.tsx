@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
@@ -21,6 +21,32 @@ const subPrograms = [
 
 function CommunityOutreach() {
   const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    if (!scrollRef.current) return;
+    setIsDragging(true);
+    setIsPaused(true);
+    startX.current = e.touches[0].pageX - scrollRef.current.offsetLeft;
+    scrollLeft.current = scrollRef.current.scrollLeft;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft.current - walk;
+  }, [isDragging]);
+
+  const handleTouchEnd = useCallback(() => {
+    setIsDragging(false);
+    setIsPaused(false);
+  }, []);
 
   return (
     <div className="mt-12 md:mt-16">
@@ -35,15 +61,23 @@ function CommunityOutreach() {
       </div>
 
       <div 
+        ref={containerRef}
         className="relative overflow-hidden"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        onMouseEnter={() => !isDragging && setIsPaused(true)}
+        onMouseLeave={() => !isDragging && setIsPaused(false)}
       >
-        <div className={`flex gap-5 ${isPaused ? "" : "marquee-slide"}`}>
+        <div 
+          ref={scrollRef}
+          className={`flex gap-5 overflow-x-auto scroll-smooth scrollbar-hide ${isPaused ? "" : "marquee-slide"} ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           {[...subPrograms, ...subPrograms].map((p, i) => (
             <article
               key={`${p.name}-${i}`}
-              className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64"
+              className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64 select-none"
             >
               <div className="relative aspect-[3/4] overflow-hidden">
                 <img 
@@ -51,6 +85,7 @@ function CommunityOutreach() {
                   alt={p.name} 
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" 
                   loading="lazy" 
+                  draggable={false}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
               </div>
