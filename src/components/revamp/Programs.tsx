@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { Link } from "@tanstack/react-router";
+import { Gallery } from "lucide-react";
 import { useState, useRef, useCallback } from "react";
 import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
@@ -94,6 +95,10 @@ function CommunityOutreach() {
               <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center">
                 <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
                 <p className="mt-2 text-sm text-white font-medium">{p.blurb}</p>
+                <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-gold/20 px-3 py-1.5 text-xs font-semibold text-gold backdrop-blur-sm">
+                  <Gallery className="h-3.5 w-3.5" />
+                  View Gallery
+                </span>
               </div>
             </Link>
           ))}
