@@ -1,20 +1,16 @@
 /**
  * Kreative Campus Gallery
- * 
- * Placeholder images - replace with actual photos when available.
  */
 
 import { GalleryPhoto } from "../index";
-import { getPlaceholderImage } from "../placeholder";
 
 export const kreativeCampusPhotos: GalleryPhoto[] = [
-  {
-    src: getPlaceholderImage("kc-1", 1200, 800),
-  },
-  {
-    src: getPlaceholderImage("kc-2", 1200, 900),
-  },
-  {
-    src: getPlaceholderImage("kc-3", 1200, 800),
-  },
+  { src: "https://i.imgur.com/TiCPunL.jpg" },
+  { src: "https://i.imgur.com/UP9UyEv.jpg" },
+  { src: "https://i.imgur.com/8KY07zm.jpg" },
+  { src: "https://i.imgur.com/JqrCdGD.jpg" },
+  { src: "https://i.imgur.com/P0M8xcw.jpg" },
+  { src: "https://i.imgur.com/Btyt73O.jpg" },
+  { src: "https://i.imgur.com/0GViVZa.jpg" },
+  { src: "https://i.imgur.com/nXRNyem.jpg" },
 ];

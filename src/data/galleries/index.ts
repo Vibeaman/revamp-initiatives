@@ -93,7 +93,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     slug: "kreative-campus",
     title: "Kreative Campus",
     description: "Skill-building creative training for youth and women.",
-    coverImage: getPlaceholderImage("kc-cover", 1200, 800),
+    coverImage: "https://i.imgur.com/TiCPunL.jpg",
   },
   "slum-outreach": {
     slug: "slum-outreach",
