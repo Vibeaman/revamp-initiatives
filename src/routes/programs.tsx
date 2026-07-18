@@ -287,35 +287,33 @@ function ProgramsPage() {
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {getAllGalleries().map((gallery, index) => (
-              <a
+              <motion.div
                 key={gallery.slug}
-                href={`/programs/gallery/${gallery.slug}`}
-                className="group block"
+                variants={fadeUp}
+                className="group cursor-pointer overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10"
+                onClick={() => {
+                  window.location.href = `/programs/gallery/${gallery.slug}`;
+                }}
               >
-                <motion.div
-                  variants={fadeUp}
-                  className="relative overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10"
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={gallery.coverImage}
-                      alt={gallery.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
-                    <div className="absolute inset-0 flex items-center justify-center bg-ink/0 transition-colors group-hover:bg-ink/30">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-ink opacity-0 transition-opacity group-hover:opacity-100">
-                        <Images className="h-5 w-5" />
-                      </span>
-                    </div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={gallery.coverImage}
+                    alt={gallery.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-ink/0 transition-colors group-hover:bg-ink/30">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-ink opacity-0 transition-opacity group-hover:opacity-100">
+                      <Images className="h-5 w-5" />
+                    </span>
                   </div>
-                  <div className="p-5">
-                    <h3 className="text-display text-lg font-bold text-cream">{gallery.title}</h3>
-                    <p className="mt-2 line-clamp-2 text-sm text-cream/60">{gallery.description}</p>
-                  </div>
-                </motion.div>
-              </a>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-display text-lg font-bold text-cream">{gallery.title}</h3>
+                  <p className="mt-2 line-clamp-2 text-sm text-cream/60">{gallery.description}</p>
+                </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
