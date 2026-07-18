@@ -33,13 +33,8 @@ export interface GalleryProgram {
   manifest: GalleryManifest;
 }
 
-// Placeholder image using picsum.photos for development
-// Replace with actual images when available
-const PLACEHOLDER_BASE = "https://picsum.photos/seed";
-
-export function getPlaceholderImage(seed: string, width = 800, height = 600): string {
-  return `${PLACEHOLDER_BASE}/${seed}/${width}/${height}`;
-}
+// Re-export placeholder utility (lives in separate file to avoid circular imports)
+export { getPlaceholderImage } from "./placeholder";
 
 // Manifests registry - import new program manifests here
 const MANIFESTS: Record<string, GalleryManifest> = {
