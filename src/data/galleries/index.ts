@@ -53,7 +53,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     slug: "walk-for-impact",
     title: "Walk for Impact",
     description: "Intergenerational storytelling event honoring elders aged 60+ with interviews and cash support.",
-    coverImage: getPlaceholderImage("walk-for-impact", 1200, 800),
+    coverImage: "https://i.imgur.com/qjTnH9s.jpg",
   },
   "seed-for-change-2025": {
     slug: "seed-for-change-2025",
