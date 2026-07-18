@@ -81,7 +81,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     slug: "art-therapy-cwsi",
     title: "Art Therapy CWSI",
     description: "Creative wellness sessions at the Centre for Women Studies and Intervention.",
-    coverImage: getPlaceholderImage("art-therapy", 1200, 800),
+    coverImage: "https://i.imgur.com/PhW4v3M.jpg",
   },
   "rbm-summit": {
     slug: "rbm-summit",

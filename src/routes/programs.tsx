@@ -287,10 +287,14 @@ function ProgramsPage() {
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {getAllGalleries().map((gallery, index) => (
-              <motion.div key={gallery.slug} variants={fadeUp}>
-                <Link
-                  href={`/programs/gallery/${gallery.slug}`}
-                  className="group relative block overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10"
+              <Link
+                key={gallery.slug}
+                href={`/programs/gallery/${gallery.slug}`}
+                className="group block"
+              >
+                <motion.div
+                  variants={fadeUp}
+                  className="relative overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
@@ -310,8 +314,8 @@ function ProgramsPage() {
                     <h3 className="text-display text-lg font-bold text-cream">{gallery.title}</h3>
                     <p className="mt-2 line-clamp-2 text-sm text-cream/60">{gallery.description}</p>
                   </div>
-                </Link>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         </div>
