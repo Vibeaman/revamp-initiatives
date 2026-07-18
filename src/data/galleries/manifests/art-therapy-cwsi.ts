@@ -1,41 +1,34 @@
 /**
  * Art Therapy CWSI Gallery
  * 
- * Placeholder images - replace with actual photos when available.
- * To add a photo: { src: "/path/to/image.jpg", caption?: "Optional caption", date?: "2025-01-15" }
+ * Images from Center for Women Studies and Intervention
  */
 
-import { GalleryPhoto, getPlaceholderImage } from "../index";
+import { GalleryPhoto } from "../index";
 
 export const artTherapyCwsiPhotos: GalleryPhoto[] = [
   {
-    src: getPlaceholderImage("at-1", 1200, 800),
-    caption: "Creative art session",
-    date: "2025-05-10",
+    src: "https://i.imgur.com/PhW4v3M.jpg",
+    caption: "Art Therapy Session",
   },
   {
-    src: getPlaceholderImage("at-2", 1200, 900),
-    caption: "Group therapy activity",
-    date: "2025-05-10",
+    src: "https://i.imgur.com/kwEkCIE.jpg",
+    caption: "Creative Workshop",
   },
   {
-    src: getPlaceholderImage("at-3", 1200, 800),
-    caption: "Art exhibition opening",
-    date: "2025-05-12",
+    src: "https://i.imgur.com/KqymyFH.jpg",
+    caption: "Group Activity",
   },
   {
-    src: getPlaceholderImage("at-4", 1200, 850),
-    caption: "Participants showcasing their work",
-    date: "2025-05-14",
+    src: "https://i.imgur.com/iop8QRs.jpg",
+    caption: "Participant Artwork",
   },
   {
-    src: getPlaceholderImage("at-5", 1200, 800),
-    caption: "Therapy garden session",
-    date: "2025-05-15",
+    src: "https://i.imgur.com/ZrPbvVx.jpg",
+    caption: "Therapy in Progress",
   },
   {
-    src: getPlaceholderImage("at-6", 1200, 900),
-    caption: "Certificate presentation",
-    date: "2025-05-18",
+    src: "https://i.imgur.com/nCvcjWD.jpg",
+    caption: "Celebration Moment",
   },
 ];
