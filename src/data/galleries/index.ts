@@ -14,6 +14,8 @@ import { seedForChange2026Photos } from "./manifests/seed-for-change-2026";
 import { idpPhotos } from "./manifests/idp";
 import { artTherapyCwsiPhotos } from "./manifests/art-therapy-cwsi";
 import { rbmSummitPhotos } from "./manifests/rbm-summit";
+import { kreativeCampusPhotos } from "./manifests/kreative-campus";
+import { slumOutreachPhotos } from "./manifests/slum-outreach";
 
 export interface GalleryPhoto {
   src: string;
@@ -45,6 +47,8 @@ const MANIFESTS: Record<string, GalleryManifest> = {
   "idp": { photos: idpPhotos },
   "art-therapy-cwsi": { photos: artTherapyCwsiPhotos },
   "rbm-summit": { photos: rbmSummitPhotos },
+  "kreative-campus": { photos: kreativeCampusPhotos },
+  "slum-outreach": { photos: slumOutreachPhotos },
 };
 
 // Metadata registry - update title, description, cover image here
@@ -84,6 +88,18 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     title: "RBM Summit",
     description: "Results-Based Management Summit - strategic planning and capacity building.",
     coverImage: "https://i.imgur.com/64wddjb.jpg",
+  },
+  "kreative-campus": {
+    slug: "kreative-campus",
+    title: "Kreative Campus",
+    description: "Skill-building creative training for youth and women.",
+    coverImage: getPlaceholderImage("kc-cover", 1200, 800),
+  },
+  "slum-outreach": {
+    slug: "slum-outreach",
+    title: "Slum Outreach",
+    description: "Direct intervention in underserved communities.",
+    coverImage: getPlaceholderImage("so-cover", 1200, 800),
   },
 };
 
