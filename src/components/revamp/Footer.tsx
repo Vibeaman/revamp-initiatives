@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 const contacts = [
   { icon: Mail, label: "revampinitiatives@gmail.com", href: "mailto:revampinitiatives@gmail.com" },
-  { icon: Phone, label: "0909 000 9999", href: "tel:09090009999" },
+  { icon: Phone, label: "08130514772 (also on WhatsApp)", href: "tel:08130514772" },
 ];
 
 const socials = [

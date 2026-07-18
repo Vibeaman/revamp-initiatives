@@ -150,9 +150,9 @@ export default function ContactForm() {
             <Mail size={16} className="text-gold" />
             revampinitiatives@gmail.com
           </a>
-          <a href="tel:09090009999" className="flex items-center gap-2 rounded-full border border-gold/30 bg-white px-4 py-2 text-sm text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+          <a href="tel:08130514772" className="flex items-center gap-2 rounded-full border border-gold/30 bg-white px-4 py-2 text-sm text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
             <Phone size={16} className="text-gold" />
-            0909 000 9999
+            08130514772 (also on WhatsApp)
           </a>
         </motion.div>
 
