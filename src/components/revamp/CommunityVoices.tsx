@@ -76,7 +76,7 @@ export default function CommunityVoices() {
             variants={fadeUp}
             className="mt-4 max-w-2xl text-sm text-ink/60 md:mt-6 md:text-base"
           >
-            The stories behind our work — told by the people who lived them.
+            The stories behind our work, told by the people who lived them.
           </motion.p>
         </motion.div>
 

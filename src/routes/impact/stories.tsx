@@ -107,7 +107,7 @@ function StoriesPage() {
             transition={{ delay: 0.2 }}
             className="mt-6 max-w-2xl text-cream/80"
           >
-            The stories behind our work — told by the people who lived them.
+            The stories behind our work, told by the people who lived them.
           </motion.p>
         </div>
       </section>

@@ -84,7 +84,7 @@ function JourneyPage() {
             transition={{ delay: 0.2 }}
             className="mt-6 max-w-2xl text-cream/80"
           >
-            The story of Revamp Initiatives — from humble beginnings in 2022 to becoming a leading creative social impact hub.
+            The story of Revamp Initiatives, from humble beginnings in 2022 to becoming a leading creative social impact hub.
           </motion.p>
         </div>
       </section>
