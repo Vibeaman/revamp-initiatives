@@ -50,7 +50,7 @@ const subPrograms = [
     img: "https://i.imgur.com/UZx6PhG.jpg", 
     blurb: "Food, medical & cash assistance.",
     fullDesc: "Supporting displaced persons at IDP Camp Durumi with essential supplies, medical care, and financial assistance to help them rebuild their lives with dignity.",
-    gallerySlug: "idp-idl",
+    gallerySlug: "idp",
   },
   { 
     name: "Kreative Campus", 

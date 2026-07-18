@@ -11,7 +11,7 @@
 import { walkForImpactPhotos } from "./manifests/walk-for-impact";
 import { seedForChange2025Photos } from "./manifests/seed-for-change-2025";
 import { seedForChange2026Photos } from "./manifests/seed-for-change-2026";
-import { idpIdlPhotos } from "./manifests/idp-idl";
+import { idpPhotos } from "./manifests/idp";
 import { artTherapyCwsiPhotos } from "./manifests/art-therapy-cwsi";
 import { rbmSummitPhotos } from "./manifests/rbm-summit";
 
@@ -42,7 +42,7 @@ const MANIFESTS: Record<string, GalleryManifest> = {
   "walk-for-impact": { photos: walkForImpactPhotos },
   "seed-for-change-2025": { photos: seedForChange2025Photos },
   "seed-for-change-2026": { photos: seedForChange2026Photos },
-  "idp-idl": { photos: idpIdlPhotos },
+  "idp": { photos: idpPhotos },
   "art-therapy-cwsi": { photos: artTherapyCwsiPhotos },
   "rbm-summit": { photos: rbmSummitPhotos },
 };
@@ -67,11 +67,11 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     description: "Women's empowerment and art therapy program — Year 2026 cohort.",
     coverImage: getPlaceholderImage("seed-2026", 1200, 800),
   },
-  "idp-idl": {
-    slug: "idp-idl",
-    title: "IDP/IDL Camp Durumi",
+  "idp": {
+    slug: "idp",
+    title: "IDP Camp Durumi",
     description: "Supporting displaced persons at IDP Camp Durumi with essential supplies, medical care, and financial assistance.",
-    coverImage: getPlaceholderImage("idp-camp", 1200, 800),
+    coverImage: "https://i.imgur.com/s76njIe.jpg",
   },
   "art-therapy-cwsi": {
     slug: "art-therapy-cwsi",
