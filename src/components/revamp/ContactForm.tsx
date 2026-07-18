@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Send, CheckCircle, Phone, Instagram, Facebook, Linkedin, Globe } from "lucide-react";
 import { Music2 } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -152,7 +153,11 @@ export default function ContactForm() {
           </a>
           <a href="tel:08130514772" className="flex items-center gap-2 rounded-full border border-gold/30 bg-white px-4 py-2 text-sm text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
             <Phone size={16} className="text-gold" />
-            08130514772 (also on WhatsApp)
+            08130514772
+          </a>
+          <a href="https://wa.me/2348130514772" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full border border-gold/30 bg-white px-4 py-2 text-sm text-ink shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+            <WhatsAppIcon size={16} className="text-gold" />
+            08130514772
           </a>
         </motion.div>
 

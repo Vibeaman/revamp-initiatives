@@ -1,10 +1,12 @@
 import { Mail, Phone, Instagram, Globe, Facebook, Linkedin } from "lucide-react";
 import { Music2 } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const contacts = [
   { icon: Mail, label: "revampinitiatives@gmail.com", href: "mailto:revampinitiatives@gmail.com" },
-  { icon: Phone, label: "08130514772 (also on WhatsApp)", href: "tel:08130514772" },
+  { icon: Phone, label: "08130514772", href: "tel:08130514772" },
+  { icon: WhatsAppIcon, label: "08130514772", href: "https://wa.me/2348130514772" },
 ];
 
 const socials = [
