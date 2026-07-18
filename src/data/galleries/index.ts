@@ -33,8 +33,9 @@ export interface GalleryProgram {
   manifest: GalleryManifest;
 }
 
-// Re-export placeholder utility (lives in separate file to avoid circular imports)
-export { getPlaceholderImage } from "./placeholder";
+// Import placeholder utility for local use AND re-export it
+import { getPlaceholderImage } from "./placeholder";
+export { getPlaceholderImage };
 
 // Manifests registry - import new program manifests here
 const MANIFESTS: Record<string, GalleryManifest> = {
