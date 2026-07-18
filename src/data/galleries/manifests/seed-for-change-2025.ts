@@ -31,4 +31,16 @@ export const seedForChange2025Photos: GalleryPhoto[] = [
   {
     src: "https://i.imgur.com/mfLGZLC.jpg",
   },
+  {
+    src: "https://i.imgur.com/KchyBhf.jpg",
+  },
+  {
+    src: "https://i.imgur.com/E71gJ5G.jpg",
+  },
+  {
+    src: "https://i.imgur.com/tsUKKLr.jpg",
+  },
+  {
+    src: "https://i.imgur.com/NdzXLDu.jpg",
+  },
 ];
