@@ -143,6 +143,27 @@
   animation: marquee 12s linear infinite;
 }
 
+@keyframes marquee-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-slide {
+  animation: marquee-slide 20s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .marquee-slide {
+    animation: marquee-slide 25s linear infinite;
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee-slide {
+    animation: marquee-slide 30s linear infinite;
+  }
+}
+
 /* Hide scrollbar for swipeable areas */
 .scrollbar-hide {
   -ms-overflow-style: none;

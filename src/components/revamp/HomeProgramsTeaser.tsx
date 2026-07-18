@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 
 const outreachCards = [
@@ -11,6 +12,7 @@ const outreachCards = [
 ];
 
 export default function HomeProgramsTeaser() {
+  const [isPaused, setIsPaused] = useState(false);
   return (
     <section id="programs" className="relative overflow-hidden bg-cream py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
@@ -72,23 +74,29 @@ export default function HomeProgramsTeaser() {
             </a>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6">
-            {outreachCards.map((card) => (
-              <motion.article
-                key={card.name}
-                variants={fadeUp}
-                className="group relative overflow-hidden rounded-2xl bg-ink text-cream"
-              >
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <img src={card.img} alt={card.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center">
-                  <h4 className="text-display text-lg font-bold text-gold">{card.name}</h4>
-                  <p className="mt-2 text-sm text-white font-medium">{card.blurb}</p>
-                </div>
-              </motion.article>
-            ))}
+          <div 
+            className="relative overflow-hidden"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div className={`flex gap-5 ${isPaused ? "" : "marquee-slide"}`}>
+              {[...outreachCards, ...outreachCards].map((card, i) => (
+                <motion.article
+                  key={`${card.name}-${i}`}
+                  variants={fadeUp}
+                  className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64"
+                >
+                  <div className="relative aspect-[3/4] overflow-hidden">
+                    <img src={card.img} alt={card.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center">
+                    <h4 className="text-display text-lg font-bold text-gold">{card.name}</h4>
+                    <p className="mt-2 text-sm text-white font-medium">{card.blurb}</p>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
           </div>
 
           <a href="/programs" className="mt-6 flex items-center justify-center gap-2 text-sm font-semibold text-gold-deep hover:text-gold md:hidden">

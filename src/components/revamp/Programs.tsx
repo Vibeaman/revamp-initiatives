@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import { useRef, useState, useCallback } from "react";
+import { useState } from "react";
 import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
@@ -20,34 +20,7 @@ const subPrograms = [
 ];
 
 function CommunityOutreach() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [paused, setPaused] = useState(false);
-  const dragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
-  const onPointerDown = useCallback((e: React.PointerEvent) => {
-    const el = trackRef.current;
-    if (!el) return;
-    dragging.current = true;
-    setPaused(true);
-    startX.current = e.clientX;
-    scrollLeft.current = el.scrollLeft;
-    el.setPointerCapture(e.pointerId);
-  }, []);
-
-  const onPointerMove = useCallback((e: React.PointerEvent) => {
-    if (!dragging.current || !trackRef.current) return;
-    const dx = e.clientX - startX.current;
-    trackRef.current.scrollLeft = scrollLeft.current - dx;
-  }, []);
-
-  const onPointerUp = useCallback((e: React.PointerEvent) => {
-    dragging.current = false;
-    trackRef.current?.releasePointerCapture(e.pointerId);
-    // Resume animation after 3 seconds of inactivity
-    setTimeout(() => setPaused(false), 3000);
-  }, []);
+  const [isPaused, setIsPaused] = useState(false);
 
   return (
     <div className="mt-12 md:mt-16">
@@ -61,23 +34,24 @@ function CommunityOutreach() {
         </div>
       </div>
 
-      <div
-        ref={trackRef}
-        className="relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
-        style={{ WebkitOverflowScrolling: "touch" }}
+      <div 
+        className="relative overflow-hidden"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
       >
-        <div className={`flex gap-5 whitespace-nowrap ${paused ? "" : "marquee-cards"}`}>
-          {subPrograms.map((p) => (
+        <div className={`flex gap-5 ${isPaused ? "" : "marquee-slide"}`}>
+          {[...subPrograms, ...subPrograms].map((p, i) => (
             <article
-              key={p.name}
-              className="group relative w-[78%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-64 select-none"
+              key={`${p.name}-${i}`}
+              className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64"
             >
               <div className="relative aspect-[3/4] overflow-hidden">
-                <img src={p.img} alt={p.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" loading="lazy" draggable={false} />
+                <img 
+                  src={p.img} 
+                  alt={p.name} 
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  loading="lazy" 
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
               </div>
               <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center">
