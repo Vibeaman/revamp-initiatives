@@ -122,7 +122,7 @@ export default function HomeProgramsTeaser() {
                   key={`${card.name}-${i}`}
                   to={card.href}
                   variants={fadeUp}
-                  className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64 select-none" style={{ touchAction: "pan-y" }}"
+                  className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64 select-none" style={{ touchAction: "pan-y" }}
                 >
                   <div className="relative aspect-[3/4] overflow-hidden">
                     <img src={card.img} alt={card.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" draggable={false} />
