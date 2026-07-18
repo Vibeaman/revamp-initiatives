@@ -65,7 +65,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     slug: "seed-for-change-2026",
     title: "Seed for Change 2026",
     description: "Women's empowerment and art therapy program — Year 2026 cohort.",
-    coverImage: getPlaceholderImage("seed-2026", 1200, 800),
+    coverImage: "https://i.imgur.com/qyxFGeu.jpg",
   },
   "idp": {
     slug: "idp",

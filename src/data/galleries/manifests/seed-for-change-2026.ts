@@ -1,37 +1,42 @@
 /**
  * Seed for Change 2026 Gallery
  * 
- * Placeholder images - replace with actual photos when available.
- * To add a photo: { src: "/path/to/image.jpg", caption?: "Optional caption", date?: "2026-01-15" }
+ * Women's empowerment program photos - 2026 cohort
  */
 
 import { GalleryPhoto } from "../index";
-import { getPlaceholderImage } from "../placeholder";
 
 export const seedForChange2026Photos: GalleryPhoto[] = [
   {
-    src: getPlaceholderImage("sfc26-1", 1200, 800),
-    caption: "New cohort orientation",
-    date: "2026-01-10",
+    src: "https://i.imgur.com/qyxFGeu.jpg",
+    caption: "Training Session",
   },
   {
-    src: getPlaceholderImage("sfc26-2", 1200, 900),
-    caption: "Skills assessment day",
-    date: "2026-01-12",
+    src: "https://i.imgur.com/lo3fyVZ.jpg",
+    caption: "Graduation Day",
   },
   {
-    src: getPlaceholderImage("sfc26-3", 1200, 800),
-    caption: "First tailoring lesson",
-    date: "2026-01-15",
+    src: "https://i.imgur.com/3sLlDr0.jpg",
+    caption: "Skill Development Workshop",
   },
   {
-    src: getPlaceholderImage("sfc26-4", 1200, 850),
-    caption: "Mentorship session",
-    date: "2026-01-20",
+    src: "https://i.imgur.com/4DysffB.jpg",
+    caption: "Art Therapy Session",
   },
   {
-    src: getPlaceholderImage("sfc26-5", 1200, 800),
-    caption: "Community outreach planning",
-    date: "2026-01-22",
+    src: "https://i.imgur.com/tHO1QBd.jpg",
+    caption: "Business Skills Training",
+  },
+  {
+    src: "https://i.imgur.com/kvLLsfb.jpg",
+    caption: "Fashion Showcase",
+  },
+  {
+    src: "https://i.imgur.com/b1nqTU4.jpg",
+    caption: "Participant Artwork",
+  },
+  {
+    src: "https://i.imgur.com/5BLnDub.jpg",
+    caption: "Group Photo",
   },
 ];
