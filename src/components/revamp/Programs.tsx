@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
+import { Link } from "@tanstack/react-router";
 import { useState, useRef, useCallback } from "react";
 import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
@@ -13,10 +14,10 @@ const seedObjectives = [
 ];
 
 const subPrograms = [
-  { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders." },
-  { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities." },
-  { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance." },
-  { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training." },
+  { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders.", href: "/gallery/walk-for-impact" },
+  { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities.", href: "/gallery/slum-outreach" },
+  { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance.", href: "/gallery/idp" },
+  { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
 ];
 
 function CommunityOutreach() {
@@ -75,8 +76,9 @@ function CommunityOutreach() {
           style={{ WebkitOverflowScrolling: "touch" }}
         >
           {[...subPrograms, ...subPrograms].map((p, i) => (
-            <article
+            <Link
               key={`${p.name}-${i}`}
+              to={p.href}
               className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64 select-none"
             >
               <div className="relative aspect-[3/4] overflow-hidden">
@@ -93,7 +95,7 @@ function CommunityOutreach() {
                 <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
                 <p className="mt-2 text-sm text-white font-medium">{p.blurb}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
