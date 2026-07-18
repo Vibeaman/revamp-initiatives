@@ -26,17 +26,26 @@ export default function HomeWhoWeAre() {
               <span className="italic text-gold-deep">lasting positive change</span> for
               vulnerable and underserved communities in Nigeria.
             </motion.h2>
-            <motion.div variants={fadeUp} className="mt-6 grid gap-4 md:grid-cols-2 md:mt-8">
+            <motion.div variants={fadeUp} className="mt-6 grid gap-4 md:grid-cols-3 md:mt-8">
+              <div className="rounded-2xl border border-ink/10 bg-white p-5">
+                <h3 className="text-display mb-2 text-lg font-bold text-ink">Our Goal</h3>
+                <p className="text-sm text-ink/70">
+                  To build a Creative Social Impact Hub that creates lasting positive social change for vulnerable,
+                  underprivileged, and underserved communities through creativity in Nigeria.
+                </p>
+              </div>
               <div className="rounded-2xl border border-ink/10 bg-white p-5">
                 <h3 className="text-display mb-2 text-lg font-bold text-ink">Our Mission</h3>
                 <p className="text-sm text-ink/70">
-                  Empower communities through creative expression, vocational training, and sustainable development.
+                  To empower communities through creative expression, vocational training, and sustainable
+                  development, fostering resilience and innovation.
                 </p>
               </div>
               <div className="rounded-2xl border border-ink/10 bg-white p-5">
                 <h3 className="text-display mb-2 text-lg font-bold text-ink">Our Vision</h3>
                 <p className="text-sm text-ink/70">
-                  A world where creativity and opportunity are accessible to all, regardless of background.
+                  A world where creativity and opportunity are accessible to all, enabling individuals to thrive and
+                  transform their communities.
                 </p>
               </div>
             </motion.div>
