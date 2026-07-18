@@ -46,8 +46,8 @@ export function GalleryGrid({ photos }: GalleryGridProps) {
               loading="lazy"
             />
             {/* Hover overlay */}
-            <div className="absolute inset-0 flex items-center justify-center bg-ink/0 transition-colors duration-300 group-hover:bg-ink/40">
-              <Expand className="h-6 w-6 text-cream opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 flex items-center justify-center bg-ink/0 transition-colors duration-300 group-hover:bg-ink/40 group-active:bg-ink/40 md:bg-ink/0">
+              <Expand className="h-6 w-6 text-cream opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100 md:opacity-0" />
             </div>
             {/* Caption preview on hover */}
             {photo.caption && (
@@ -60,9 +60,16 @@ export function GalleryGrid({ photos }: GalleryGridProps) {
       </div>
 
       {/* Photo count indicator */}
-      <div className="mt-6 flex items-center justify-center gap-2 text-sm text-cream/60">
-        <Grid3X3 className="h-4 w-4" />
-        <span>{photos.length} photos</span>
+      <div className="mt-6 flex flex-col items-center gap-2 text-sm text-cream/60">
+        <div className="flex items-center gap-2">
+          <Grid3X3 className="h-4 w-4" />
+          <span>{photos.length} photos</span>
+        </div>
+        {/* Mobile hint - visible only on small screens */}
+        <p className="mt-2 flex items-center gap-2 text-xs text-cream/40 md:hidden">
+          <Expand className="h-3.5 w-3.5" />
+          Tap an image to view full size
+        </p>
       </div>
 
       {/* Lightbox */}
