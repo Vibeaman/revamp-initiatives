@@ -78,6 +78,14 @@ export default function Navbar() {
                 Programs
               </Link>
             </li>
+            <li>
+              <Link
+                to="/gallery/art-therapy-cwsi"
+                className="rounded-full px-4 py-2 text-sm font-medium text-cream/80 transition-colors hover:text-gold"
+              >
+                Gallery
+              </Link>
+            </li>
 
             {/* Impact Dropdown - Clickable */}
             <li ref={impactRef} className="relative">
@@ -187,6 +195,15 @@ export default function Navbar() {
                   className="block rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5 hover:text-gold"
                 >
                   Programs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/gallery/art-therapy-cwsi"
+                  onClick={() => setOpen(false)}
+                  className="block rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5 hover:text-gold"
+                >
+                  Gallery
                 </Link>
               </li>
 

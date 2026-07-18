@@ -58,13 +58,13 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
   "seed-for-change-2025": {
     slug: "seed-for-change-2025",
     title: "Seed for Change 2025",
-    description: "Women's empowerment and art therapy program — Year 2025 cohort.",
+    description: "Women's empowerment and art therapy program - Year 2025 cohort.",
     coverImage: "https://i.imgur.com/UMemkVg.jpg",
   },
   "seed-for-change-2026": {
     slug: "seed-for-change-2026",
     title: "Seed for Change 2026",
-    description: "Women's empowerment and art therapy program — Year 2026 cohort.",
+    description: "Women's empowerment and art therapy program - Year 2026 cohort.",
     coverImage: "https://i.imgur.com/qyxFGeu.jpg",
   },
   "idp": {
@@ -82,7 +82,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
   "rbm-summit": {
     slug: "rbm-summit",
     title: "RBM Summit",
-    description: "Results-Based Management Summit — strategic planning and capacity building.",
+    description: "Results-Based Management Summit - strategic planning and capacity building.",
     coverImage: "https://i.imgur.com/64wddjb.jpg",
   },
 };
