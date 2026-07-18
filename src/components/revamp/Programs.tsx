@@ -90,15 +90,17 @@ function CommunityOutreach() {
                   loading="lazy" 
                   draggable={false}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
               </div>
-              <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center">
-                <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
-                <p className="mt-2 text-sm text-white font-medium">{p.blurb}</p>
-                <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-gold/20 px-3 py-1.5 text-xs font-semibold text-gold backdrop-blur-sm">
-                  <Images className="h-3.5 w-3.5" />
-                  View Gallery
-                </span>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent pt-16">
+                <div className="flex flex-col items-center p-5 text-center">
+                  <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
+                  <p className="mt-2 text-sm text-white font-medium">{p.blurb}</p>
+                  <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-gold px-4 py-2 text-xs font-semibold text-ink shadow-lg">
+                    <Images className="h-3.5 w-3.5" />
+                    View Gallery
+                  </span>
+                </div>
               </div>
             </Link>
           ))}
