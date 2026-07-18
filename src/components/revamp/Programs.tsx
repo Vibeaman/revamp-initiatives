@@ -68,6 +68,9 @@ function CommunityOutreach() {
         onMouseEnter={() => !isDragging && setIsPaused(true)}
         onMouseLeave={() => !isDragging && setIsPaused(false)}
       >
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-cream to-transparent md:w-24" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-cream to-transparent md:w-24" />
         <div 
           ref={scrollRef}
           className={`flex gap-5 overflow-x-auto scroll-smooth scrollbar-hide ${isPaused ? "" : "marquee-slide"} ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
