@@ -59,7 +59,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     slug: "seed-for-change-2025",
     title: "Seed for Change 2025",
     description: "Women's empowerment and art therapy program — Year 2025 cohort.",
-    coverImage: "https://i.imgur.com/qyxFGeu.jpg",
+    coverImage: "https://i.imgur.com/UMemkVg.jpg",
   },
   "seed-for-change-2026": {
     slug: "seed-for-change-2026",
