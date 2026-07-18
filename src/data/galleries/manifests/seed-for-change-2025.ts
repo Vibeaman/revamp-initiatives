@@ -35,23 +35,7 @@ export const seedForChange2025Photos: GalleryPhoto[] = [
   },
   {
     src: getPlaceholderImage("sfc25-6", 1200, 900),
-  },
-  {
-    src: getPlaceholderImage("sfc25-7", 1200, 800),
-    caption: "Entrepreneurship workshop",
-    date: "2025-03-22",
-  },
-  {
-    src: getPlaceholderImage("sfc25-8", 1200, 850),
     caption: "Group photo with founder",
     date: "2025-03-25",
-  },
-  {
-    src: getPlaceholderImage("sfc25-9", 1200, 800),
-  },
-  {
-    src: getPlaceholderImage("sfc25-10", 1200, 900),
-    caption: "Sewing machines distribution",
-    date: "2025-03-26",
   },
 ];

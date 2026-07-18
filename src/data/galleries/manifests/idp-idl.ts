@@ -30,36 +30,17 @@ export const idpIdlPhotos: GalleryPhoto[] = [
   },
   {
     src: getPlaceholderImage("idp-5", 1200, 800),
-  },
-  {
-    src: getPlaceholderImage("idp-6", 1200, 900),
     caption: "Volunteers sorting donations",
     date: "2025-04-07",
   },
   {
-    src: getPlaceholderImage("idp-7", 1200, 800),
+    src: getPlaceholderImage("idp-6", 1200, 900),
     caption: "Women empowerment session",
     date: "2025-04-08",
   },
   {
-    src: getPlaceholderImage("idp-8", 1200, 850),
-  },
-  {
-    src: getPlaceholderImage("idp-9", 1200, 800),
+    src: getPlaceholderImage("idp-7", 1200, 800),
     caption: "Follow-up visit",
     date: "2025-04-15",
-  },
-  {
-    src: getPlaceholderImage("idp-10", 1200, 900),
-    caption: "Community leader meeting",
-    date: "2025-04-16",
-  },
-  {
-    src: getPlaceholderImage("idp-11", 1200, 800),
-  },
-  {
-    src: getPlaceholderImage("idp-12", 1200, 850),
-    caption: "Final distribution tally",
-    date: "2025-04-17",
   },
 ];

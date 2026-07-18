@@ -25,14 +25,11 @@ export const seedForChange2026Photos: GalleryPhoto[] = [
   },
   {
     src: getPlaceholderImage("sfc26-4", 1200, 850),
-  },
-  {
-    src: getPlaceholderImage("sfc26-5", 1200, 800),
     caption: "Mentorship session",
     date: "2026-01-20",
   },
   {
-    src: getPlaceholderImage("sfc26-6", 1200, 900),
+    src: getPlaceholderImage("sfc26-5", 1200, 800),
     caption: "Community outreach planning",
     date: "2026-01-22",
   },

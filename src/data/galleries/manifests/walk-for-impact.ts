@@ -30,19 +30,12 @@ export const walkForImpactPhotos: GalleryPhoto[] = [
   },
   {
     src: getPlaceholderImage("wfi-5", 1200, 800),
-    date: "2025-02-17",
-  },
-  {
-    src: getPlaceholderImage("wfi-6", 1200, 900),
     caption: "Cash support distribution",
     date: "2025-02-17",
   },
   {
-    src: getPlaceholderImage("wfi-7", 1200, 800),
+    src: getPlaceholderImage("wfi-6", 1200, 900),
     caption: "Group photograph with elders",
     date: "2025-02-18",
-  },
-  {
-    src: getPlaceholderImage("wfi-8", 1200, 850),
   },
 ];

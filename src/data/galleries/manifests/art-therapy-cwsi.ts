@@ -25,22 +25,16 @@ export const artTherapyCwsiPhotos: GalleryPhoto[] = [
   },
   {
     src: getPlaceholderImage("at-4", 1200, 850),
-  },
-  {
-    src: getPlaceholderImage("at-5", 1200, 800),
     caption: "Participants showcasing their work",
     date: "2025-05-14",
   },
   {
-    src: getPlaceholderImage("at-6", 1200, 900),
+    src: getPlaceholderImage("at-5", 1200, 800),
     caption: "Therapy garden session",
     date: "2025-05-15",
   },
   {
-    src: getPlaceholderImage("at-7", 1200, 800),
-  },
-  {
-    src: getPlaceholderImage("at-8", 1200, 850),
+    src: getPlaceholderImage("at-6", 1200, 900),
     caption: "Certificate presentation",
     date: "2025-05-18",
   },

@@ -30,27 +30,11 @@ export const rbmSummitPhotos: GalleryPhoto[] = [
   },
   {
     src: getPlaceholderImage("rbm-5", 1200, 800),
-  },
-  {
-    src: getPlaceholderImage("rbm-6", 1200, 900),
     caption: "Panel discussion",
     date: "2025-06-22",
   },
   {
-    src: getPlaceholderImage("rbm-7", 1200, 800),
-    caption: "Networking session",
-    date: "2025-06-22",
-  },
-  {
-    src: getPlaceholderImage("rbm-8", 1200, 850),
-    caption: "Closing remarks",
-    date: "2025-06-23",
-  },
-  {
-    src: getPlaceholderImage("rbm-9", 1200, 800),
-  },
-  {
-    src: getPlaceholderImage("rbm-10", 1200, 900),
+    src: getPlaceholderImage("rbm-6", 1200, 900),
     caption: "Group photo of participants",
     date: "2025-06-23",
   },
