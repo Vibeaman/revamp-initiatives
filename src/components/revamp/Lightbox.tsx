@@ -21,11 +21,15 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < photos.length - 1;
 
-  const goPrev = useCallback(() => {
+  const goPrev = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (hasPrev) onNavigate(currentIndex - 1);
   }, [hasPrev, currentIndex, onNavigate]);
 
-  const goNext = useCallback(() => {
+  const goNext = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (hasNext) onNavigate(currentIndex + 1);
   }, [hasNext, currentIndex, onNavigate]);
 
@@ -89,6 +93,14 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
 
   if (typeof document === "undefined") return null;
 
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return createPortal(
     <AnimatePresence>
       <motion.div
@@ -98,9 +110,7 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
         className="fixed inset-0 z-50 flex items-center justify-center bg-ink/95 backdrop-blur-sm"
-        onClick={(e) => {
-          if (e.target === e.currentTarget) onClose();
-        }}
+        onClick={handleOverlayClick}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -121,7 +131,7 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
         {/* Navigation: Previous */}
         {hasPrev && (
           <button
-            onClick={goPrev}
+            onClick={(e) => goPrev(e)}
             className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-cream transition-colors hover:bg-white/20 md:left-6"
             aria-label="Previous photo"
           >
@@ -132,7 +142,7 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
         {/* Navigation: Next */}
         {hasNext && (
           <button
-            onClick={goNext}
+            onClick={(e) => goNext(e)}
             className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/10 p-2 text-cream transition-colors hover:bg-white/20 md:right-6"
             aria-label="Next photo"
           >

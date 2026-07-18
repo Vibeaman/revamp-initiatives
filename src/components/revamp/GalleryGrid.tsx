@@ -32,7 +32,10 @@ export function GalleryGrid({ photos }: GalleryGridProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.05 }}
-            onClick={() => openLightbox(index)}
+            onClick={(e) => {
+              e.preventDefault();
+              openLightbox(index);
+            }}
             className="group relative aspect-square overflow-hidden rounded-xl bg-cream/5 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-ink"
             aria-label={`View photo${photo.caption ? `: ${photo.caption}` : ""}`}
           >
