@@ -289,8 +289,7 @@ function ProgramsPage() {
             {getAllGalleries().map((gallery, index) => (
               <motion.div key={gallery.slug} variants={fadeUp}>
                 <Link
-                  to="/programs/gallery/$slug"
-                  params={{ slug: gallery.slug }}
+                  href={`/programs/gallery/${gallery.slug}`}
                   className="group relative block overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
