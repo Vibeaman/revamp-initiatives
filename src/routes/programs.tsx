@@ -136,7 +136,7 @@ function CommunityOutreach() {
             return p.gallerySlug ? (
               <Link
                 key={`${p.name}-${i}`}
-                to="/programs/gallery/$slug"
+                to="/gallery/$slug"
                 params={{ slug: p.gallerySlug }}
                 className="block"
               >
@@ -222,7 +222,7 @@ function ProgramsPage() {
               </ul>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  to="/programs/gallery/$slug"
+                  to="/gallery/$slug"
                   params={{ slug: "seed-for-change-2025" }}
                   className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
                 >
@@ -230,7 +230,7 @@ function ProgramsPage() {
                   View 2025 Gallery
                 </Link>
                 <Link
-                  to="/programs/gallery/$slug"
+                  to="/gallery/$slug"
                   params={{ slug: "seed-for-change-2026" }}
                   className="inline-flex items-center gap-2 rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-cream"
                 >
