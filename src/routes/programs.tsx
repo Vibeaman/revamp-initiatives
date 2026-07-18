@@ -44,7 +44,8 @@ const subPrograms = [
     name: "Slum Outreach", 
     img: "https://i.imgur.com/93sLY6m.jpg", 
     blurb: "Direct intervention in underserved communities.",
-    fullDesc: "Direct intervention in underserved communities through food support, medical assistance, and cash aid. We work alongside community leaders to identify and address critical needs."
+    fullDesc: "Direct intervention in underserved communities through food support, medical assistance, and cash aid. We work alongside community leaders to identify and address critical needs.",
+    gallerySlug: "slum-outreach",
   },
   { 
     name: "IDP Camp Durumi", 
@@ -57,7 +58,8 @@ const subPrograms = [
     name: "Kreative Campus", 
     img: kreativeCampusImg, 
     blurb: "Skill-building creative training.",
-    fullDesc: "Campus-based creative skill-building workshops that empower students with practical skills in photography, design, and digital arts for future careers."
+    fullDesc: "Campus-based creative skill-building workshops that empower students with practical skills in photography, design, and digital arts for future careers.",
+    gallerySlug: "kreative-campus",
   },
 ];
 
