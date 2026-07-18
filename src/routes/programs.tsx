@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight, Images } from "lucide-react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
+import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
 
 import { getAllGalleries } from "@/data/galleries";
 
@@ -54,7 +55,7 @@ const subPrograms = [
   },
   { 
     name: "Kreative Campus", 
-    img: "https://i.imgur.com/0zqP8HV.jpg", 
+    img: kreativeCampusImg, 
     blurb: "Skill-building creative training.",
     fullDesc: "Campus-based creative skill-building workshops that empower students with practical skills in photography, design, and digital arts for future careers."
   },

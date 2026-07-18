@@ -6,6 +6,7 @@ import { useState, useRef, useCallback } from "react";
 import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
+import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
 
 const seedObjectives = [
   "Train women in tailoring & entrepreneurship",
@@ -18,7 +19,7 @@ const subPrograms = [
   { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders.", href: "/gallery/walk-for-impact" },
   { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities.", href: "/gallery/slum-outreach" },
   { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance.", href: "/gallery/idp" },
-  { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
+  { name: "Kreative Campus", img: kreativeCampusImg, blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
 ];
 
 function CommunityOutreach() {

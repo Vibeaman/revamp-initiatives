@@ -4,12 +4,13 @@ import { ArrowRight, ChevronLeft, ChevronRight, Images } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect, useCallback, useRef } from "react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
+import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
 
 const outreachCards = [
   { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders.", href: "/gallery/walk-for-impact" },
   { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities.", href: "/gallery/slum-outreach" },
   { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance.", href: "/gallery/idp" },
-  { name: "Kreative Campus", img: "https://i.imgur.com/0zqP8HV.jpg", blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
+  { name: "Kreative Campus", img: kreativeCampusImg, blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
 ];
 
 const AUTOPLAY_MS = 5000;
