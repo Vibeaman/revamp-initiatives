@@ -99,7 +99,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     slug: "slum-outreach",
     title: "Slum Outreach",
     description: "Direct intervention in underserved communities.",
-    coverImage: getPlaceholderImage("so-cover", 1200, 800),
+    coverImage: "https://i.imgur.com/iCkCfHr.jpg",
   },
 };
 
