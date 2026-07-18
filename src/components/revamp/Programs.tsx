@@ -74,13 +74,13 @@ function CommunityOutreach() {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          style={{ WebkitOverflowScrolling: "touch" }}
+          style={{ WebkitOverflowScrolling: "touch", touchAction: "pan-y" }}
         >
           {[...subPrograms, ...subPrograms].map((p, i) => (
             <Link
               key={`${p.name}-${i}`}
               to={p.href}
-              className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64 select-none"
+              className="group relative w-[72%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-56 lg:w-64 select-none" style={{ touchAction: "pan-y" }}"
             >
               <div className="relative aspect-[3/4] overflow-hidden">
                 <img 
