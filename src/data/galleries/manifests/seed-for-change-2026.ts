@@ -5,7 +5,8 @@
  * To add a photo: { src: "/path/to/image.jpg", caption?: "Optional caption", date?: "2026-01-15" }
  */
 
-import { GalleryPhoto, getPlaceholderImage } from "../index";
+import { GalleryPhoto } from "../index";
+import { getPlaceholderImage } from "../placeholder";
 
 export const seedForChange2026Photos: GalleryPhoto[] = [
   {

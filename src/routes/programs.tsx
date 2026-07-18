@@ -1,11 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight, Images } from "lucide-react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
-import { useRef, useState, useCallback } from "react";
+
 import { getAllGalleries } from "@/data/galleries";
 
 export const Route = createFileRoute("/programs")({
@@ -61,36 +61,14 @@ const subPrograms = [
 ];
 
 function CommunityOutreach() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [paused, setPaused] = useState(false);
-  const dragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
-  const onPointerDown = useCallback((e: React.PointerEvent) => {
-    const el = trackRef.current;
-    if (!el) return;
-    dragging.current = true;
-    setPaused(true);
-    startX.current = e.clientX;
-    scrollLeft.current = el.scrollLeft;
-    el.setPointerCapture(e.pointerId);
-  }, []);
-
-  const onPointerMove = useCallback((e: React.PointerEvent) => {
-    if (!dragging.current || !trackRef.current) return;
-    const dx = e.clientX - startX.current;
-    trackRef.current.scrollLeft = scrollLeft.current - dx;
-  }, []);
-
-  const onPointerUp = useCallback((e: React.PointerEvent) => {
-    dragging.current = false;
-    trackRef.current?.releasePointerCapture(e.pointerId);
-    setTimeout(() => setPaused(false), 3000);
-  }, []);
-
   return (
-    <div className="mt-12 md:mt-16">
+    <motion.div
+      variants={staggerParent}
+      initial="hidden"
+      whileInView="show"
+      viewport={viewportOnce}
+      className="mt-12 md:mt-16"
+    >
       <div className="mb-6 flex items-end justify-between gap-6 md:mb-8">
         <div>
           <h3 className="text-display text-2xl font-bold text-ink md:text-4xl">Community Outreach</h3>
@@ -100,55 +78,45 @@ function CommunityOutreach() {
         </div>
       </div>
 
-      <div
-        ref={trackRef}
-        className="relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
-        style={{ WebkitOverflowScrolling: "touch" }}
-      >
-        <div className={`flex gap-5 whitespace-nowrap ${paused ? "" : "marquee-cards"}`}>
-          {[...subPrograms].map((p, i) => {
-            const Card = (
-              <article
-                key={`${p.name}-${i}`}
-                className="group relative w-[78%] shrink-0 overflow-hidden rounded-2xl bg-ink text-cream md:w-64 select-none"
-              >
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <img src={p.img} alt={p.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none" loading="lazy" draggable={false} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center">
-                  <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
-                  <p className="mt-2 text-sm text-white font-medium">{p.blurb}</p>
-                  {p.gallerySlug && (
-                    <span className="mt-3 inline-flex items-center gap-1 rounded-full bg-gold/20 px-3 py-1 text-xs font-medium text-gold">
-                      <Images className="h-3 w-3" />
-                      View Gallery
-                    </span>
-                  )}
-                </div>
-              </article>
-            );
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6">
+        {subPrograms.map((p) => {
+          const Card = (
+            <motion.article
+              variants={fadeUp}
+              className="group relative overflow-hidden rounded-2xl bg-ink text-cream"
+            >
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <img src={p.img} alt={p.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-5 text-center">
+                <h4 className="text-display text-lg font-bold text-gold">{p.name}</h4>
+                <p className="mt-2 text-sm text-white font-medium">{p.blurb}</p>
+                {p.gallerySlug && (
+                  <span className="mt-3 inline-flex items-center gap-1 rounded-full bg-gold/20 px-3 py-1 text-xs font-medium text-gold">
+                    <Images className="h-3 w-3" />
+                    View Gallery
+                  </span>
+                )}
+              </div>
+            </motion.article>
+          );
 
-            return p.gallerySlug ? (
-              <Link
-                key={`${p.name}-${i}`}
-                to="/programs/gallery/$slug"
-                params={{ slug: p.gallerySlug }}
-                className="block"
-              >
-                {Card}
-              </Link>
-            ) : (
-              <div key={`${p.name}-${i}`}>{Card}</div>
-            );
-          })}
-        </div>
+          return p.gallerySlug ? (
+            <Link
+              key={p.name}
+              to="/gallery/$slug"
+              params={{ slug: p.gallerySlug }}
+              className="block"
+            >
+              {Card}
+            </Link>
+          ) : (
+            <div key={p.name}>{Card}</div>
+          );
+        })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -222,7 +190,7 @@ function ProgramsPage() {
               </ul>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  to="/programs/gallery/$slug"
+                  to="/gallery/$slug"
                   params={{ slug: "seed-for-change-2025" }}
                   className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
                 >
@@ -230,7 +198,7 @@ function ProgramsPage() {
                   View 2025 Gallery
                 </Link>
                 <Link
-                  to="/programs/gallery/$slug"
+                  to="/gallery/$slug"
                   params={{ slug: "seed-for-change-2026" }}
                   className="inline-flex items-center gap-2 rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-cream"
                 >
