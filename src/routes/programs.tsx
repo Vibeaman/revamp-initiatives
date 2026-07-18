@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
 import { motion } from "framer-motion";
@@ -287,15 +287,13 @@ function ProgramsPage() {
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
             {getAllGalleries().map((gallery, index) => (
-              <Link
+              <motion.a
                 key={gallery.slug}
                 href={`/programs/gallery/${gallery.slug}`}
+                variants={fadeUp}
                 className="group block"
               >
-                <motion.div
-                  variants={fadeUp}
-                  className="relative overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10"
-                >
+                <div className="relative overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10">
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img
                       src={gallery.coverImage}
@@ -314,8 +312,8 @@ function ProgramsPage() {
                     <h3 className="text-display text-lg font-bold text-cream">{gallery.title}</h3>
                     <p className="mt-2 line-clamp-2 text-sm text-cream/60">{gallery.description}</p>
                   </div>
-                </motion.div>
-              </Link>
+                </div>
+              </motion.a>
             ))}
           </motion.div>
         </div>
