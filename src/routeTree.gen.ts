@@ -17,7 +17,7 @@ import { Route as ImpactIndexRouteImport } from './routes/impact/index'
 import { Route as ImpactStoriesRouteImport } from './routes/impact/stories'
 import { Route as ImpactMilestonesRouteImport } from './routes/impact/milestones'
 import { Route as ImpactJourneyRouteImport } from './routes/impact/journey'
-import { Route as ProgramsGallerySlugRouteImport } from './routes/programs/gallery.$slug'
+import { Route as GallerySlugRouteImport } from './routes/gallery/$slug'
 
 const ProgramsRoute = ProgramsRouteImport.update({
   id: '/programs',
@@ -59,45 +59,45 @@ const ImpactJourneyRoute = ImpactJourneyRouteImport.update({
   path: '/impact/journey',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsGallerySlugRoute = ProgramsGallerySlugRouteImport.update({
+const GallerySlugRoute = GallerySlugRouteImport.update({
   id: '/gallery/$slug',
   path: '/gallery/$slug',
-  getParentRoute: () => ProgramsRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
-  '/programs': typeof ProgramsRouteWithChildren
+  '/programs': typeof ProgramsRoute
+  '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
   '/impact/stories': typeof ImpactStoriesRoute
   '/impact/': typeof ImpactIndexRoute
-  '/programs/gallery/$slug': typeof ProgramsGallerySlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
-  '/programs': typeof ProgramsRouteWithChildren
+  '/programs': typeof ProgramsRoute
+  '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
   '/impact/stories': typeof ImpactStoriesRoute
   '/impact': typeof ImpactIndexRoute
-  '/programs/gallery/$slug': typeof ProgramsGallerySlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
-  '/programs': typeof ProgramsRouteWithChildren
+  '/programs': typeof ProgramsRoute
+  '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
   '/impact/stories': typeof ImpactStoriesRoute
   '/impact/': typeof ImpactIndexRoute
-  '/programs/gallery/$slug': typeof ProgramsGallerySlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -106,40 +106,41 @@ export interface FileRouteTypes {
     | '/founders'
     | '/get-involved'
     | '/programs'
+    | '/gallery/$slug'
     | '/impact/journey'
     | '/impact/milestones'
     | '/impact/stories'
     | '/impact/'
-    | '/programs/gallery/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/founders'
     | '/get-involved'
     | '/programs'
+    | '/gallery/$slug'
     | '/impact/journey'
     | '/impact/milestones'
     | '/impact/stories'
     | '/impact'
-    | '/programs/gallery/$slug'
   id:
     | '__root__'
     | '/'
     | '/founders'
     | '/get-involved'
     | '/programs'
+    | '/gallery/$slug'
     | '/impact/journey'
     | '/impact/milestones'
     | '/impact/stories'
     | '/impact/'
-    | '/programs/gallery/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FoundersRoute: typeof FoundersRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
-  ProgramsRoute: typeof ProgramsRouteWithChildren
+  ProgramsRoute: typeof ProgramsRoute
+  GallerySlugRoute: typeof GallerySlugRoute
   ImpactJourneyRoute: typeof ImpactJourneyRoute
   ImpactMilestonesRoute: typeof ImpactMilestonesRoute
   ImpactStoriesRoute: typeof ImpactStoriesRoute
@@ -204,33 +205,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpactJourneyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/gallery/$slug': {
-      id: '/programs/gallery/$slug'
+    '/gallery/$slug': {
+      id: '/gallery/$slug'
       path: '/gallery/$slug'
-      fullPath: '/programs/gallery/$slug'
-      preLoaderRoute: typeof ProgramsGallerySlugRouteImport
-      parentRoute: typeof ProgramsRoute
+      fullPath: '/gallery/$slug'
+      preLoaderRoute: typeof GallerySlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface ProgramsRouteChildren {
-  ProgramsGallerySlugRoute: typeof ProgramsGallerySlugRoute
-}
-
-const ProgramsRouteChildren: ProgramsRouteChildren = {
-  ProgramsGallerySlugRoute: ProgramsGallerySlugRoute,
-}
-
-const ProgramsRouteWithChildren = ProgramsRoute._addFileChildren(
-  ProgramsRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FoundersRoute: FoundersRoute,
   GetInvolvedRoute: GetInvolvedRoute,
-  ProgramsRoute: ProgramsRouteWithChildren,
+  ProgramsRoute: ProgramsRoute,
+  GallerySlugRoute: GallerySlugRoute,
   ImpactJourneyRoute: ImpactJourneyRoute,
   ImpactMilestonesRoute: ImpactMilestonesRoute,
   ImpactStoriesRoute: ImpactStoriesRoute,

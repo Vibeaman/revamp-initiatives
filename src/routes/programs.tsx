@@ -292,7 +292,7 @@ function ProgramsPage() {
                 variants={fadeUp}
                 className="group cursor-pointer overflow-hidden rounded-2xl bg-cream/5 transition-all hover:bg-cream/10"
                 onClick={() => {
-                  window.location.href = `/programs/gallery/${gallery.slug}`;
+                  window.location.href = `/gallery/${gallery.slug}`;
                 }}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">

@@ -6,7 +6,7 @@ import { GalleryGrid } from "@/components/revamp/GalleryGrid";
 import { getGallery, galleryExists } from "@/data/galleries";
 import { motion } from "framer-motion";
 
-export const Route = createFileRoute("/programs/gallery/$slug")({
+export const Route = createFileRoute("/gallery/$slug")({
   component: GalleryPage,
   notFoundComponent: () => <GalleryNotFound />,
 });
