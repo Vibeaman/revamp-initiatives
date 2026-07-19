@@ -112,10 +112,11 @@ export default function HomeProgramsTeaser() {
               <span className="rounded-full border border-gold/30 px-3 py-1">Launched 2024</span>
             </div>
             <Link
-              to="/programs/seed-for-change"
+              to="/gallery/$slug"
+              params={{ slug: "seed-for-change-2026" }}
               className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
             >
-              Read the Full Story
+              View Galleries
               <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>

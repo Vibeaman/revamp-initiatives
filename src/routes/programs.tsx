@@ -193,11 +193,12 @@ function ProgramsPage() {
               </ul>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  to="/programs/seed-for-change"
+                  to="/gallery/$slug"
+                  params={{ slug: "seed-for-change-2026" }}
                   className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
                 >
                   <Images className="h-4 w-4" />
-                  Read the Full Story &amp; Galleries
+                  View Galleries
                 </Link>
               </div>
             </motion.div>

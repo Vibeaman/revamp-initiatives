@@ -14,7 +14,6 @@ import { Route as GetInvolvedRouteImport } from './routes/get-involved'
 import { Route as FoundersRouteImport } from './routes/founders'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ImpactIndexRouteImport } from './routes/impact/index'
-import { Route as ProgramsSeedForChangeRouteImport } from './routes/programs/seed-for-change'
 import { Route as ImpactStoriesRouteImport } from './routes/impact/stories'
 import { Route as ImpactMilestonesRouteImport } from './routes/impact/milestones'
 import { Route as ImpactJourneyRouteImport } from './routes/impact/journey'
@@ -45,11 +44,6 @@ const ImpactIndexRoute = ImpactIndexRouteImport.update({
   path: '/impact/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsSeedForChangeRoute = ProgramsSeedForChangeRouteImport.update({
-  id: '/seed-for-change',
-  path: '/seed-for-change',
-  getParentRoute: () => ProgramsRoute,
-} as any)
 const ImpactStoriesRoute = ImpactStoriesRouteImport.update({
   id: '/impact/stories',
   path: '/impact/stories',
@@ -75,24 +69,22 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
-  '/programs': typeof ProgramsRouteWithChildren
+  '/programs': typeof ProgramsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
   '/impact/stories': typeof ImpactStoriesRoute
-  '/programs/seed-for-change': typeof ProgramsSeedForChangeRoute
   '/impact/': typeof ImpactIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
-  '/programs': typeof ProgramsRouteWithChildren
+  '/programs': typeof ProgramsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
   '/impact/stories': typeof ImpactStoriesRoute
-  '/programs/seed-for-change': typeof ProgramsSeedForChangeRoute
   '/impact': typeof ImpactIndexRoute
 }
 export interface FileRoutesById {
@@ -100,12 +92,11 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
-  '/programs': typeof ProgramsRouteWithChildren
+  '/programs': typeof ProgramsRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
   '/impact/stories': typeof ImpactStoriesRoute
-  '/programs/seed-for-change': typeof ProgramsSeedForChangeRoute
   '/impact/': typeof ImpactIndexRoute
 }
 export interface FileRouteTypes {
@@ -119,7 +110,6 @@ export interface FileRouteTypes {
     | '/impact/journey'
     | '/impact/milestones'
     | '/impact/stories'
-    | '/programs/seed-for-change'
     | '/impact/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -131,7 +121,6 @@ export interface FileRouteTypes {
     | '/impact/journey'
     | '/impact/milestones'
     | '/impact/stories'
-    | '/programs/seed-for-change'
     | '/impact'
   id:
     | '__root__'
@@ -143,7 +132,6 @@ export interface FileRouteTypes {
     | '/impact/journey'
     | '/impact/milestones'
     | '/impact/stories'
-    | '/programs/seed-for-change'
     | '/impact/'
   fileRoutesById: FileRoutesById
 }
@@ -151,7 +139,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FoundersRoute: typeof FoundersRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
-  ProgramsRoute: typeof ProgramsRouteWithChildren
+  ProgramsRoute: typeof ProgramsRoute
   GallerySlugRoute: typeof GallerySlugRoute
   ImpactJourneyRoute: typeof ImpactJourneyRoute
   ImpactMilestonesRoute: typeof ImpactMilestonesRoute
@@ -196,13 +184,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpactIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/seed-for-change': {
-      id: '/programs/seed-for-change'
-      path: '/seed-for-change'
-      fullPath: '/programs/seed-for-change'
-      preLoaderRoute: typeof ProgramsSeedForChangeRouteImport
-      parentRoute: typeof ProgramsRoute
-    }
     '/impact/stories': {
       id: '/impact/stories'
       path: '/impact/stories'
@@ -234,23 +215,11 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface ProgramsRouteChildren {
-  ProgramsSeedForChangeRoute: typeof ProgramsSeedForChangeRoute
-}
-
-const ProgramsRouteChildren: ProgramsRouteChildren = {
-  ProgramsSeedForChangeRoute: ProgramsSeedForChangeRoute,
-}
-
-const ProgramsRouteWithChildren = ProgramsRoute._addFileChildren(
-  ProgramsRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FoundersRoute: FoundersRoute,
   GetInvolvedRoute: GetInvolvedRoute,
-  ProgramsRoute: ProgramsRouteWithChildren,
+  ProgramsRoute: ProgramsRoute,
   GallerySlugRoute: GallerySlugRoute,
   ImpactJourneyRoute: ImpactJourneyRoute,
   ImpactMilestonesRoute: ImpactMilestonesRoute,
