@@ -3,7 +3,7 @@ import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import { Images, BookOpen } from "lucide-react";
+import { Images, BookOpen, Folder } from "lucide-react";
 
 export const Route = createFileRoute("/seed-of-change")({
   head: () => ({
@@ -12,48 +12,65 @@ export const Route = createFileRoute("/seed-of-change")({
       {
         name: "description",
         content:
-          "Seed of Change is Revamp Initiatives' flagship women's empowerment journey — a living diary of the people, stories, and moments shaping the project year by year.",
+          "Seed of Change is Revamp Initiatives' flagship women's empowerment journey, a living diary of the people, stories, and moments shaping the project year by year.",
       },
       { property: "og:title", content: "Seed of Change | Revamp Initiatives" },
       {
         property: "og:description",
         content:
-          "A living diary of Seed of Change — Revamp Initiatives' flagship women's empowerment project.",
+          "A living diary of Seed of Change, Revamp Initiatives' flagship women's empowerment project.",
       },
     ],
   }),
   component: SeedOfChangePage,
 });
 
+interface GalleryFolder {
+  name: string;
+  photos: string[]; // left empty intentionally, to be filled in later
+}
+
 interface DiaryEntry {
   year: string;
   title: string;
   body: string;
-  photos: string[]; // left empty intentionally — to be filled in later
+  folders: GalleryFolder[];
 }
+
+const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Graduating"];
 
 const entries: DiaryEntry[] = [
   {
     year: "2025",
     title: "Where it all began",
     body:
-      "Placeholder text — this is where the story of the 2025 chapter of Seed of Change will live. Here we'll share the moments, the women, and the milestones that shaped this year of the journey, in our own words, as it happened.",
-    photos: [],
+      "In the past, 16 women were trained through our Art Residency program, mentored and empowered with the right skills, tools, seed capital, and job employment. The Seed for Change initiative in 2025 covered 6+ skill areas, reached 300+ children, and delivered a youth facilitation program supporting over 1,000 youth toward grants in Nigerian universities.",
+    folders: DAY_FOLDERS.map((name) => ({ name, photos: [] })),
   },
   {
     year: "2026",
     title: "Continuing the journey",
     body:
-      "Placeholder text — this is where the story of the 2026 chapter of Seed of Change will live. A new year, a new cohort, new stories of growth — this space will hold the diary entries, reflections, and photos from this leg of the journey.",
-    photos: [],
+      "This is where the story of the 2026 chapter of Seed of Change will live. A new year, a new cohort, new stories of growth. This space will hold the diary entries, reflections, and photos from this leg of the journey.",
+    folders: DAY_FOLDERS.map((name) => ({ name, photos: [] })),
   },
 ];
 
-function EmptyGalleryState() {
+const stats = [
+  { value: "16", label: "Women trained through our Art Residency program" },
+  { value: "6+", label: "Skill areas covered in 2025" },
+  { value: "300+", label: "Children reached" },
+  { value: "1,000+", label: "Youth facilitated toward university grants" },
+];
+
+function EmptyFolderCard({ name }: { name: string }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-cream/15 bg-cream/[0.02] px-6 py-14 text-center">
-      <Images className="mb-4 h-10 w-10 text-gold/40" />
-      <p className="text-sm text-cream/50">Photos coming soon.</p>
+    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-cream/15 bg-cream/[0.02] px-4 py-8 text-center transition-colors hover:border-gold/30 hover:bg-cream/[0.04]">
+      <Folder className="mb-3 h-8 w-8 text-gold/40" />
+      <p className="text-sm font-semibold text-cream/80">{name}</p>
+      <p className="mt-1 flex items-center gap-1 text-xs text-cream/40">
+        <Images className="h-3 w-3" /> Photos coming soon
+      </p>
     </div>
   );
 }
@@ -90,10 +107,35 @@ function SeedOfChangePage() {
             transition={{ delay: 0.2 }}
             className="mt-6 max-w-2xl text-cream/80"
           >
-            Placeholder text — Seed of Change is one of our broadest and most personal projects.
-            This page is its diary: an evolving record of the women, the moments, and the growth
-            behind the project, told chapter by chapter.
+            Seed for Change Initiative (2024-Present) is a flagship program of Revamp
+            Initiatives, a women-focused empowerment and art therapy program for marginalized
+            communities, kids, and communities exposed to kidnapping, banditry attacks, and
+            other underserved, less opportune women and youths, providing practical vocational
+            and creative skills for income generation, financial independence, and
+            socio-economic growth.
           </motion.p>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="relative border-y border-cream/10 bg-cream/[0.02] py-10 md:py-14">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <motion.div
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="grid grid-cols-2 gap-8 md:grid-cols-4"
+          >
+            {stats.map((stat) => (
+              <motion.div key={stat.label} variants={fadeUp} className="text-center md:text-left">
+                <p className="text-display text-3xl font-bold text-gold gold-glow md:text-5xl">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-sm text-cream/60">{stat.label}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -137,7 +179,11 @@ function SeedOfChangePage() {
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
                     {entry.year} Gallery
                   </p>
-                  <EmptyGalleryState />
+                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+                    {entry.folders.map((folder) => (
+                      <EmptyFolderCard key={folder.name} name={folder.name} />
+                    ))}
+                  </div>
                 </motion.div>
               </motion.article>
             ))}
