@@ -188,6 +188,14 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                to="/seed-of-change"
+                className="rounded-full px-4 py-2 text-sm font-medium text-cream/80 transition-colors hover:text-gold"
+              >
+                Seed of Change
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/get-involved"
                 className="rounded-full px-4 py-2 text-sm font-medium text-cream/80 transition-colors hover:text-gold"
               >
@@ -323,6 +331,15 @@ export default function Navbar() {
                   className="block rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5 hover:text-gold"
                 >
                   Founders
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/seed-of-change"
+                  onClick={() => setOpen(false)}
+                  className="block rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5 hover:text-gold"
+                >
+                  Seed of Change
                 </Link>
               </li>
               <li>
