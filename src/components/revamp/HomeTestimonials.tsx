@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import garuba from "@/assets/garuba-testimonial.jpg";
 
 const testimonials = [
@@ -37,9 +38,9 @@ export default function HomeTestimonials() {
           >
             In their <span className="italic text-gold">own words</span>.
           </motion.h2>
-          <a href="/stories" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-soft">
+          <Link to="/impact/stories" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-soft">
             View all stories <ArrowRight size={16} />
-          </a>
+          </Link>
         </motion.div>
 
         {testimonials.map((t) => (
