@@ -193,26 +193,11 @@ function ProgramsPage() {
               </ul>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  to="/gallery/$slug"
-                  params={{ slug: "seed-for-change-2025" }}
+                  to="/programs/seed-for-change"
                   className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
                 >
                   <Images className="h-4 w-4" />
-                  View 2025 Gallery
-                </Link>
-                <Link
-                  to="/gallery/$slug"
-                  params={{ slug: "seed-for-change-2026" }}
-                  className="inline-flex items-center gap-2 rounded-full border border-ink/20 bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-cream"
-                >
-                  <Images className="h-4 w-4" />
-                  View 2026 Gallery
-                </Link>
-                <Link
-                  to="/programs/seed-for-change"
-                  className="inline-flex items-center gap-2 rounded-full border border-ink/20 bg-transparent px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-cream"
-                >
-                  Read the Full Story
+                  Read the Full Story &amp; Galleries
                 </Link>
               </div>
             </motion.div>
@@ -263,7 +248,9 @@ function ProgramsPage() {
             viewport={viewportOnce}
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {getAllGalleries().map((gallery, index) => (
+            {getAllGalleries()
+              .filter((gallery) => gallery.slug !== "seed-for-change-2025" && gallery.slug !== "seed-for-change-2026")
+              .map((gallery, index) => (
               <motion.div
                 key={gallery.slug}
                 variants={fadeUp}

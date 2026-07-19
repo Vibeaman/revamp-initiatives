@@ -5,7 +5,7 @@ import { ArrowLeft, Sprout } from "lucide-react";
 import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
 import { GalleryGrid } from "@/components/revamp/GalleryGrid";
-import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
+import { fadeUp, viewportOnce } from "@/utils/animations";
 import { seedForChangeStory } from "@/data/seedForChangeStory";
 
 export const Route = createFileRoute("/programs/seed-for-change")({
@@ -118,24 +118,14 @@ function SeedForChangeStoryPage() {
               </div>
             </section>
 
-            {/* Day-by-day galleries */}
+            {/* Gallery */}
             <section className="relative overflow-hidden bg-ink py-12 md:py-16">
               <div className="mx-auto max-w-7xl px-6 md:px-10">
-                <motion.div
-                  variants={staggerParent}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={viewportOnce}
-                  className="space-y-14 md:space-y-20"
-                >
-                  {activeStory.days.map((day) => (
-                    <motion.div key={day.slug} variants={fadeUp}>
-                      <h3 className="text-display mb-6 text-xl font-bold text-cream md:text-2xl">
-                        {day.label}
-                      </h3>
-                      <GalleryGrid photos={day.photos} />
-                    </motion.div>
-                  ))}
+                <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={viewportOnce}>
+                  <h3 className="text-display mb-6 text-xl font-bold text-cream md:text-2xl">
+                    {activeStory.year} Gallery
+                  </h3>
+                  <GalleryGrid photos={activeStory.photos} />
                 </motion.div>
               </div>
             </section>
