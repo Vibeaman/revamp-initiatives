@@ -118,13 +118,6 @@ export default function Navbar() {
                     >
                       All Programs
                     </Link>
-                    <Link
-                      to="/programs/seed-for-change"
-                      onClick={() => setProgramsOpen(false)}
-                      className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm text-cream/80 transition-colors hover:bg-cream/5 hover:text-gold"
-                    >
-                      Seed for Change Story
-                    </Link>
                     <div className="my-2 border-t border-cream/10" />
                     <div className="mb-2 px-4 py-1">
                       <p className="text-xs font-semibold uppercase tracking-wider text-gold/60">Gallery</p>
@@ -269,13 +262,6 @@ export default function Navbar() {
                           className="block rounded-xl px-4 py-3 text-lg font-medium text-cream/80 hover:bg-cream/5 hover:text-gold"
                         >
                           All Programs
-                        </Link>
-                        <Link
-                          to="/programs/seed-for-change"
-                          onClick={() => setOpen(false)}
-                          className="block rounded-xl px-4 py-3 text-lg font-medium text-cream/80 hover:bg-cream/5 hover:text-gold"
-                        >
-                          Seed for Change Story
                         </Link>
                         <p className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gold/60">
                           Gallery

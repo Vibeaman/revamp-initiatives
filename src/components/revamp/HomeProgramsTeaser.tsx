@@ -85,42 +85,6 @@ export default function HomeProgramsTeaser() {
           </motion.h2>
         </motion.div>
 
-        {/* Seed for Change flagship */}
-        <motion.div
-          variants={staggerParent}
-          initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
-          className="mt-10 grid gap-8 overflow-hidden rounded-3xl bg-ink text-cream shadow-ink lg:grid-cols-2 md:mt-14"
-        >
-          <motion.div variants={fadeUp} className="relative min-h-[280px] lg:min-h-full">
-            <img src="https://i.imgur.com/5nrpSL1.jpg" alt="Seed for Change training" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-ink/70 via-transparent to-transparent" />
-            <span className="absolute left-5 top-5 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-widest text-ink md:left-6 md:top-6 md:px-4 md:py-1.5">
-              Flagship
-            </span>
-          </motion.div>
-          <motion.div variants={fadeUp} className="flex flex-col justify-center p-6 md:p-10">
-            <h3 className="text-display text-2xl font-bold text-gold md:text-4xl">Seed for Change</h3>
-            <p className="mt-4 leading-relaxed text-cream/80 md:text-lg">
-              A women-focused empowerment and art therapy program, also a fashion brand built on training,
-              empowerment, and job creation.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-wider text-cream/60 md:mt-6 md:gap-3">
-              <span className="rounded-full border border-gold/30 px-3 py-1">50+ women trained</span>
-              <span className="rounded-full border border-gold/30 px-3 py-1">6+ skill areas</span>
-              <span className="rounded-full border border-gold/30 px-3 py-1">Launched 2024</span>
-            </div>
-            <Link
-              to="/programs/seed-for-change"
-              className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
-            >
-              Read the Full Story
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </motion.div>
-        </motion.div>
-
         {/* Community Outreach slideshow */}
         <motion.div
           variants={staggerParent}
