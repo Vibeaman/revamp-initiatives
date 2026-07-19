@@ -25,6 +25,13 @@ export const Route = createFileRoute("/programs")({
   component: ProgramsPage,
 });
 
+const seedObjectives = [
+  "Train women in tailoring & entrepreneurship",
+  "Create sustainable jobs and income",
+  "Build a socially responsible fashion brand",
+  "Reinvest proceeds back into communities",
+];
+
 const subPrograms = [
   { 
     name: "Walk for Impact", 
@@ -147,9 +154,57 @@ function ProgramsPage() {
             transition={{ delay: 0.2 }}
             className="mt-6 max-w-2xl text-cream/80"
           >
-            Community outreach initiatives creating pathways to empowerment through
-            creativity and skill development.
+            From our flagship Seed for Change program to community outreach initiatives, 
+            we create pathways to empowerment through creativity and skill development.
           </motion.p>
+        </div>
+      </section>
+
+      {/* Seed for Change */}
+      <section className="relative overflow-hidden bg-cream py-12 md:py-20">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <motion.div
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="grid gap-8 lg:grid-cols-2 lg:gap-12"
+          >
+            <motion.div variants={fadeUp}>
+              <span className="mb-4 inline-block rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-widest text-ink">Flagship Program</span>
+              <h2 className="text-display text-3xl font-bold text-ink md:text-5xl">Seed for Change</h2>
+              <p className="mt-6 text-base leading-relaxed text-ink/80 md:text-lg">
+                A women-focused empowerment and art therapy program, also a fashion brand built on training,
+                empowerment, and job creation. Every piece produced carries a story of resilience, linking style
+                with social change.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-wider text-ink/60 md:gap-3">
+                <span className="rounded-full border border-ink/20 px-3 py-1">50+ women trained</span>
+                <span className="rounded-full border border-ink/20 px-3 py-1">6+ skill areas</span>
+                <span className="rounded-full border border-ink/20 px-3 py-1">Launched 2024</span>
+              </div>
+              <ul className="mt-8 space-y-4">
+                {seedObjectives.map((o) => (
+                  <li key={o} className="flex gap-4 text-ink/80">
+                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gold" />
+                    {o}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  to="/programs/seed-for-change"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-105"
+                >
+                  <Images className="h-4 w-4" />
+                  Read the Full Story &amp; Galleries
+                </Link>
+              </div>
+            </motion.div>
+            <motion.div variants={fadeUp} className="relative">
+              <img src="https://i.imgur.com/5nrpSL1.jpg" alt="Seed for Change training" className="rounded-3xl shadow-ink" loading="lazy" />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
