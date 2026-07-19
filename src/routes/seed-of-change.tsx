@@ -3,7 +3,7 @@ import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import { Images, BookOpen, Folder } from "lucide-react";
+import { Images, BookOpen, Folder, Video } from "lucide-react";
 
 export const Route = createFileRoute("/seed-of-change")({
   head: () => ({
@@ -35,9 +35,10 @@ interface DiaryEntry {
   title: string;
   body: string;
   folders: GalleryFolder[];
+  videoUrl: string; // left empty intentionally, to be filled in later (e.g. YouTube/Vimeo embed link)
 }
 
-const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Graduating"];
+const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Graduation"];
 
 const entries: DiaryEntry[] = [
   {
@@ -46,6 +47,7 @@ const entries: DiaryEntry[] = [
     body:
       "In the past, 16 women were trained through our Art Residency program, mentored and empowered with the right skills, tools, seed capital, and job employment. The Seed for Change initiative in 2025 covered 6+ skill areas, reached 300+ children, and delivered a youth facilitation program supporting over 1,000 youth toward grants in Nigerian universities.",
     folders: DAY_FOLDERS.map((name) => ({ name, photos: [] })),
+    videoUrl: "",
   },
   {
     year: "2026",
@@ -53,6 +55,7 @@ const entries: DiaryEntry[] = [
     body:
       "This is where the story of the 2026 chapter of Seed of Change will live. A new year, a new cohort, new stories of growth. This space will hold the diary entries, reflections, and photos from this leg of the journey.",
     folders: DAY_FOLDERS.map((name) => ({ name, photos: [] })),
+    videoUrl: "",
   },
 ];
 
@@ -71,6 +74,30 @@ function EmptyFolderCard({ name }: { name: string }) {
       <p className="mt-1 flex items-center gap-1 text-xs text-cream/40">
         <Images className="h-3 w-3" /> Photos coming soon
       </p>
+    </div>
+  );
+}
+
+function VideoSlot({ videoUrl, year }: { videoUrl: string; year: string }) {
+  if (videoUrl) {
+    return (
+      <div className="aspect-video w-full overflow-hidden rounded-2xl border border-cream/10 bg-black">
+        <iframe
+          src={videoUrl}
+          title={`${year} Seed of Change highlight video`}
+          className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex aspect-video w-full flex-col items-center justify-center rounded-2xl border border-dashed border-cream/15 bg-cream/[0.02] px-4 text-center transition-colors hover:border-gold/30 hover:bg-cream/[0.04]">
+      <Video className="mb-3 h-9 w-9 text-gold/40" />
+      <p className="text-sm font-semibold text-cream/80">{year} Highlight Video</p>
+      <p className="mt-1 text-xs text-cream/40">Video coming soon</p>
     </div>
   );
 }
@@ -174,6 +201,13 @@ function SeedOfChangePage() {
                 <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70 md:text-lg">
                   {entry.body}
                 </motion.p>
+
+                <motion.div variants={fadeUp} className="mt-8">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
+                    {entry.year} Highlight Video
+                  </p>
+                  <VideoSlot videoUrl={entry.videoUrl} year={entry.year} />
+                </motion.div>
 
                 <motion.div variants={fadeUp} className="mt-8">
                   <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
