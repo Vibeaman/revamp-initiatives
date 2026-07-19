@@ -6,7 +6,9 @@ import HomeWhoWeAre from "@/components/revamp/HomeWhoWeAre";
 import HomeProgramsTeaser from "@/components/revamp/HomeProgramsTeaser";
 import HomeImpactStats from "@/components/revamp/HomeImpactStats";
 import HomeTestimonials from "@/components/revamp/HomeTestimonials";
+import Partners from "@/components/revamp/Partners";
 import Footer from "@/components/revamp/Footer";
+import StickyGetInvolved from "@/components/revamp/StickyGetInvolved";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,7 +42,9 @@ function Index() {
       <HomeProgramsTeaser />
       <HomeImpactStats />
       <HomeTestimonials />
+      <Partners />
       <Footer />
+      <StickyGetInvolved />
     </main>
   );
 }
