@@ -208,6 +208,12 @@ function ProgramsPage() {
                   <Images className="h-4 w-4" />
                   View 2026 Gallery
                 </Link>
+                <Link
+                  to="/programs/seed-for-change"
+                  className="inline-flex items-center gap-2 rounded-full border border-ink/20 bg-transparent px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-cream"
+                >
+                  Read the Full Story
+                </Link>
               </div>
             </motion.div>
             <motion.div variants={fadeUp} className="relative">
