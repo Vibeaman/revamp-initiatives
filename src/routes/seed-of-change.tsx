@@ -48,19 +48,31 @@ const entries: DiaryEntry[] = [
     title: "Where it all began",
     body:
       "In the past, 16 women were trained through our Art Residency program, mentored and empowered with the right skills, tools, seed capital, and job employment. The Seed for Change initiative in 2025 covered 6+ skill areas, reached 300+ children, and delivered a youth facilitation program supporting over 1,000 youth toward grants in Nigerian universities.",
-    folders: DAY_FOLDERS.map((name) =>
-      name === "Day 1"
-        ? {
-            name,
-            photos: [
-              "https://i.imgur.com/WO2VC1m.jpeg",
-              "https://i.imgur.com/UJQSTUc.jpeg",
-              "https://i.imgur.com/TShGAbP.jpeg",
-              "https://i.imgur.com/X9W41gi.jpeg",
-            ],
-          }
-        : { name, photos: [] }
-    ),
+    folders: DAY_FOLDERS.map((name) => {
+      if (name === "Day 1") {
+        return {
+          name,
+          photos: [
+            "https://i.imgur.com/WO2VC1m.jpeg",
+            "https://i.imgur.com/UJQSTUc.jpeg",
+            "https://i.imgur.com/TShGAbP.jpeg",
+            "https://i.imgur.com/X9W41gi.jpeg",
+          ],
+        };
+      }
+      if (name === "Day 2") {
+        return {
+          name,
+          photos: [
+            "https://i.imgur.com/5A6b2io.jpeg",
+            "https://i.imgur.com/jBjzpEy.jpeg",
+            "https://i.imgur.com/NVwk22h.jpeg",
+            "https://i.imgur.com/ex0LEAX.jpeg",
+          ],
+        };
+      }
+      return { name, photos: [] };
+    }),
     videoUrl: "",
   },
   {
