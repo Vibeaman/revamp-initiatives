@@ -220,7 +220,7 @@ const entries: DiaryEntry[] = [
 ];
 
 const stats = [
-  { value: "16", label: "Women trained through our Art Residency program" },
+  { value: "50+", label: "Women trained through our Art Residency program" },
   { value: "6+", label: "Skill areas covered in 2025" },
   { value: "300+", label: "Children reached" },
   { value: "1,000+", label: "Youth facilitated toward university grants" },
