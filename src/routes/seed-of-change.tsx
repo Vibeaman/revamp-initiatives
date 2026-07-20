@@ -138,6 +138,19 @@ const entries: DiaryEntry[] = [
           ],
         };
       }
+      if (name === "Day 2") {
+        return {
+          name,
+          photos: [
+            "https://i.imgur.com/miEI7pU.jpeg",
+            "https://i.imgur.com/J7SvVi9.jpeg",
+            "https://i.imgur.com/mtiShxe.jpeg",
+            "https://i.imgur.com/e1GfCjX.jpeg",
+            "https://i.imgur.com/KmasTmB.jpeg",
+            "https://i.imgur.com/MBUyVwy.jpeg",
+          ],
+        };
+      }
       return { name, photos: [] };
     }),
     videoUrl: "",
