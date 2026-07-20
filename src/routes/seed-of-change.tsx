@@ -125,7 +125,21 @@ const entries: DiaryEntry[] = [
     title: "Continuing the journey",
     body:
       "This is where the story of the 2026 chapter of Seed of Change will live. A new year, a new cohort, new stories of growth. This space will hold the diary entries, reflections, and photos from this leg of the journey.",
-    folders: DAY_FOLDERS.map((name) => ({ name, photos: [] })),
+    folders: DAY_FOLDERS.map((name) => {
+      if (name === "Day 1") {
+        return {
+          name,
+          photos: [
+            "https://i.imgur.com/LDCL5EV.jpeg",
+            "https://i.imgur.com/6sL2wWP.jpeg",
+            "https://i.imgur.com/UyjV9U6.jpeg",
+            "https://i.imgur.com/WjOWXye.jpeg",
+            "https://i.imgur.com/zRk0fFH.jpeg",
+          ],
+        };
+      }
+      return { name, photos: [] };
+    }),
     videoUrl: "",
   },
 ];
