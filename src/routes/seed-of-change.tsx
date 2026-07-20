@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
 import { GalleryGrid } from "@/components/revamp/GalleryGrid";
@@ -118,7 +118,7 @@ const entries: DiaryEntry[] = [
       }
       return { name, photos: [] };
     }),
-    videoUrl: "https://player.vimeo.com/video/1211280593",
+    videoUrl: "https://player.vimeo.com/video/1211281712",
   },
   {
     year: "2026",
@@ -189,10 +189,58 @@ function FolderCard({
 }
 
 function VideoSlot({ videoUrl, year }: { videoUrl: string; year: string }) {
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [ratio, setRatio] = useState<number | null>(null); // width / height
+
+  useEffect(() => {
+    if (!videoUrl) return;
+
+    let player: any;
+    let cancelled = false;
+
+    const setup = () => {
+      const VimeoCtor = (window as any).Vimeo?.Player;
+      if (!VimeoCtor || !iframeRef.current) return;
+      player = new VimeoCtor(iframeRef.current);
+      Promise.all([player.getVideoWidth(), player.getVideoHeight()])
+        .then(([w, h]: [number, number]) => {
+          if (!cancelled && w && h) setRatio(w / h);
+        })
+        .catch(() => {});
+    };
+
+    if ((window as any).Vimeo?.Player) {
+      setup();
+    } else {
+      const existing = document.querySelector<HTMLScriptElement>(
+        'script[src="https://player.vimeo.com/api/player.js"]'
+      );
+      const script = existing ?? document.createElement("script");
+      if (!existing) {
+        script.src = "https://player.vimeo.com/api/player.js";
+        document.body.appendChild(script);
+      }
+      script.addEventListener("load", setup);
+      if ((window as any).Vimeo?.Player) setup();
+      return () => script.removeEventListener("load", setup);
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, [videoUrl]);
+
   if (videoUrl) {
+    const isPortrait = ratio !== null && ratio < 1;
     return (
-      <div className="aspect-video w-full overflow-hidden rounded-2xl border border-cream/10 bg-black">
+      <div
+        className={`mx-auto w-full overflow-hidden rounded-2xl border border-cream/10 bg-black ${
+          isPortrait ? "max-h-[75vh] max-w-sm sm:max-w-md" : ""
+        }`}
+        style={{ aspectRatio: ratio ? `${ratio}` : "16 / 9" }}
+      >
         <iframe
+          ref={iframeRef}
           src={videoUrl}
           title={`${year} Seed of Change highlight video`}
           className="h-full w-full"
