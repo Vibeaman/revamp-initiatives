@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import Navbar from "@/components/revamp/Navbar";
 import Footer from "@/components/revamp/Footer";
-import { motion } from "framer-motion";
+import { GalleryGrid } from "@/components/revamp/GalleryGrid";
+import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import { Images, BookOpen, Folder, Video } from "lucide-react";
+import { Images, BookOpen, Folder, Video, ChevronDown } from "lucide-react";
 
 export const Route = createFileRoute("/seed-of-change")({
   head: () => ({
@@ -46,7 +48,19 @@ const entries: DiaryEntry[] = [
     title: "Where it all began",
     body:
       "In the past, 16 women were trained through our Art Residency program, mentored and empowered with the right skills, tools, seed capital, and job employment. The Seed for Change initiative in 2025 covered 6+ skill areas, reached 300+ children, and delivered a youth facilitation program supporting over 1,000 youth toward grants in Nigerian universities.",
-    folders: DAY_FOLDERS.map((name) => ({ name, photos: [] })),
+    folders: DAY_FOLDERS.map((name) =>
+      name === "Day 1"
+        ? {
+            name,
+            photos: [
+              "https://i.imgur.com/WO2VC1m.jpeg",
+              "https://i.imgur.com/UJQSTUc.jpeg",
+              "https://i.imgur.com/TShGAbP.jpeg",
+              "https://i.imgur.com/X9W41gi.jpeg",
+            ],
+          }
+        : { name, photos: [] }
+    ),
     videoUrl: "",
   },
   {
@@ -66,15 +80,54 @@ const stats = [
   { value: "1,000+", label: "Youth facilitated toward university grants" },
 ];
 
-function EmptyFolderCard({ name }: { name: string }) {
+function FolderCard({
+  folder,
+  isOpen,
+  onToggle,
+}: {
+  folder: GalleryFolder;
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
+  const hasPhotos = folder.photos.length > 0;
+
+  if (!hasPhotos) {
+    return (
+      <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-cream/15 bg-cream/[0.02] px-4 py-8 text-center transition-colors hover:border-gold/30 hover:bg-cream/[0.04]">
+        <Folder className="mb-3 h-8 w-8 text-gold/40" />
+        <p className="text-sm font-semibold text-cream/80">{folder.name}</p>
+        <p className="mt-1 flex items-center gap-1 text-xs text-cream/40">
+          <Images className="h-3 w-3" /> Photos coming soon
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-cream/15 bg-cream/[0.02] px-4 py-8 text-center transition-colors hover:border-gold/30 hover:bg-cream/[0.04]">
-      <Folder className="mb-3 h-8 w-8 text-gold/40" />
-      <p className="text-sm font-semibold text-cream/80">{name}</p>
-      <p className="mt-1 flex items-center gap-1 text-xs text-cream/40">
-        <Images className="h-3 w-3" /> Photos coming soon
+    <button
+      type="button"
+      onClick={onToggle}
+      className="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-gold/30 bg-cream/[0.04] px-4 py-8 text-center transition-colors hover:border-gold/50 hover:bg-cream/[0.06] focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-ink"
+      aria-expanded={isOpen}
+    >
+      <img
+        src={folder.photos[0]}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover opacity-20 transition-opacity duration-300 group-hover:opacity-30"
+        loading="lazy"
+      />
+      <Folder className="relative mb-3 h-8 w-8 text-gold" />
+      <p className="relative text-sm font-semibold text-cream">{folder.name}</p>
+      <p className="relative mt-1 flex items-center gap-1 text-xs text-cream/60">
+        <Images className="h-3 w-3" /> {folder.photos.length} photo
+        {folder.photos.length === 1 ? "" : "s"}
       </p>
-    </div>
+      <ChevronDown
+        className={`relative mt-2 h-4 w-4 text-gold/70 transition-transform duration-300 ${
+          isOpen ? "rotate-180" : ""
+        }`}
+      />
+    </button>
   );
 }
 
@@ -99,6 +152,88 @@ function VideoSlot({ videoUrl, year }: { videoUrl: string; year: string }) {
       <p className="text-sm font-semibold text-cream/80">{year} Highlight Video</p>
       <p className="mt-1 text-xs text-cream/40">Video coming soon</p>
     </div>
+  );
+}
+
+function DiaryEntryBlock({ entry, index }: { entry: DiaryEntry; index: number }) {
+  const [openFolder, setOpenFolder] = useState<string | null>(null);
+  const activeFolder = entry.folders.find((f) => f.name === openFolder);
+
+  return (
+    <motion.article
+      variants={staggerParent}
+      initial="hidden"
+      whileInView="show"
+      viewport={viewportOnce}
+      className="relative"
+    >
+      {index > 0 && <div className="mb-16 border-t border-cream/10 md:mb-24" />}
+
+      <motion.div variants={fadeUp} className="mb-6 flex items-center gap-4">
+        <span className="text-display text-4xl font-bold text-gold gold-glow md:text-6xl">
+          {entry.year}
+        </span>
+        <div className="h-px flex-1 bg-cream/10" />
+      </motion.div>
+
+      <motion.h2
+        variants={fadeUp}
+        className="text-display font-bold leading-tight"
+        style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
+      >
+        {entry.title}
+      </motion.h2>
+
+      <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70 md:text-lg">
+        {entry.body}
+      </motion.p>
+
+      <motion.div variants={fadeUp} className="mt-8">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
+          {entry.year} Highlight Video
+        </p>
+        <VideoSlot videoUrl={entry.videoUrl} year={entry.year} />
+      </motion.div>
+
+      <motion.div variants={fadeUp} className="mt-8">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
+          {entry.year} Gallery
+        </p>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          {entry.folders.map((folder) => (
+            <FolderCard
+              key={folder.name}
+              folder={folder}
+              isOpen={openFolder === folder.name}
+              onToggle={() =>
+                setOpenFolder((current) => (current === folder.name ? null : folder.name))
+              }
+            />
+          ))}
+        </div>
+
+        <AnimatePresence>
+          {activeFolder && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-6 rounded-2xl border border-cream/10 bg-cream/[0.02] p-4 md:p-6">
+                <p className="mb-4 text-sm font-semibold text-cream/80">
+                  {entry.year} &middot; {activeFolder.name}
+                </p>
+                <GalleryGrid
+                  photos={activeFolder.photos.map((src) => ({ src }))}
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </motion.article>
   );
 }
 
@@ -171,55 +306,7 @@ function SeedOfChangePage() {
         <div className="relative mx-auto max-w-5xl px-6 md:px-10">
           <div className="space-y-16 md:space-y-24">
             {entries.map((entry, i) => (
-              <motion.article
-                key={entry.year}
-                variants={staggerParent}
-                initial="hidden"
-                whileInView="show"
-                viewport={viewportOnce}
-                className="relative"
-              >
-                {i > 0 && (
-                  <div className="mb-16 border-t border-cream/10 md:mb-24" />
-                )}
-
-                <motion.div variants={fadeUp} className="mb-6 flex items-center gap-4">
-                  <span className="text-display text-4xl font-bold text-gold gold-glow md:text-6xl">
-                    {entry.year}
-                  </span>
-                  <div className="h-px flex-1 bg-cream/10" />
-                </motion.div>
-
-                <motion.h2
-                  variants={fadeUp}
-                  className="text-display font-bold leading-tight"
-                  style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
-                >
-                  {entry.title}
-                </motion.h2>
-
-                <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70 md:text-lg">
-                  {entry.body}
-                </motion.p>
-
-                <motion.div variants={fadeUp} className="mt-8">
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
-                    {entry.year} Highlight Video
-                  </p>
-                  <VideoSlot videoUrl={entry.videoUrl} year={entry.year} />
-                </motion.div>
-
-                <motion.div variants={fadeUp} className="mt-8">
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
-                    {entry.year} Gallery
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-                    {entry.folders.map((folder) => (
-                      <EmptyFolderCard key={folder.name} name={folder.name} />
-                    ))}
-                  </div>
-                </motion.div>
-              </motion.article>
+              <DiaryEntryBlock key={entry.year} entry={entry} index={i} />
             ))}
           </div>
         </div>
