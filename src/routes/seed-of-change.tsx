@@ -40,7 +40,7 @@ interface DiaryEntry {
   videoUrl: string; // left empty intentionally, to be filled in later (e.g. YouTube/Vimeo embed link)
 }
 
-const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Graduation"];
+const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Graduation"];
 
 const entries: DiaryEntry[] = [
   {
