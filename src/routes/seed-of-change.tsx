@@ -188,6 +188,17 @@ const entries: DiaryEntry[] = [
           ],
         };
       }
+      if (name === "Graduation") {
+        return {
+          name,
+          photos: [
+            "https://i.imgur.com/TMd4f2a.jpeg",
+            "https://i.imgur.com/LvTOEv3.jpeg",
+            "https://i.imgur.com/EVtoNFW.jpeg",
+            "https://i.imgur.com/4LVYB24.jpeg",
+          ],
+        };
+      }
       return { name, photos: [] };
     }),
     videoUrl: "",
