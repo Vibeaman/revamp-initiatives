@@ -7,6 +7,7 @@ import { ArrowRight, Images } from "lucide-react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
 import whatWeDoImg from "@/assets/what-we-do.jpg";
+import slumOutreachImg from "@/assets/slum-outreach.jpg";
 
 import { getAllGalleries } from "@/data/galleries";
 
@@ -43,7 +44,7 @@ const subPrograms = [
   },
   { 
     name: "Slum Outreach", 
-    img: "https://i.imgur.com/93sLY6m.jpg", 
+    img: slumOutreachImg, 
     blurb: "Direct intervention in underserved communities.",
     fullDesc: "Direct intervention in underserved communities through food support, medical assistance, and cash aid. We work alongside community leaders to identify and address critical needs.",
     gallerySlug: "slum-outreach",

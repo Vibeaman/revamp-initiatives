@@ -6,10 +6,11 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
 import whatWeDoImg from "@/assets/what-we-do.jpg";
+import slumOutreachImg from "@/assets/slum-outreach.jpg";
 
 const outreachCards = [
   { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders.", href: "/gallery/walk-for-impact" },
-  { name: "Slum Outreach", img: "https://i.imgur.com/93sLY6m.jpg", blurb: "Direct intervention in underserved communities.", href: "/gallery/slum-outreach" },
+  { name: "Slum Outreach", img: slumOutreachImg, blurb: "Direct intervention in underserved communities.", href: "/gallery/slum-outreach" },
   { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance.", href: "/gallery/idp" },
   { name: "Kreative Campus", img: kreativeCampusImg, blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
 ];
