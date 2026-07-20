@@ -7,6 +7,7 @@ import cameras from "@/assets/cameras.jpg";
 import photography from "@/assets/photography.jpg";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
+import whatWeDoImg from "@/assets/what-we-do.jpg";
 
 const seedObjectives = [
   "Train women in tailoring & entrepreneurship",
@@ -136,7 +137,7 @@ export default function Programs() {
           className="mt-10 grid gap-8 overflow-hidden rounded-3xl bg-ink text-cream shadow-ink lg:grid-cols-2 md:mt-14"
         >
           <motion.div variants={fadeUp} className="relative min-h-[280px] lg:min-h-full">
-            <img src="https://i.imgur.com/5nrpSL1.jpg" alt="Seed for Change training" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <img src={whatWeDoImg} alt="Seed for Change training" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-tr from-ink/70 via-transparent to-transparent" />
             <span className="absolute left-5 top-5 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-widest text-ink md:left-6 md:top-6 md:px-4 md:py-1.5">
               Flagship

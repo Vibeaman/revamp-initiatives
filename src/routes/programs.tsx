@@ -6,6 +6,7 @@ import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight, Images } from "lucide-react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
+import whatWeDoImg from "@/assets/what-we-do.jpg";
 
 import { getAllGalleries } from "@/data/galleries";
 
@@ -203,7 +204,7 @@ function ProgramsPage() {
               </div>
             </motion.div>
             <motion.div variants={fadeUp} className="relative">
-              <img src="https://i.imgur.com/5nrpSL1.jpg" alt="Seed for Change training" className="rounded-3xl shadow-ink" loading="lazy" />
+              <img src={whatWeDoImg} alt="Seed for Change training" className="rounded-3xl shadow-ink" loading="lazy" />
             </motion.div>
           </motion.div>
         </div>
