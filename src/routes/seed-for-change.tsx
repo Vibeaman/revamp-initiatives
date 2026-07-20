@@ -20,20 +20,20 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-export const Route = createFileRoute("/seed-of-change")({
+export const Route = createFileRoute("/seed-for-change")({
   head: () => ({
     meta: [
-      { title: "Seed of Change | Revamp Initiatives" },
+      { title: "Seed For Change | Revamp Initiatives" },
       {
         name: "description",
         content:
-          "Seed of Change is Revamp Initiatives' flagship women's empowerment journey, a living diary of the people, stories, and moments shaping the project year by year.",
+          "Seed For Change is Revamp Initiatives' flagship women's empowerment journey, a living diary of the people, stories, and moments shaping the project year by year.",
       },
-      { property: "og:title", content: "Seed of Change | Revamp Initiatives" },
+      { property: "og:title", content: "Seed For Change | Revamp Initiatives" },
       {
         property: "og:description",
         content:
-          "A living diary of Seed of Change, Revamp Initiatives' flagship women's empowerment project.",
+          "A living diary of Seed For Change, Revamp Initiatives' flagship women's empowerment project.",
       },
     ],
   }),
@@ -137,7 +137,7 @@ const entries: DiaryEntry[] = [
     year: "2026",
     title: "Continuing the journey",
     body:
-      "This is where the story of the 2026 chapter of Seed of Change will live. A new year, a new cohort, new stories of growth. This space will hold the diary entries, reflections, and photos from this leg of the journey.",
+      "This is where the story of the 2026 chapter of Seed For Change will live. A new year, a new cohort, new stories of growth. This space will hold the diary entries, reflections, and photos from this leg of the journey.",
     folders: DAY_FOLDERS.map((name) => {
       if (name === "Day 1") {
         return {
@@ -381,7 +381,7 @@ function VideoSlot({ videoUrl, year }: { videoUrl: string; year: string }) {
         <iframe
           ref={iframeRef}
           src={videoUrl}
-          title={`${year} Seed of Change highlight video`}
+          title={`${year} Seed For Change highlight video`}
           className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

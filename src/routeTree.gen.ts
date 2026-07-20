@@ -9,7 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SeedOfChangeRouteImport } from './routes/seed-of-change'
+import { Route as SeedForChangeRouteImport } from './routes/seed-for-change'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as GetInvolvedRouteImport } from './routes/get-involved'
 import { Route as FoundersRouteImport } from './routes/founders'
@@ -20,9 +20,9 @@ import { Route as ImpactMilestonesRouteImport } from './routes/impact/milestones
 import { Route as ImpactJourneyRouteImport } from './routes/impact/journey'
 import { Route as GallerySlugRouteImport } from './routes/gallery/$slug'
 
-const SeedOfChangeRoute = SeedOfChangeRouteImport.update({
-  id: '/seed-of-change',
-  path: '/seed-of-change',
+const SeedForChangeRoute = SeedForChangeRouteImport.update({
+  id: '/seed-for-change',
+  path: '/seed-for-change',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsRoute = ProgramsRouteImport.update({
@@ -76,7 +76,7 @@ export interface FileRoutesByFullPath {
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
   '/programs': typeof ProgramsRoute
-  '/seed-of-change': typeof SeedOfChangeRoute
+  '/seed-for-change': typeof SeedForChangeRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
@@ -88,7 +88,7 @@ export interface FileRoutesByTo {
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
   '/programs': typeof ProgramsRoute
-  '/seed-of-change': typeof SeedOfChangeRoute
+  '/seed-for-change': typeof SeedForChangeRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
@@ -101,7 +101,7 @@ export interface FileRoutesById {
   '/founders': typeof FoundersRoute
   '/get-involved': typeof GetInvolvedRoute
   '/programs': typeof ProgramsRoute
-  '/seed-of-change': typeof SeedOfChangeRoute
+  '/seed-for-change': typeof SeedForChangeRoute
   '/gallery/$slug': typeof GallerySlugRoute
   '/impact/journey': typeof ImpactJourneyRoute
   '/impact/milestones': typeof ImpactMilestonesRoute
@@ -115,7 +115,7 @@ export interface FileRouteTypes {
     | '/founders'
     | '/get-involved'
     | '/programs'
-    | '/seed-of-change'
+    | '/seed-for-change'
     | '/gallery/$slug'
     | '/impact/journey'
     | '/impact/milestones'
@@ -127,7 +127,7 @@ export interface FileRouteTypes {
     | '/founders'
     | '/get-involved'
     | '/programs'
-    | '/seed-of-change'
+    | '/seed-for-change'
     | '/gallery/$slug'
     | '/impact/journey'
     | '/impact/milestones'
@@ -139,7 +139,7 @@ export interface FileRouteTypes {
     | '/founders'
     | '/get-involved'
     | '/programs'
-    | '/seed-of-change'
+    | '/seed-for-change'
     | '/gallery/$slug'
     | '/impact/journey'
     | '/impact/milestones'
@@ -152,7 +152,7 @@ export interface RootRouteChildren {
   FoundersRoute: typeof FoundersRoute
   GetInvolvedRoute: typeof GetInvolvedRoute
   ProgramsRoute: typeof ProgramsRoute
-  SeedOfChangeRoute: typeof SeedOfChangeRoute
+  SeedForChangeRoute: typeof SeedForChangeRoute
   GallerySlugRoute: typeof GallerySlugRoute
   ImpactJourneyRoute: typeof ImpactJourneyRoute
   ImpactMilestonesRoute: typeof ImpactMilestonesRoute
@@ -162,11 +162,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/seed-of-change': {
-      id: '/seed-of-change'
-      path: '/seed-of-change'
-      fullPath: '/seed-of-change'
-      preLoaderRoute: typeof SeedOfChangeRouteImport
+    '/seed-for-change': {
+      id: '/seed-for-change'
+      path: '/seed-for-change'
+      fullPath: '/seed-for-change'
+      preLoaderRoute: typeof SeedForChangeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs': {
@@ -240,7 +240,7 @@ const rootRouteChildren: RootRouteChildren = {
   FoundersRoute: FoundersRoute,
   GetInvolvedRoute: GetInvolvedRoute,
   ProgramsRoute: ProgramsRoute,
-  SeedOfChangeRoute: SeedOfChangeRoute,
+  SeedForChangeRoute: SeedForChangeRoute,
   GallerySlugRoute: GallerySlugRoute,
   ImpactJourneyRoute: ImpactJourneyRoute,
   ImpactMilestonesRoute: ImpactMilestonesRoute,

@@ -180,10 +180,10 @@ export default function Navbar() {
 
             <li>
               <Link
-                to="/seed-of-change"
+                to="/seed-for-change"
                 className="rounded-full px-4 py-2 text-sm font-medium text-cream/80 transition-colors hover:text-gold"
               >
-                Seed of Change
+                Seed For Change
               </Link>
             </li>
             <li>
@@ -326,11 +326,11 @@ export default function Navbar() {
 
               <li>
                 <Link
-                  to="/seed-of-change"
+                  to="/seed-for-change"
                   onClick={() => setOpen(false)}
                   className="block rounded-xl px-4 py-3 text-display text-xl font-semibold text-cream hover:bg-cream/5 hover:text-gold"
                 >
-                  Seed of Change
+                  Seed For Change
                 </Link>
               </li>
               <li>
