@@ -214,7 +214,7 @@ const entries: DiaryEntry[] = [
       }
       return { name, photos: [] };
     }),
-    videoUrl: "",
+    videoUrl: "https://player.vimeo.com/video/1211285889",
   },
 ];
 
