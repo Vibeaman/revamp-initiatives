@@ -177,6 +177,17 @@ const entries: DiaryEntry[] = [
           ],
         };
       }
+      if (name === "Day 5") {
+        return {
+          name,
+          photos: [
+            "https://i.imgur.com/2eC14lW.jpeg",
+            "https://i.imgur.com/Ln2bxKJ.jpeg",
+            "https://i.imgur.com/qLuTsSn.jpeg",
+            "https://i.imgur.com/m64aRfc.jpeg",
+          ],
+        };
+      }
       return { name, photos: [] };
     }),
     videoUrl: "",
