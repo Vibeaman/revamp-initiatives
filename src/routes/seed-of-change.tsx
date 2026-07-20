@@ -5,7 +5,20 @@ import Footer from "@/components/revamp/Footer";
 import { GalleryGrid } from "@/components/revamp/GalleryGrid";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
-import { Images, BookOpen, Folder, Video, ChevronDown } from "lucide-react";
+import {
+  Images,
+  BookOpen,
+  Folder,
+  Video,
+  ChevronDown,
+  Compass,
+  Target,
+  Camera,
+  Users,
+  Share2,
+  Sparkles,
+  CheckCircle2,
+} from "lucide-react";
 
 export const Route = createFileRoute("/seed-of-change")({
   head: () => ({
@@ -210,6 +223,57 @@ const stats = [
   { value: "6+", label: "Skill areas covered in 2025" },
   { value: "300+", label: "Children reached" },
   { value: "1,000+", label: "Youth facilitated toward university grants" },
+];
+
+const whatWeDo = [
+  {
+    icon: Camera,
+    title: "Creative Residency",
+    body:
+      "Our residency provides an immersive learning experience where participants receive hands-on training, mentorship, and opportunities to develop their creative practice in a collaborative environment.",
+  },
+  {
+    icon: Sparkles,
+    title: "Skills Development",
+    body: "Participants gain practical skills in areas such as:",
+    list: [
+      "Photography",
+      "Filmmaking",
+      "Graphic Design",
+      "Fashion",
+      "Creative Writing",
+      "Content Creation",
+      "Branding",
+      "Entrepreneurship",
+    ],
+  },
+  {
+    icon: Users,
+    title: "Mentorship",
+    body:
+      "Industry professionals guide participants through practical sessions, portfolio development, career planning, and personal growth.",
+  },
+  {
+    icon: Share2,
+    title: "Networking",
+    body:
+      "We create opportunities for participants to connect with experienced creatives, organisations, industry leaders, and potential collaborators.",
+  },
+  {
+    icon: Images,
+    title: "Exhibition & Showcase",
+    body:
+      "At the end of the residency, participants present their work to the public through a professionally curated exhibition, creating opportunities for visibility, partnerships, and career advancement.",
+  },
+];
+
+const whoCanApply = [
+  "Emerging creatives",
+  "Students and recent graduates",
+  "Young professionals",
+  "Entrepreneurs",
+  "Artists seeking mentorship",
+  "Women passionate about building careers in the creative industry",
 ];
 
 function FolderCard({
@@ -449,13 +513,162 @@ function SeedOfChangePage() {
             transition={{ delay: 0.2 }}
             className="mt-6 max-w-2xl text-cream/80"
           >
-            Seed for Change Initiative (2024-Present) is a flagship program of Revamp
-            Initiatives, a women-focused empowerment and art therapy program for marginalized
-            communities, kids, and communities exposed to kidnapping, banditry attacks, and
-            other underserved, less opportune women and youths, providing practical vocational
-            and creative skills for income generation, financial independence, and
-            socio-economic growth.
+            Seed for Change is a transformative creative residency and empowerment programme
+            dedicated to equipping women with the skills, confidence, mentorship, and
+            opportunities they need to thrive in the creative industry.
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.28 }}
+            className="mt-4 max-w-2xl text-cream/80"
+          >
+            We believe that talent exists everywhere, but opportunity does not. Through
+            immersive learning, industry mentorship, collaboration, and public exhibitions, we
+            help emerging female creatives unlock their potential and build sustainable
+            careers.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.36 }}
+            className="mt-4 max-w-2xl text-cream/80"
+          >
+            Whether you&rsquo;re an aspiring photographer, filmmaker, designer, writer,
+            storyteller, or entrepreneur, Seed for Change is designed to help you grow, connect,
+            and create meaningful impact.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="relative border-t border-cream/10 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <motion.div
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="grid gap-8 md:grid-cols-2"
+          >
+            <motion.div
+              variants={fadeUp}
+              className="rounded-2xl border border-gold/20 bg-cream/[0.03] p-8"
+            >
+              <Compass className="mb-4 h-8 w-8 text-gold" />
+              <h2 className="text-display text-2xl font-bold text-gold">Our Vision</h2>
+              <p className="mt-4 leading-relaxed text-cream/70">
+                To cultivate a generation of confident, innovative, and empowered women who are
+                shaping the future of the creative industry and driving positive social change.
+              </p>
+            </motion.div>
+            <motion.div
+              variants={fadeUp}
+              className="rounded-2xl border border-gold/20 bg-cream/[0.03] p-8"
+            >
+              <Target className="mb-4 h-8 w-8 text-gold" />
+              <h2 className="text-display text-2xl font-bold text-gold">Our Mission</h2>
+              <p className="mt-4 leading-relaxed text-cream/70">
+                Our mission is to bridge the gap between talent and opportunity by providing
+                women with access to quality creative education, mentorship, leadership
+                development, and professional exposure. We are committed to nurturing
+                creativity, promoting economic empowerment, and building a supportive community
+                where women can learn, collaborate, and thrive.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="relative border-t border-cream/10 bg-cream/[0.02] py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewportOnce}
+            className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold"
+          >
+            <Sparkles size={14} /> What We Do
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewportOnce}
+            className="text-display font-bold leading-tight"
+            style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
+          >
+            From training to the spotlight.
+          </motion.h2>
+          <motion.div
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {whatWeDo.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={fadeUp}
+                className="rounded-2xl border border-cream/10 bg-cream/[0.03] p-6"
+              >
+                <item.icon className="mb-4 h-7 w-7 text-gold" />
+                <h3 className="text-lg font-semibold text-cream">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-cream/60">{item.body}</p>
+                {item.list && (
+                  <ul className="mt-3 grid grid-cols-2 gap-y-1.5 text-sm text-cream/70">
+                    {item.list.map((skill) => (
+                      <li key={skill} className="flex items-center gap-1.5">
+                        <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 text-gold/70" />
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Who Can Apply */}
+      <section className="relative border-t border-cream/10 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <motion.div
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="grid gap-10 md:grid-cols-2 md:items-center"
+          >
+            <motion.div variants={fadeUp}>
+              <p className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+                <Users size={14} /> Who Can Apply?
+              </p>
+              <h2
+                className="text-display font-bold leading-tight"
+                style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
+              >
+                Seed for Change welcomes women who are:
+              </h2>
+              <p className="mt-4 max-w-xl leading-relaxed text-cream/70">
+                No matter where you are in your journey, if you&rsquo;re ready to learn, create,
+                and grow, Seed for Change is for you.
+              </p>
+            </motion.div>
+            <motion.ul variants={fadeUp} className="grid gap-3 sm:grid-cols-2">
+              {whoCanApply.map((role) => (
+                <li
+                  key={role}
+                  className="flex items-center gap-2 rounded-xl border border-cream/10 bg-cream/[0.03] px-4 py-3 text-sm text-cream/80"
+                >
+                  <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-gold" />
+                  {role}
+                </li>
+              ))}
+            </motion.ul>
+          </motion.div>
         </div>
       </section>
 
