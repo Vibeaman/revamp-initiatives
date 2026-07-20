@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { GalleryPhoto } from "@/data/galleries";
+import { imgurThumb } from "@/utils/imgur";
 
 interface LightboxProps {
   photos: GalleryPhoto[];
@@ -166,10 +167,12 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
           onClick={(e) => e.stopPropagation()}
         >
           <img
-            src={currentPhoto.src}
+            src={imgurThumb(currentPhoto.src, "h")}
             alt={currentPhoto.caption || `Photo ${currentIndex + 1}`}
             className="max-h-[85vh] max-w-[95vw] rounded-lg object-contain md:max-h-[90vh] md:max-w-[90vw]"
             draggable={false}
+            loading="eager"
+            decoding="async"
           />
 
           {/* Caption bar */}

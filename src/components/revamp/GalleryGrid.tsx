@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { GalleryPhoto } from "@/data/galleries";
 import { Lightbox } from "./Lightbox";
 import { Grid3X3, Expand } from "lucide-react";
+import { imgurThumb } from "@/utils/imgur";
 
 interface GalleryGridProps {
   photos: GalleryPhoto[];
@@ -40,10 +41,11 @@ export function GalleryGrid({ photos }: GalleryGridProps) {
             aria-label={`View photo${photo.caption ? `: ${photo.caption}` : ""}`}
           >
             <img
-              src={photo.src}
+              src={imgurThumb(photo.src, "m")}
               alt={photo.caption || `Photo ${index + 1}`}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
+              decoding="async"
             />
             {/* Hover overlay */}
             <div className="absolute inset-0 flex items-center justify-center bg-ink/0 transition-colors duration-300 group-hover:bg-ink/40 group-active:bg-ink/40 md:bg-ink/0">

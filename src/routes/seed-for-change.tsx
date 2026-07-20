@@ -5,6 +5,7 @@ import Footer from "@/components/revamp/Footer";
 import { GalleryGrid } from "@/components/revamp/GalleryGrid";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
+import { imgurThumb } from "@/utils/imgur";
 import {
   Images,
   BookOpen,
@@ -307,10 +308,11 @@ function FolderCard({
       aria-expanded={isOpen}
     >
       <img
-        src={folder.photos[0]}
+        src={imgurThumb(folder.photos[0], "t")}
         alt=""
         className="absolute inset-0 h-full w-full object-cover opacity-20 transition-opacity duration-300 group-hover:opacity-30"
         loading="lazy"
+        decoding="async"
       />
       <Folder className="relative mb-3 h-8 w-8 text-gold" />
       <p className="relative text-sm font-semibold text-cream">{folder.name}</p>
