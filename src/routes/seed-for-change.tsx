@@ -75,7 +75,7 @@ const entries: DiaryEntry[] = [
     year: "2025",
     title: "Where it all began",
     body:
-      "In the past, 50+ women were trained through our Art Residency program, mentored and empowered with the right skills, tools, seed capital, and job employment. The Seed for Change initiative in 2025 covered 6+ skill areas, reached 300+ children, and delivered a youth facilitation program supporting over 1,000 youth toward grants in Nigerian universities.",
+      "In the past, 70+ women were trained through our Art Residency program, mentored and empowered with the right skills, tools, seed capital, and job employment. The Seed for Change initiative in 2025 covered 6+ skill areas, reached 300+ children, and delivered a youth facilitation program supporting over 1,000 youth toward grants in Nigerian universities.",
     folders: DAY_FOLDERS.map((name) => {
       if (name === "Day 1") {
         return {
@@ -236,7 +236,7 @@ const entries: DiaryEntry[] = [
 ];
 
 const stats = [
-  { value: "50+", label: "Women trained through our Art Residency program" },
+  { value: "70+", label: "Women trained through our Art Residency program" },
   { value: "6+", label: "Skill areas covered in 2025" },
   { value: "300+", label: "Children reached" },
   { value: "1,000+", label: "Youth facilitated toward university grants" },
