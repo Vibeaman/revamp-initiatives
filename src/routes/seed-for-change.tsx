@@ -46,12 +46,17 @@ interface GalleryFolder {
   photos: string[]; // left empty intentionally, to be filled in later
 }
 
+interface VideoEntry {
+  label: string; // e.g. "Highlight", "Interview"
+  url: string; // left empty intentionally, to be filled in later (e.g. YouTube/Vimeo embed link)
+}
+
 interface DiaryEntry {
   year: string;
   title: string;
   body: string;
   folders: GalleryFolder[];
-  videoUrl: string; // left empty intentionally, to be filled in later (e.g. YouTube/Vimeo embed link)
+  videos: VideoEntry[];
   coverPhoto?: string; // hero/cover image shown at the top of the year's entry
 }
 
@@ -147,7 +152,7 @@ const entries: DiaryEntry[] = [
       }
       return { name, photos: [] };
     }),
-    videoUrl: "https://player.vimeo.com/video/1211281712",
+    videos: [{ label: "Highlight", url: "https://player.vimeo.com/video/1211281712" }],
     coverPhoto: "https://i.imgur.com/qbw895u.jpeg",
   },
   {
@@ -231,7 +236,10 @@ const entries: DiaryEntry[] = [
       }
       return { name, photos: [] };
     }),
-    videoUrl: "https://player.vimeo.com/video/1211285889",
+    videos: [
+      { label: "Highlight", url: "" },
+      { label: "Interview", url: "https://player.vimeo.com/video/1211736154" },
+    ],
   },
 ];
 
@@ -345,7 +353,15 @@ function FolderCard({
   );
 }
 
-function VideoSlot({ videoUrl, year }: { videoUrl: string; year: string }) {
+function VideoSlot({
+  videoUrl,
+  year,
+  label = "Highlight",
+}: {
+  videoUrl: string;
+  year: string;
+  label?: string;
+}) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [ratio, setRatio] = useState<number | null>(null); // width / height
 
@@ -399,7 +415,7 @@ function VideoSlot({ videoUrl, year }: { videoUrl: string; year: string }) {
         <iframe
           ref={iframeRef}
           src={videoUrl}
-          title={`${year} Seed For Change highlight video`}
+          title={`${year} Seed For Change ${label.toLowerCase()} video`}
           className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -411,7 +427,9 @@ function VideoSlot({ videoUrl, year }: { videoUrl: string; year: string }) {
   return (
     <div className="flex aspect-video w-full flex-col items-center justify-center rounded-2xl border border-dashed border-cream/15 bg-cream/[0.02] px-4 text-center transition-colors hover:border-gold/30 hover:bg-cream/[0.04]">
       <Video className="mb-3 h-9 w-9 text-gold/40" />
-      <p className="text-sm font-semibold text-cream/80">{year} Highlight Video</p>
+      <p className="text-sm font-semibold text-cream/80">
+        {year} {label} Video
+      </p>
       <p className="mt-1 text-xs text-cream/40">Video coming soon</p>
     </div>
   );
@@ -465,11 +483,15 @@ function DiaryEntryBlock({ entry, index }: { entry: DiaryEntry; index: number })
         </motion.div>
       )}
 
-      <motion.div variants={fadeUp} className="mt-8">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
-          {entry.year} Highlight Video
-        </p>
-        <VideoSlot videoUrl={entry.videoUrl} year={entry.year} />
+      <motion.div variants={fadeUp} className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+        {entry.videos.map((video) => (
+          <div key={video.label}>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
+              {entry.year} {video.label} Video
+            </p>
+            <VideoSlot videoUrl={video.url} year={entry.year} label={video.label} />
+          </div>
+        ))}
       </motion.div>
 
       <motion.div variants={fadeUp} className="mt-8">
