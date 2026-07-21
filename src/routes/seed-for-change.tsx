@@ -52,6 +52,7 @@ interface DiaryEntry {
   body: string;
   folders: GalleryFolder[];
   videoUrl: string; // left empty intentionally, to be filled in later (e.g. YouTube/Vimeo embed link)
+  coverPhoto?: string; // hero/cover image shown at the top of the year's entry
 }
 
 const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Graduation"];
@@ -147,6 +148,7 @@ const entries: DiaryEntry[] = [
       return { name, photos: [] };
     }),
     videoUrl: "https://player.vimeo.com/video/1211281712",
+    coverPhoto: "https://i.imgur.com/qbw895u.jpeg",
   },
   {
     year: "2026",
@@ -447,6 +449,21 @@ function DiaryEntryBlock({ entry, index }: { entry: DiaryEntry; index: number })
       <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70 md:text-lg">
         {entry.body}
       </motion.p>
+
+      {entry.coverPhoto && (
+        <motion.div
+          variants={fadeUp}
+          className="mt-8 overflow-hidden rounded-2xl border border-gold/20"
+        >
+          <img
+            src={imgurThumb(entry.coverPhoto, "l")}
+            alt={`${entry.year} Seed For Change graduation cover photo`}
+            className="h-[260px] w-full object-cover sm:h-[360px] md:h-[460px]"
+            loading="eager"
+            decoding="async"
+          />
+        </motion.div>
+      )}
 
       <motion.div variants={fadeUp} className="mt-8">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
