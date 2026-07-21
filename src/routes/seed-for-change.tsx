@@ -56,6 +56,19 @@ interface DiaryEntry {
 
 const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Graduation"];
 
+const MINISTER_PHOTO_URL = "/images/seed-for-change/minister-graduation-2025.jpg";
+const MINISTER_CAPTION = "With the Honorable Minister of Women Affairs at the 2025 Graduation";
+
+const CORE_PARTNERS = [
+  {
+    name: "Ministry of Women Affairs",
+    description:
+      "A proud core partner of Seed For Change, championing women's empowerment and standing with our graduates every step of the way.",
+    image: MINISTER_PHOTO_URL,
+    caption: MINISTER_CAPTION,
+  },
+];
+
 const entries: DiaryEntry[] = [
   {
     year: "2025",
@@ -123,6 +136,7 @@ const entries: DiaryEntry[] = [
         return {
           name,
           photos: [
+            MINISTER_PHOTO_URL,
             "https://i.imgur.com/fXVVaj7.jpeg",
             "https://i.imgur.com/AsdmRvg.jpeg",
             "https://i.imgur.com/qbw895u.jpeg",
@@ -472,7 +486,10 @@ function DiaryEntryBlock({ entry, index }: { entry: DiaryEntry; index: number })
                   {entry.year} &middot; {activeFolder.name}
                 </p>
                 <GalleryGrid
-                  photos={activeFolder.photos.map((src) => ({ src }))}
+                  photos={activeFolder.photos.map((src) => ({
+                    src,
+                    caption: src === MINISTER_PHOTO_URL ? MINISTER_CAPTION : undefined,
+                  }))}
                 />
               </div>
             </motion.div>
@@ -690,6 +707,61 @@ function SeedOfChangePage() {
                   {stat.value}
                 </p>
                 <p className="mt-2 text-sm text-cream/60">{stat.label}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Partners */}
+      <section className="relative border-t border-cream/10 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewportOnce}
+            className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold"
+          >
+            <Users size={14} /> Core Partners
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={viewportOnce}
+            className="text-display font-bold leading-tight"
+            style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
+          >
+            Standing with us every step of the way.
+          </motion.h2>
+          <motion.div
+            variants={staggerParent}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportOnce}
+            className="mt-10 grid gap-8 md:grid-cols-2 md:items-center"
+          >
+            {CORE_PARTNERS.map((partner) => (
+              <motion.div
+                key={partner.name}
+                variants={fadeUp}
+                className="overflow-hidden rounded-2xl border border-gold/20 bg-cream/[0.03]"
+              >
+                <div className="relative">
+                  <img
+                    src={partner.image}
+                    alt={partner.caption}
+                    className="h-64 w-full object-cover md:h-80"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-4">
+                    <p className="text-xs font-medium text-cream/90">{partner.caption}</p>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl font-semibold text-gold">{partner.name}</h3>
+                  <p className="mt-2 leading-relaxed text-cream/70">{partner.description}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
