@@ -237,7 +237,7 @@ const entries: DiaryEntry[] = [
       return { name, photos: [] };
     }),
     videos: [
-      { label: "Highlight", url: "" },
+      { label: "Highlight", url: "https://player.vimeo.com/video/1212105859" },
       { label: "Interview", url: "https://player.vimeo.com/video/1211736154" },
     ],
   },
