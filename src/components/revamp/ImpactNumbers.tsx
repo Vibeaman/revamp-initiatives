@@ -48,8 +48,8 @@ export default function ImpactNumbers() {
             Numbers that carry <span className="text-gold">names, stories, and futures.</span>
           </h2>
           <p className="mt-4 max-w-2xl text-sm text-cream/70 md:mt-6 md:text-base">
-            Over ₦50,000 distributed in direct cash assistance to displaced persons and vulnerable
-            families, alongside sustained empowerment programs from Abuja to Borno.
+            Over ₦50,000 in direct cash assistance reaching over 100 women in 2025, alongside
+            sustained empowerment programs from Abuja to Borno.
           </p>
         </div>
 

@@ -65,8 +65,8 @@ function ImpactOverview() {
             transition={{ delay: 0.2 }}
             className="mt-6 max-w-2xl text-cream/80"
           >
-            Over ₦50,000 distributed in direct cash assistance to displaced persons and vulnerable
-            families, alongside sustained empowerment programs from Abuja to Borno.
+            Over ₦50,000 in direct cash assistance reaching over 100 women in 2025, alongside
+            sustained empowerment programs from Abuja to Borno.
           </motion.p>
         </div>
       </section>
