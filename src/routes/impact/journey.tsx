@@ -42,7 +42,7 @@ const milestones = [
   },
   {
     year: "2025",
-    title: "50+ women fully empowered",
+    title: "100+ women fully empowered",
     body: "The Art Residency cohort completes training with tools, seed capital, and job placement pathways.",
   },
   {

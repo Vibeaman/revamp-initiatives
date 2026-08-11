@@ -109,7 +109,7 @@ export default function HomeProgramsTeaser() {
               empowerment, and job creation.
             </p>
             <div className="mt-5 flex flex-wrap gap-2 text-xs uppercase tracking-wider text-cream/60 md:mt-6 md:gap-3">
-              <span className="rounded-full border border-gold/30 px-3 py-1">50+ women trained</span>
+              <span className="rounded-full border border-gold/30 px-3 py-1">100+ women trained</span>
               <span className="rounded-full border border-gold/30 px-3 py-1">6+ skill areas</span>
               <span className="rounded-full border border-gold/30 px-3 py-1">Launched 2024</span>
             </div>
