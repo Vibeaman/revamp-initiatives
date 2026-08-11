@@ -4,9 +4,9 @@ import { ArrowRight, TrendingUp, Users, Heart, Award } from "lucide-react";
 
 const highlights = [
   { value: "3,000+", label: "People Empowered", icon: Users },
-  { value: "50+", label: "Women Trained", icon: Heart },
+  { value: "100+", label: "Women Empowered", icon: Heart },
   { value: "4", label: "Partnerships", icon: Award },
-  { value: "₦50K+", label: "Cash Aid Distributed", icon: TrendingUp },
+  { value: "₦50K+", label: "Cash Aid Per Woman", icon: TrendingUp },
 ];
 
 export default function HomeImpactStats() {
