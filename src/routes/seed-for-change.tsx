@@ -227,10 +227,10 @@ const entries: DiaryEntry[] = [
         return {
           name,
           photos: [
-            "https://i.imgur.com/TMd4f2a.jpeg",
-            "https://i.imgur.com/LvTOEv3.jpeg",
-            "https://i.imgur.com/EVtoNFW.jpeg",
-            "https://i.imgur.com/4LVYB24.jpeg",
+            "https://res.cloudinary.com/i2buwjgr/image/upload/v1786538754/IMG_3961.jpg",
+            "https://res.cloudinary.com/i2buwjgr/image/upload/v1786538755/IMG_3962.jpg",
+            "https://res.cloudinary.com/i2buwjgr/image/upload/v1786538765/IMG_3963.jpg",
+            "https://res.cloudinary.com/i2buwjgr/image/upload/v1786538757/IMG_3964.jpg",
           ],
         };
       }
