@@ -8,7 +8,7 @@ import { GalleryPhoto } from "../index";
 
 export const seedForChange2026Photos: GalleryPhoto[] = [
   {
-    src: "https://i.imgur.com/qyxFGeu.jpg",
+    src: "https://res.cloudinary.com/i2buwjgr/image/upload/v1786538754/IMG_3961.jpg",
   },
   {
     src: "https://i.imgur.com/lo3fyVZ.jpg",
