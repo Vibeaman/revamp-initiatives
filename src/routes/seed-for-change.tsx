@@ -152,7 +152,7 @@ const entries: DiaryEntry[] = [
       }
       return { name, photos: [] };
     }),
-    videos: [{ label: "Highlight", url: "https://player.vimeo.com/video/1212096948" }],
+    videos: [],
     coverPhoto: "https://i.imgur.com/mZTFQrf.jpeg",
   },
   {
@@ -483,16 +483,18 @@ function DiaryEntryBlock({ entry, index }: { entry: DiaryEntry; index: number })
         </motion.div>
       )}
 
-      <motion.div variants={fadeUp} className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
-        {entry.videos.map((video) => (
-          <div key={video.label}>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
-              {entry.year} {video.label} Video
-            </p>
-            <VideoSlot videoUrl={video.url} year={entry.year} label={video.label} />
-          </div>
-        ))}
-      </motion.div>
+      {entry.videos.length > 0 && (
+        <motion.div variants={fadeUp} className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+          {entry.videos.map((video) => (
+            <div key={video.label}>
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
+                {entry.year} {video.label} Video
+              </p>
+              <VideoSlot videoUrl={video.url} year={entry.year} label={video.label} />
+            </div>
+          ))}
+        </motion.div>
+      )}
 
       <motion.div variants={fadeUp} className="mt-8">
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gold/60">
