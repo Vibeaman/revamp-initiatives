@@ -62,7 +62,7 @@ interface DiaryEntry {
 
 const DAY_FOLDERS = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Graduation"];
 
-const MINISTER_PHOTO_URL = "https://i.imgur.com/mZTFQrf.jpeg";
+const MINISTER_PHOTO_URL = "/images/seed-for-change/minister-graduation-2025.jpg";
 const MINISTER_CAPTION = "With the Honorable Minister of Women Affairs at the 2025 Graduation";
 
 const CORE_PARTNERS = [
