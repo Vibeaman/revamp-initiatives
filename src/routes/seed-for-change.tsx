@@ -474,7 +474,7 @@ function DiaryEntryBlock({ entry, index }: { entry: DiaryEntry; index: number })
           className="mt-8 overflow-hidden rounded-2xl border border-gold/20"
         >
           <img
-            src={imgurThumb(entry.coverPhoto, "l")}
+            src={imgurThumb(entry.coverPhoto, "h")}
             alt={`${entry.year} Seed For Change graduation cover photo`}
             className="h-[260px] w-full object-cover sm:h-[360px] md:h-[460px]"
             loading="eager"
