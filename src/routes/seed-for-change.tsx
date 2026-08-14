@@ -153,7 +153,7 @@ const entries: DiaryEntry[] = [
       return { name, photos: [] };
     }),
     videos: [{ label: "Highlight", url: "https://player.vimeo.com/video/1212096948" }],
-    coverPhoto: "https://i.imgur.com/lEoVdJt.jpeg",
+    coverPhoto: "https://i.imgur.com/mZTFQrf.jpeg",
   },
   {
     year: "2026",
