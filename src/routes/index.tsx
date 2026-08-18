@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Empowering vulnerable Nigerian communities through creativity, vocational training, and sustainable development.",
+          "Empowering women and youth from underrepresented and marginalized communities with creative skills, entrepreneurial opportunities, and mentorship to build sustainable livelihoods.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

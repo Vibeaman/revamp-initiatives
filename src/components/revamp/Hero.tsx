@@ -132,8 +132,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-5 max-w-2xl text-sm leading-relaxed text-cream/75 md:mt-8 md:text-lg"
         >
-          Empowering vulnerable communities through creative expression, vocational training,
-          and sustainable development since 2022.
+          Empowering women and youth from underrepresented and marginalized communities with creative skills, entrepreneurial opportunities, and mentorship to build sustainable livelihoods.
         </motion.p>
 
         <motion.div
