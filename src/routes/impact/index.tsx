@@ -22,7 +22,7 @@ export const Route = createFileRoute("/impact/")({
 
 const stats = [
   { value: "3,000+", label: "Women & Youths Empowered", icon: Users },
-  { value: "100+", label: "Women in Seed for Change Residency", icon: Heart },
+  { value: "100+", label: "Women Empowered Through Our Seed for Change Creative Women Residency Program", icon: Heart },
   { value: "4", label: "Partnerships", icon: Award },
   { value: "₦50K+", label: "Cash Aid Per Woman", icon: TrendingUp },
 ];
