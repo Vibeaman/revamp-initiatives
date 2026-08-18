@@ -5,6 +5,7 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const contacts = [
   { icon: Mail, label: "revampinitiatives@gmail.com", href: "mailto:revampinitiatives@gmail.com" },
+  { icon: Mail, label: "info@therevampinitiatives.org", href: "mailto:info@therevampinitiatives.org" },
   { icon: Phone, label: "08130514772", href: "tel:08130514772" },
   { icon: WhatsAppIcon, label: "08130514772", href: "https://wa.me/2348130514772" },
 ];

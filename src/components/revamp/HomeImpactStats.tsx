@@ -3,8 +3,8 @@ import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { ArrowRight, TrendingUp, Users, Heart, Award } from "lucide-react";
 
 const highlights = [
-  { value: "3,000+", label: "People Empowered", icon: Users },
-  { value: "100+", label: "Women Empowered", icon: Heart },
+  { value: "3,000+", label: "Women & Youths Empowered", icon: Users },
+  { value: "100+", label: "Women in Seed for Change Residency", icon: Heart },
   { value: "4", label: "Partnerships", icon: Award },
   { value: "₦50K+", label: "Cash Aid Per Woman", icon: TrendingUp },
 ];

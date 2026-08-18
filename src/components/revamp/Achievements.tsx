@@ -71,7 +71,7 @@ export default function Achievements() {
           <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-12">
             <div className="shrink-0">
               <BigStat value={3000} />
-              <p className="mt-2 text-sm uppercase tracking-wider text-cream/60">People Empowered</p>
+              <p className="mt-2 text-sm uppercase tracking-wider text-cream/60">Women & Youths Empowered</p>
             </div>
             <p className="text-sm leading-relaxed text-cream/80 md:text-base">
               Over three thousand individuals across communities have been directly empowered through Revamp
