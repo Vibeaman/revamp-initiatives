@@ -8,16 +8,16 @@ import { GalleryPhoto } from "../index";
 
 export const artTherapyCwsiPhotos: GalleryPhoto[] = [
   {
-    src: "https://i.imgur.com/PhW4v3M.jpg",
+    src: "/images/art-therapy-cwsi/student-sketching-easel-1.jpg",
   },
   {
-    src: "https://i.imgur.com/kwEkCIE.jpg",
+    src: "/images/art-therapy-cwsi/student-sketching-easel-2.jpg",
   },
   {
-    src: "https://i.imgur.com/KqymyFH.jpg",
+    src: "/images/art-therapy-cwsi/students-drawing-desk.jpg",
   },
   {
-    src: "https://i.imgur.com/iop8QRs.jpg",
+    src: "/images/art-therapy-cwsi/student-sketching-portrait.jpg",
   },
   {
     src: "https://i.imgur.com/ZrPbvVx.jpg",
