@@ -83,12 +83,6 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
     description: "Creative wellness sessions at the Centre for Women Studies and Intervention.",
     coverImage: "https://i.imgur.com/PhW4v3M.jpg",
   },
-  "rbm-summit": {
-    slug: "rbm-summit",
-    title: "RBM Summit",
-    description: "Results-Based Management Summit - strategic planning and capacity building.",
-    coverImage: "https://i.imgur.com/64wddjb.jpg",
-  },
   "kreative-campus": {
     slug: "kreative-campus",
     title: "Kreative Campus",
