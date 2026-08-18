@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { Link } from "@tanstack/react-router";
 import garuba from "@/assets/garuba-testimonial.jpg";
+import saadatu from "@/assets/saadatu-idp.jpg";
 
 export const Route = createFileRoute("/impact/stories")({
   head: () => ({
@@ -40,10 +41,10 @@ const voices: VoiceEntry[] = [
   },
   {
     date: "2024",
-    name: "Sa'adatu Adamu",
+    name: "Saa'datu",
     story:
-      "A displaced woman from Gwoza, Borno State. Through medical assistance and cash support, she received the treatment she needed, along with a renewed sense of agency.",
-    img: "https://i.imgur.com/evGlEHV.jpg",
+      "Saa'datu is a 21-year-old mother of a 7-year-old girl, living in the IDP camp while expecting another child. Last year she suffered a miscarriage caused by infection, and with the same conditions unchanged, she lives in fear that history will repeat itself. Revamp Initiatives and Revamp Media Agency have helped her access hospital treatment, but the risk remains as long as she is exposed to the same environment. Through it all, Saa'datu carries on with quiet, unshakeable resilience.",
+    img: saadatu,
   },
   {
     date: "1 Oct 2024",
