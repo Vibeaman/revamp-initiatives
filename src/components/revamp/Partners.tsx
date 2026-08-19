@@ -5,6 +5,7 @@ const partners = [
   "Federal Ministry of Women Affairs",
   "Office of the Special Assistant to the President on Art & Culture",
   "Revamp Art Media Agency",
+  "National Centre for Women Development (NCWD)",
 ];
 
 export default function Partners() {
