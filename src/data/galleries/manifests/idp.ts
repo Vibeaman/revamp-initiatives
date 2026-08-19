@@ -8,18 +8,21 @@ import { GalleryPhoto } from "../index";
 
 export const idpPhotos: GalleryPhoto[] = [
   {
-    src: "https://i.imgur.com/s76njIe.jpg",
+    src: "/images/idp-camp-durumi/idp-1.jpeg",
   },
   {
-    src: "https://i.imgur.com/0WrWx3K.jpg",
+    src: "/images/idp-camp-durumi/idp-2.jpeg",
   },
   {
-    src: "https://i.imgur.com/YFvgxuV.jpg",
+    src: "/images/idp-camp-durumi/idp-3.jpeg",
   },
   {
-    src: "https://i.imgur.com/b2aF7M7.jpg",
+    src: "/images/idp-camp-durumi/idp-4.jpeg",
   },
   {
-    src: "https://i.imgur.com/jzhNTXL.jpg",
+    src: "/images/idp-camp-durumi/idp-5.jpeg",
+  },
+  {
+    src: "/images/idp-camp-durumi/idp-6.jpeg",
   },
 ];
