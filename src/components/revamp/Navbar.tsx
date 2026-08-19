@@ -13,11 +13,10 @@ const impactLinks = [
 
 const galleryLinks = [
   { label: "Art Therapy CWSI", href: "/gallery/art-therapy-cwsi" },
-  { label: "IDP Camp Durumi", href: "/gallery/idp" },
-  { label: "Kreative Campus", href: "/gallery/kreative-campus" },
+  { label: "Internally Displaced Persons Camp Durumi", href: "/gallery/idp" },
+  { label: "Kreative Kampus", href: "/gallery/kreative-campus" },
   { label: "Seed for Change 2025", href: "/gallery/seed-for-change-2025" },
   { label: "Seed for Change 2026", href: "/gallery/seed-for-change-2026" },
-  { label: "Slum Outreach", href: "/gallery/slum-outreach" },
   { label: "Walk for Impact", href: "/gallery/walk-for-impact" },
 ];
 

@@ -73,8 +73,8 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
   },
   "idp": {
     slug: "idp",
-    title: "IDP Camp Durumi",
-    description: "Supporting displaced persons at IDP Camp Durumi with essential supplies, medical care, and financial assistance.",
+    title: "Internally Displaced Persons Camp Durumi",
+    description: "Supporting displaced persons at Internally Displaced Persons Camp Durumi with essential supplies, medical care, and financial assistance.",
     coverImage: "https://i.imgur.com/s76njIe.jpg",
   },
   "art-therapy-cwsi": {
@@ -85,7 +85,7 @@ export const GALLERY_PROGRAMS: Record<string, Omit<GalleryProgram, "manifest">> 
   },
   "kreative-campus": {
     slug: "kreative-campus",
-    title: "Kreative Campus",
+    title: "Kreative Kampus",
     description: "Skill-building creative training for youth and women.",
     coverImage: "https://i.imgur.com/TiCPunL.jpg",
   },

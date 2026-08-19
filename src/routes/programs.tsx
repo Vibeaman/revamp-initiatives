@@ -7,8 +7,6 @@ import { ArrowRight, Images } from "lucide-react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
 import whatWeDoImg from "@/assets/what-we-do.jpg";
-import slumOutreachImg from "@/assets/slum-outreach.jpg";
-
 import { getAllGalleries } from "@/data/galleries";
 
 export const Route = createFileRoute("/programs")({
@@ -18,7 +16,7 @@ export const Route = createFileRoute("/programs")({
       {
         name: "description",
         content:
-          "Explore Revamp Initiatives' creative empowerment programs in Nigeria. Learn about Seed for Change, Walk for Impact, Slum Outreach, IDP Camp Durumi, and Kreative Campus.",
+          "Explore Revamp Initiatives' creative empowerment programs in Nigeria. Learn about Seed for Change, Walk for Impact, Internally Displaced Persons Camp Durumi, and Kreative Kampus.",
       },
       { property: "og:title", content: "Creative Empowerment Programs Nigeria | Revamp Initiatives" },
       { property: "og:description", content: "Creative empowerment programs transforming communities through skills, creativity, and sustainable development." },
@@ -43,21 +41,14 @@ const subPrograms = [
     gallerySlug: "walk-for-impact",
   },
   { 
-    name: "Slum Outreach", 
-    img: slumOutreachImg, 
-    blurb: "Direct intervention in underserved communities.",
-    fullDesc: "Direct intervention in underserved communities through food support, medical assistance, and cash aid. We work alongside community leaders to identify and address critical needs.",
-    gallerySlug: "slum-outreach",
-  },
-  { 
-    name: "IDP Camp Durumi", 
+    name: "Internally Displaced Persons Camp Durumi", 
     img: "https://i.imgur.com/UZx6PhG.jpg", 
     blurb: "Food, medical & cash assistance.",
     fullDesc: "Supporting displaced persons at IDP Camp Durumi with essential supplies, medical care, and financial assistance to help them rebuild their lives with dignity.",
     gallerySlug: "idp",
   },
   { 
-    name: "Kreative Campus", 
+    name: "Kreative Kampus", 
     img: kreativeCampusImg, 
     blurb: "Skill-building creative training.",
     fullDesc: "Campus-based creative skill-building workshops that empower students with practical skills in photography, design, and digital arts for future careers.",
@@ -78,7 +69,7 @@ function CommunityOutreach() {
         <div>
           <h3 className="text-display text-2xl font-bold text-ink md:text-4xl">Community Outreach</h3>
           <p className="mt-2 max-w-2xl text-sm text-ink/70 md:mt-3 md:text-base">
-            Direct intervention in underserved communities, IDP camps, and slum areas.
+            Direct intervention in underserved communities and Internally Displaced Persons camps.
           </p>
         </div>
       </div>

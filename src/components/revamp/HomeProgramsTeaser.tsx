@@ -6,13 +6,10 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import walkForImpactImg from "@/assets/walk-for-impact.jpg";
 import kreativeCampusImg from "@/assets/conference-notetaking.jpg";
 import whatWeDoImg from "@/assets/what-we-do.jpg";
-import slumOutreachImg from "@/assets/slum-outreach.jpg";
-
 const outreachCards = [
   { name: "Walk for Impact", img: walkForImpactImg, blurb: "Preserving stories of Nigeria's elders.", href: "/gallery/walk-for-impact" },
-  { name: "Slum Outreach", img: slumOutreachImg, blurb: "Direct intervention in underserved communities.", href: "/gallery/slum-outreach" },
-  { name: "IDP Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance.", href: "/gallery/idp" },
-  { name: "Kreative Campus", img: kreativeCampusImg, blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
+  { name: "Internally Displaced Persons Camp Durumi", img: "https://i.imgur.com/UZx6PhG.jpg", blurb: "Food, medical & cash assistance.", href: "/gallery/idp" },
+  { name: "Kreative Kampus", img: kreativeCampusImg, blurb: "Skill-building creative training.", href: "/gallery/kreative-campus" },
 ];
 
 const AUTOPLAY_MS = 5000;
@@ -136,7 +133,7 @@ export default function HomeProgramsTeaser() {
             <div>
               <h3 className="text-display text-2xl font-bold text-ink md:text-4xl">Community Outreach</h3>
               <p className="mt-2 max-w-2xl text-sm text-ink/70 md:mt-3 md:text-base">
-                Direct intervention in underserved communities, IDP camps, and slum areas.
+                Direct intervention in underserved communities and Internally Displaced Persons camps.
               </p>
             </div>
             <a href="/programs" className="hidden items-center gap-2 text-sm font-semibold text-gold-deep hover:text-gold md:flex">
