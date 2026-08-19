@@ -22,6 +22,13 @@ export const Route = createFileRoute("/impact/milestones")({
 
 const milestones = [
   {
+    year: "2022",
+    title: "University of Abuja Partnership",
+    body: "A foundational academic partnership with the University of Abuja, anchoring Revamp's community work in the FCT and enabling sustained engagement with students and researchers from 2022 till date.",
+    icon: Building,
+    featured: false,
+  },
+  {
     year: "2024",
     title: "Seed for Change Inaugural Cohort",
     body: "The first SFC cohort completed training with graduation celebrations, empowering participants with practical skills and entrepreneurial confidence.",
@@ -37,9 +44,9 @@ const milestones = [
   },
   {
     year: "2025",
-    title: "CWS Collaboration",
-    body: "Joined forces with the Centre for Women's Studies to deepen gender-focused impact, research, and advocacy.",
-    icon: Heart,
+    title: "Ministry of Women Affairs",
+    body: "A growing institutional collaboration with the Federal Ministry of Women Affairs, validating Revamp's grassroots model and amplifying impact at the national policy level.",
+    icon: Award,
     featured: false,
   },
   {
@@ -56,7 +63,8 @@ const partners = [
   "Office of the Special Assistant to the President on Art & Culture",
   "Revamp Art Media Agency",
   "University of Maiduguri",
-  "Centre for Women's Studies",
+  "University of Abuja",
+  "National Centre for Women Development (NCWD)",
 ];
 
 function MilestonesPage() {

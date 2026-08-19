@@ -565,7 +565,7 @@ function SeedOfChangePage() {
             className="text-display font-bold leading-[1.02]"
             style={{ fontSize: "clamp(2rem, 6vw, 4rem)" }}
           >
-            Seed of <span className="text-gold">Change</span>.
+            Seed for <span className="text-gold">Change</span>.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

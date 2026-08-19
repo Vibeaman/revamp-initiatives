@@ -16,6 +16,11 @@ const stats = [
 
 const milestoneCards = [
   {
+    year: "2022",
+    title: "University of Abuja Partnership",
+    body: "A foundational academic partnership with the University of Abuja, anchoring Revamp's community work in the FCT from 2022 till date.",
+  },
+  {
     year: "2024",
     title: "Seed for Change Inaugural Cohort",
     body: "The first SFC cohort completed training with graduation celebrations, empowering participants with practical skills and entrepreneurial confidence.",
@@ -27,8 +32,8 @@ const milestoneCards = [
   },
   {
     year: "2025",
-    title: "CWS Collaboration",
-    body: "Joined forces with the Centre for Women's Studies to deepen gender-focused impact, research, and advocacy across our programs.",
+    title: "Ministry of Women Affairs",
+    body: "A growing institutional collaboration with the Federal Ministry of Women Affairs, validating Revamp's grassroots model and amplifying impact at the national level.",
   },
   {
     year: "2026",
