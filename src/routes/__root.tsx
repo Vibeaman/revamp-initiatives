@@ -9,6 +9,10 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import previewImage from "@/assets/hero.jpg";
+
+const siteUrl = "https://www.therevampinitiatives.org";
+const previewImageUrl = new URL(previewImage, siteUrl).toString();
 
 function NotFoundComponent() {
   return (
@@ -74,10 +78,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Nigerian creative social impact hub empowering vulnerable communities through creativity, vocational training, and sustainable development.",
+          "Revamp Initiatives is a Nigerian creative social impact hub empowering vulnerable communities through creativity, vocational training, and sustainable development.",
       },
+      { property: "og:title", content: "Revamp Initiatives — Creativity for Social Impact" },
+      {
+        property: "og:description",
+        content:
+          "Empowering women and young people through creative skills, opportunity, and sustainable development.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: siteUrl },
+      { property: "og:image", content: previewImageUrl },
+      { property: "og:image:alt", content: "Revamp Initiatives creative social impact project" },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1920" },
+      { property: "og:image:height", content: "1080" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Revamp Initiatives — Creativity for Social Impact" },
+      {
+        name: "twitter:description",
+        content: "A Nigerian creative social impact hub building opportunity through creativity.",
+      },
+      { name: "twitter:image", content: previewImageUrl },
+      { name: "twitter:image:alt", content: "Revamp Initiatives creative social impact project" },
     ],
     links: [
+      { rel: "canonical", href: siteUrl },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
