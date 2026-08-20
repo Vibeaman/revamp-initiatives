@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 flex flex-col justify-between gap-4 border-t border-cream/10 pt-6 text-xs text-cream/50 md:flex-row">
-          <p>© {new Date().getFullYear()} Revamp Initiatives. Encourage creativity for social impact.</p>
+          <p>© {new Date().getFullYear()} Revamp Initiatives. Encouraging creativity for social impact.</p>
           <p>Made with intention in Nigeria.</p>
         </div>
       </div>
