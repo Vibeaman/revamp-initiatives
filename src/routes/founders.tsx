@@ -28,7 +28,7 @@ const team = [
     highlights: [
       "Served as Documentary Photographer and Assistant on Visual Communications to Nigeria's Minister of Humanitarian Affairs (2019–2023)",
       "Worked on assignment for UNDP, CNN, Reuters, the New York Times, and other organizations in Nigeria",
-      "Founded Revamp Art Media Agency as Creative Director — a social impact creative agency that uses documentary photography, videography, and visual arts as direct tools for community empowerment, reaching displaced persons, women, youth, and underserved communities across Nigeria",
+      "Founded Revamp Art Media Agency as Creative Director — a social impact creative agency that harnesses documentary photography, videography, and visual arts to empower women and youth, uplift displaced and underserved communities, and contribute to lasting social change across Nigeria",
     ],
     image: "https://i.imgur.com/33otmU4.jpg",
     imageAspect: "aspect-[1136/1271]",
