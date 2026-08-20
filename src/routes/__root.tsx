@@ -9,10 +9,9 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import previewImage from "@/assets/hero.jpg";
 
 const siteUrl = "https://www.therevampinitiatives.org";
-const previewImageUrl = new URL(previewImage, siteUrl).toString();
+const previewImageUrl = `${siteUrl}/og-image.jpg`;
 
 function NotFoundComponent() {
   return (
@@ -87,8 +86,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Empowering women and young people through creative skills, opportunity, and sustainable development.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Revamp Initiatives" },
       { property: "og:url", content: siteUrl },
       { property: "og:image", content: previewImageUrl },
+      { property: "og:image:secure_url", content: previewImageUrl },
       { property: "og:image:alt", content: "Revamp Initiatives creative social impact project" },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1920" },
@@ -99,6 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "twitter:description",
         content: "A Nigerian creative social impact hub building opportunity through creativity.",
       },
+      { name: "twitter:url", content: siteUrl },
       { name: "twitter:image", content: previewImageUrl },
       { name: "twitter:image:alt", content: "Revamp Initiatives creative social impact project" },
     ],
