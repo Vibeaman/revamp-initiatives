@@ -6,6 +6,7 @@ import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
 import { Link } from "@tanstack/react-router";
 import garuba from "@/assets/garuba-testimonial.jpg";
 import saadatu from "@/assets/saadatu-idp.jpg";
+import abubakarAfter from "@/assets/abubakar-after.jpg";
 
 export const Route = createFileRoute("/impact/stories")({
   head: () => ({
@@ -26,6 +27,7 @@ interface VoiceEntry {
   name: string;
   story: string;
   img: string;
+  afterImg?: string;
   quote?: string;
   role?: string;
   program?: string;
@@ -38,6 +40,7 @@ const voices: VoiceEntry[] = [
     story:
       "A young boy suffering from severe malnutrition was admitted to hospital after Revamp's intervention. He received essential medical care on the path toward restoring his health.",
     img: "https://i.imgur.com/bhu0XIq.jpg",
+    afterImg: abubakarAfter,
   },
   {
     date: "2024",
@@ -117,17 +120,49 @@ function StoriesPage() {
                   i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
                 }`}
               >
-                <div className="relative">
-                  <div className="overflow-hidden rounded-3xl shadow-ink">
-                    <img
-                      src={v.img}
-                      alt={v.name}
-                      className="aspect-[4/5] w-full object-cover"
-                      loading="lazy"
-                    />
+                {v.afterImg ? (
+                  /* Before / After layout */
+                  <div className="relative">
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="flex flex-col gap-2">
+                        <span className="text-center text-[10px] font-bold uppercase tracking-widest text-ink/50">Before</span>
+                        <div className="overflow-hidden rounded-2xl shadow-ink">
+                          <img
+                            src={v.img}
+                            alt={`${v.name} — before`}
+                            className="aspect-[4/5] w-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <span className="text-center text-[10px] font-bold uppercase tracking-widest text-gold-deep">After</span>
+                        <div className="overflow-hidden rounded-2xl shadow-ink">
+                          <img
+                            src={v.afterImg}
+                            alt={`${v.name} — after`}
+                            className="aspect-[4/5] w-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-3 -right-3 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold md:-bottom-4 md:-right-4 md:block md:h-20 md:w-20" />
                   </div>
-                  <div className="absolute -bottom-3 -right-3 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold md:-bottom-4 md:-right-4 md:block md:h-20 md:w-20" />
-                </div>
+                ) : (
+                  /* Single image layout */
+                  <div className="relative">
+                    <div className="overflow-hidden rounded-3xl shadow-ink">
+                      <img
+                        src={v.img}
+                        alt={v.name}
+                        className="aspect-[4/5] w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="absolute -bottom-3 -right-3 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold md:-bottom-4 md:-right-4 md:block md:h-20 md:w-20" />
+                  </div>
+                )}
 
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep">

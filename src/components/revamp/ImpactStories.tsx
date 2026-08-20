@@ -1,12 +1,22 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerParent, viewportOnce } from "@/utils/animations";
+import abubakarAfter from "@/assets/abubakar-after.jpg";
 
-const stories = [
+interface Story {
+  date: string;
+  name: string;
+  body: string;
+  img: string;
+  afterImg?: string;
+}
+
+const stories: Story[] = [
   {
     date: "July 2024",
     name: "Abubakar Sadiq",
     body: "A young boy suffering from severe malnutrition was admitted to hospital after Revamp's intervention. He received essential medical care on the path toward restoring his health.",
     img: "https://i.imgur.com/bhu0XIq.jpg",
+    afterImg: abubakarAfter,
   },
   {
     date: "2024",
@@ -47,12 +57,35 @@ export default function ImpactStories() {
                 i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
               }`}
             >
-              <div className="relative">
-                <div className="overflow-hidden rounded-3xl shadow-ink">
-                  <img src={s.img} alt={s.name} className="aspect-[4/5] w-full object-cover" loading="lazy" />
+              {s.afterImg ? (
+                /* Before / After layout */
+                <div className="relative">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="flex flex-col gap-2">
+                      <span className="text-center text-[10px] font-bold uppercase tracking-widest text-ink/50">Before</span>
+                      <div className="overflow-hidden rounded-2xl shadow-ink">
+                        <img src={s.img} alt={`${s.name} — before`} className="aspect-[4/5] w-full object-cover" loading="lazy" />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <span className="text-center text-[10px] font-bold uppercase tracking-widest text-gold-deep">After</span>
+                      <div className="overflow-hidden rounded-2xl shadow-ink">
+                        <img src={s.afterImg} alt={`${s.name} — after`} className="aspect-[4/5] w-full object-cover" loading="lazy" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold md:-bottom-4 md:-right-4 md:h-20 md:w-20" />
                 </div>
-                <div className="absolute -bottom-3 -right-3 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold md:-bottom-4 md:-right-4 md:h-20 md:w-20" />
-              </div>
+              ) : (
+                /* Single image layout */
+                <div className="relative">
+                  <div className="overflow-hidden rounded-3xl shadow-ink">
+                    <img src={s.img} alt={s.name} className="aspect-[4/5] w-full object-cover" loading="lazy" />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 hidden h-16 w-16 rounded-full bg-gradient-gold shadow-gold md:-bottom-4 md:-right-4 md:h-20 md:w-20" />
+                </div>
+              )}
+
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep">{s.date}</span>
                 <h3 className="text-display mt-3 font-bold leading-tight text-ink md:mt-4" style={{ fontSize: "clamp(1.5rem, 3vw, 2.5rem)" }}>
