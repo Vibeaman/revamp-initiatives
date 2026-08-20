@@ -27,8 +27,8 @@ const team = [
     bio: "Taibat Ajiboye is a humanitarian and creative based in Abuja, Nigeria, who advocates for global change through creative visual representation. She works as a visual artist and documentary photographer focused on storytelling around humanitarian affairs, health and well-being, and social inclusion. She has published several books including Sadiya: Journey of Social Impact and Tokens that Births Change.",
     highlights: [
       "Served as Documentary Photographer and Assistant on Visual Communications to Nigeria's Minister of Humanitarian Affairs (2019–2023)",
-      "Worked on assignment for CNN, Reuters, and other organizations in Nigeria",
-      "Founded Revamp Art Media Agency as Creative Director, a communications consulting firm specializing in documentary photography, videography, and graphic arts",
+      "Worked on assignment for UNDP, CNN, Reuters, the New York Times, and other organizations in Nigeria",
+      "Founded Revamp Art Media Agency as Creative Director, a full-service communications firm specializing in documentary photography, videography, graphic arts, and strategic storytelling for humanitarian, social impact, and development causes",
     ],
     image: "https://i.imgur.com/33otmU4.jpg",
     imageAspect: "aspect-[1136/1271]",
