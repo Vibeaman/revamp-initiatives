@@ -25,4 +25,19 @@ export const artTherapyCwsiPhotos: GalleryPhoto[] = [
   {
     src: "https://i.imgur.com/nCvcjWD.jpg",
   },
+  {
+    src: "/images/art-therapy-cwsi/art-therapy-5.jpg",
+  },
+  {
+    src: "/images/art-therapy-cwsi/art-therapy-6.jpg",
+  },
+  {
+    src: "/images/art-therapy-cwsi/art-therapy-7.jpg",
+  },
+  {
+    src: "/images/art-therapy-cwsi/art-therapy-8.jpg",
+  },
+  {
+    src: "/images/art-therapy-cwsi/art-therapy-9.jpg",
+  },
 ];
